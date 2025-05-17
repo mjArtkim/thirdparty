@@ -1,0 +1,97 @@
+<script setup>
+
+</script>
+
+<template>
+  <div class="footer-container">
+    <ul class="foot-list">
+      <li><a href="https://www.instagram.com/thirdpartylive/" target="_blank" >Instargram</a></li>
+      <li><a href="https://www.threads.com/@thirdpartylive" target="_blank" >Threads</a></li>
+      <li><a href="https://www.youtube.com/@thirdpartychannel" target="_blank" >Youtube</a></li>
+    </ul>
+    <div class="foot-copy">© 2025, THIRD Ξ PARTY </div>
+  </div>
+</template>
+
+<style>
+.footer-container {
+  position: relative;
+  height: 200px;
+  border-top: 1px solid #eee;
+  margin: 0 50px;
+}
+.foot-list {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-top: 20px;
+}
+.foot-list li{
+  padding: 0 10px;
+}
+.foot-list li a:hover {
+  font-weight: bold;
+}
+.foot-copy {
+  position: absolute;
+  bottom: 50px;
+}
+/* 모바일 (320px 이상) */
+@media (min-width: 320px) {
+  /* 스타일 정의 */
+}
+
+@media (max-width: 429px) {
+  .footer-container {
+    margin: 0 30px;
+  }
+  .foot-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 0;
+  }
+  .foot-list li{
+    padding: 0 10px;
+  }
+  .foot-copy {
+    bottom: 30px;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 430px) and (max-width: 600px) {
+  .footer-container {
+    margin: 0 30px;
+  }
+  .foot-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 0;
+  }
+  .foot-list li{
+    padding: 0 10px;
+  }
+  .foot-copy {
+    bottom: 30px;
+    font-size: 14px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .footer-container {
+    margin: 0 30px;
+  }
+  .foot-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 0;
+  }
+}
+</style>

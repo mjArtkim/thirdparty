@@ -1,0 +1,41 @@
+@import './base.css';
+:root{
+  --background-dark: #2d3548;
+  --text-light: rgba(255,255,255,0.6);
+  --text-lighter: rgba(255,255,255,0.9);
+}
+#app {
+  margin: 0 auto;
+}
+
+a{
+  text-decoration: none;
+  transition: 0.4s;
+  padding: 3px;
+  color: #eee;
+}
+.z-index-2 {z-index: 2;}
+/* 작은 모바일 (300px 이하) */
+@media (max-width: 300px) {
+  /* 스타일 정의 */
+}
+
+/* 모바일 (320px 이상) */
+@media (min-width: 320px) {
+  /* 스타일 정의 */
+}
+
+/* 작은 태블릿 (600px 이하) */
+@media (max-width: 600px) {
+  /* 스타일 정의 */
+}
+
+/* 중간 크기 태블릿 (768px 이하) */
+@media (max-width: 768px) {
+  /* 스타일 정의 */
+}
+
+/* 큰 태블릿 (1024px 이하) */
+@media (max-width: 1024px) {
+  /* 스타일 정의 */
+}

@@ -68,52 +68,6 @@ onBeforeUnmount(() => {
   window.removeEventListener('scroll', onScroll)
 })
 </script>
-<template>
-  <div class="pad-top100">
-    <div class="type-tabs">
-      <button
-        v-for="type in types"
-        :key="type"
-        :class="{ active: currentType === type }"
-        @click="setType(type)">
-        {{ type }}
-      </button>
-    </div>
-    <h2>{{ currentType }} 목록</h2>
-    <ul class="l-container">
-    <div v-for="post in filteredPosts" :key="post.id"  class="b-game-card" 
-    data-aos="fade-up"
-    data-aos-duration="1000">
-      <router-link to="#" class="b-game-card__cover">
-        <template v-if="post.tracks && post.tracks.length" >
-          <img :src="post.image" alt="" class="b-game-card__cover" />
-          <h3>{{ post.album }}</h3>
-          <p>발매일: {{ post.releases }}<br/>레이블: {{ post.recolabel }}</p>
-          <ul style="margin-left: 1rem;">
-            <li v-for="(track, index) in post.tracks" :key="index">
-              <div>
-                <strong>{{ track.caption }}</strong><br/>
-                DJ: {{ track.djname }}<br/>
-              </div>
-            </li>
-          </ul>
-        </template>
-        <template v-else>
-          <img :src="post.image" alt="" class="b-game-card__cover" />
-          <div>
-            <strong>{{ post.caption }}</strong> ({{ post.type }})<br/>
-            DJ: {{ post.djname }}<br/>
-            발매일: {{ post.releases }}<br/>
-            장르: {{ post.tag }}<br/>
-            <a v-if="post.link" :href="post.link" target="_blank">듣기</a>
-          </div>
-        </template>
-      </router-link>
-    </div>
-  </ul>
-  </div>
-</template>
-
 <style lang="scss">
   .pad-top100 {padding-top: 100px; }
   .type-tabs {
@@ -208,3 +162,49 @@ onBeforeUnmount(() => {
     }
   }
 </style>
+
+<template>
+  <div class="pad-top100">
+    <div class="type-tabs">
+      <button
+        v-for="type in types"
+        :key="type"
+        :class="{ active: currentType === type }"
+        @click="setType(type)">
+        {{ type }}
+      </button>
+    </div>
+    <h2>{{ currentType }} 목록</h2>
+    <ul class="l-container">
+    <div v-for="post in filteredPosts" :key="post.id"  class="b-game-card" 
+    data-aos="fade-up"
+    data-aos-duration="1000">
+      <router-link to="#" class="b-game-card__cover">
+        <template v-if="post.tracks && post.tracks.length" >
+          <img :src="post.image" alt="" class="b-game-card__cover" />
+          <h3>{{ post.album }}</h3>
+          <p>발매일: {{ post.releases }}<br/>레이블: {{ post.recolabel }}</p>
+          <ul style="margin-left: 1rem;">
+            <li v-for="(track, index) in post.tracks" :key="index">
+              <div>
+                <strong>{{ track.caption }}</strong><br/>
+                DJ: {{ track.djname }}<br/>
+              </div>
+            </li>
+          </ul>
+        </template>
+        <template v-else>
+          <img :src="post.image" alt="" class="b-game-card__cover" />
+          <div>
+            <strong>{{ post.caption }}</strong> ({{ post.type }})<br/>
+            DJ: {{ post.djname }}<br/>
+            발매일: {{ post.releases }}<br/>
+            장르: {{ post.tag }}<br/>
+            <a v-if="post.link" :href="post.link" target="_blank">듣기</a>
+          </div>
+        </template>
+      </router-link>
+    </div>
+  </ul>
+  </div>
+</template>

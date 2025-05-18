@@ -1,8 +1,48 @@
+import img1 from '@/assets/music/paradise.png'
+import img2 from '@/assets/music/shut_up.png'
+import img3 from '@/assets/music/bad_boy.png'
+import img4 from '@/assets/music/believe.png'
+import img5 from '@/assets/music/carry_you.png'
+import img6 from '@/assets/music/together.png'
+import img7 from '@/assets/music/keepon.png'
+import img8 from '@/assets/music/thee_c.png'
+import img9 from '@/assets/music/together_ep.png'
+import img10 from '@/assets/music/forthepeople.png'
+import img11 from '@/assets/music/joy.png'
+import img12 from '@/assets/music/veinsremix.png'
+import img13 from '@/assets/music/wefoundlove.png'
+import img14 from '@/assets/music/takemeaway.png'
+import img15 from '@/assets/music/falling.png'
+import img16 from '@/assets/music/falling.png'
+import img17 from '@/assets/music/likethis.png'
+import img18 from '@/assets/music/havenofear.png'
+import img19 from '@/assets/music/veins.png'
+import img20 from '@/assets/music/startit.png'
+import img21 from '@/assets/music/neverletyougo.png'
+import img22 from '@/assets/music/lion.png'
+import img23 from '@/assets/music/realsound.png'
+import img24 from '@/assets/music/waiting.png'
+import img25 from '@/assets/music/nation.png'
+import img26 from '@/assets/music/arrival.png'
+import img27 from '@/assets/music/collide.png'
+import img28 from '@/assets/music/alive.png'
+import img29 from '@/assets/music/everyday.png'
+import img30 from '@/assets/music/lights.png'
+import img31 from '@/assets/music/feel.png'
+import img32 from '@/assets/music/detune.png'
+import img33 from '@/assets/music/duel.png'
+import img34 from '@/assets/music/release.png'
+import img35 from '@/assets/music/rise.png'
+import img36 from '@/assets/music/hope_a.png'
+import img37 from '@/assets/music/neverget.png'
+
+
+
 
 export const igPosts = [
   {
     id: 1,
-    image: '/music/paradise.png',
+    image: img1,
     caption: "PARADISE",
     album: "PARADISE",
     djname:"THIRD ≡ PARTY, Romeo Blanco",
@@ -15,7 +55,7 @@ export const igPosts = [
   },
   {
     id: 2,
-    image: '/music/shut_up.png',
+    image: img2,
     caption: "SHUT UP",
     album: "SHUT UP",
     djname:"THIRD ≡ PARTY, Mark Roma, Nicky Romero",
@@ -28,7 +68,7 @@ export const igPosts = [
   },
   {
     id: 3,
-    image: '/music/bad_boy.png',
+    image: img3,
     caption: "BAD BOY",
     album: "BAD BOY",
     djname:"THIRD ≡ PARTY, Nicky Romero",
@@ -41,7 +81,7 @@ export const igPosts = [
   },
   {
     id: 4,
-    image: '/music/believe.png',
+    image: img4,
     caption: "BELIEVE",
     album: "BELIEVE",
     djname:"THIRD ≡ PARTY",
@@ -54,7 +94,7 @@ export const igPosts = [
   },
   {
     id: 5,
-    image: '/music/carry_you.png',
+    image: img5,
     caption: "CARRY YOU",
     djname:"THIRD ≡ PARTY, Martin Garrix, Oaks",
     releases: "2024-02-16",
@@ -66,7 +106,7 @@ export const igPosts = [
   },
   {
     id: 6,
-    image: '/music/together.png',
+    image: img6,
     caption: "TOGETHER",
     album: "TOGETHER",
     djname:"THIRD ≡ PARTY",
@@ -121,7 +161,7 @@ export const igPosts = [
   // 2023
   {
     id: 7,
-    image: '/music/keepon.png',
+    image: img7,
     caption: "Keep On Loving you",
     album: "Keep On Loving you",
     djname:"THIRD ≡ PARTY",
@@ -134,7 +174,7 @@ export const igPosts = [
   },
   {
     id: 8,
-    image: '/music/thee_c.png',
+    image: img8,
     caption: "Thee Chords (Feel So High)",
     album: "Thee Chords (Feel So High)",
     djname:"THIRD ≡ PARTY",
@@ -147,7 +187,7 @@ export const igPosts = [
   },
   {
     id: 9,
-    image: "/music/together_ep.png",
+    image: img9,
     album: "Together (The Remixes)",
     djname: "THIRD ≡ PARTY",
     tag: "Progressive House, Dance",
@@ -182,7 +222,7 @@ export const igPosts = [
   //2022
   {
     id: 10,
-    image: '/music/forthepeople.png',
+    image: img10,
     caption: "For the People",
     album: "For the People",
     djname:"THIRD ≡ PARTY, Nicky Romero",
@@ -195,7 +235,7 @@ export const igPosts = [
   },
   {
     id: 11,
-    image: '/music/neverget.png',
+    image: img37,
     caption: "Never Get Enough [feat. Kathy Brown]",
     album: "Never Get Enough ",
     djname:"THIRD ≡ PARTY",
@@ -208,7 +248,7 @@ export const igPosts = [
   },
   {
     id: 12,
-    image: '/music/joy.png',
+    image: img11,
     caption: "JOY (Praye Remix) [feat. Kathy Brown]",
     album: "JOY",
     djname:"THIRD ≡ PARTY",
@@ -221,7 +261,7 @@ export const igPosts = [
   },
   {
     id: 13,
-    image: '/music/joy.png',
+    image: img11,
     caption: "JOY",
     album: "JOY",
     djname:"THIRD ≡ PARTY",
@@ -235,7 +275,7 @@ export const igPosts = [
   //2021
   {
     id: 14,
-    image: '/music/veinsremix.png',
+    image: img12,
     caption: "Veins (Avira Remix)",
     album: "Veins (Avira Remix)",
     djname:"THIRD ≡ PARTY",
@@ -250,7 +290,7 @@ export const igPosts = [
   //2020
   {
     id: 15,
-    image: '/music/wefoundlove.png',
+    image: img13,
     caption: "We Found Love [feat. Errol Reid]",
     album: "We Found Love [feat. Errol Reid]",
     djname:"THIRD ≡ PARTY, GVN",
@@ -263,7 +303,7 @@ export const igPosts = [
   },
   {
     id: 16,
-    image: '/music/takemeaway.png',
+    image: img14,
     caption: "Take Me Away",
     album: "Take Me Away",
     djname:"THIRD ≡ PARTY",
@@ -277,7 +317,7 @@ export const igPosts = [
   //2019
   {
     id: 17,
-    image: '/music/falling.png',
+    image: img15,
     caption: "Falling (feat. First State & Anita Kelsey)",
     album: "Falling",
     djname:"THIRD ≡ PARTY",
@@ -291,7 +331,7 @@ export const igPosts = [
   //2018
   {
     id: 18,
-    image: '/music/midnight.png',
+    image: img16,
     caption: "Midnight",
     album: "Midnight",
     djname:"THIRD ≡ PARTY",
@@ -305,7 +345,7 @@ export const igPosts = [
   //2017
   {
     id: 19,
-    image: '/music/likethis.png',
+    image: img17,
     caption: "Like This",
     album: "Like This",
     djname:"THIRD ≡ PARTY, Pete K, Cory Lasser",
@@ -318,7 +358,7 @@ export const igPosts = [
   },
   {
     id: 20,
-    image: '/music/havenofear.png',
+    image: img18,
     caption: "Have No Fear",
     album: "Have No Fear",
     djname:"THIRD ≡ PARTY",
@@ -331,7 +371,7 @@ export const igPosts = [
   },
   {
     id: 21,
-    image: '/music/veins.png',
+    image: img19,
     caption: "Veins",
     album: "Veins",
     djname:"THIRD ≡ PARTY",
@@ -345,7 +385,7 @@ export const igPosts = [
   //2016
   {
     id: 22,
-    image: '/music/startit.png',
+    image: img20,
     caption: "Start It",
     album: "Start It",
     djname:"THIRD ≡ PARTY, Sentinel",
@@ -358,7 +398,7 @@ export const igPosts = [
   },
   {
     id: 23,
-    image: '/music/neverletyougo.png',
+    image: img21,
     caption: "Never Let You Go",
     album: "Never Let You Go",
     djname:"THIRD ≡ PARTY, Sem Vox",
@@ -371,7 +411,7 @@ export const igPosts = [
   },
   {
     id: 24,
-    image: '/music/lion.png',
+    image: img22,
     caption: "Lions in the Wild",
     album: "Lions in the Wild",
     djname:"THIRD ≡ PARTY, Martin Garrix",
@@ -384,7 +424,7 @@ export const igPosts = [
   },
   {
     id: 25,
-    image: '/music/realsound.png',
+    image: img23,
     caption: "Real Sound",
     album: "Real Sound",
     djname:"THIRD ≡ PARTY, Sentinel",
@@ -398,7 +438,7 @@ export const igPosts = [
   //2015
   {
     id: 26,
-    image: '/music/waiting.png',
+    image: img24,
     caption: "Waiting",
     album: "Waiting",
     djname:"THIRD ≡ PARTY",
@@ -411,7 +451,7 @@ export const igPosts = [
   },
   {
     id: 27,
-    image: '/music/nation.png',
+    image: img25,
     album: "Nation",
     djname:"THIRD ≡ PARTY, Arias",
     releases: "2015-09-25",
@@ -437,7 +477,7 @@ export const igPosts = [
   },
   {
     id: 28,
-    image: '/music/arrival.png',
+    image: img26,
     caption: "Arrival",
     album: "Arrival",
     djname:"THIRD ≡ PARTY",
@@ -450,7 +490,7 @@ export const igPosts = [
   },
   {
     id: 29,
-    image: '/music/collide.png',
+    image: img27,
     caption: "Collide [feat. Daniel Gidlund]",
     album: "Collide",
     djname:"THIRD ≡ PARTY",
@@ -463,7 +503,7 @@ export const igPosts = [
   },
   {
     id: 30,
-    image: '/music/alive.png',
+    image: img28,
     caption: "Alive",
     album: "Alive",
     djname:"THIRD ≡ PARTY",
@@ -476,7 +516,7 @@ export const igPosts = [
   },
   {
     id: 31,
-    image: '/music/everyday.png',
+    image: img29,
     caption: "Everyday of My Life",
     album: "Everyday of My Life",
     djname:"THIRD ≡ PARTY",
@@ -490,7 +530,7 @@ export const igPosts = [
   //2012
   {
     id: 32,
-    image: '/music/lights.png',
+    image: img30,
     caption: "Lights",
     album: "Lights",
     djname:"THIRD ≡ PARTY, Steve Angello",
@@ -503,7 +543,7 @@ export const igPosts = [
   },
   {
     id: 33,
-    image: '/music/feel.png',
+    image: img31,
     caption: "Feel",
     album: "Feel",
     djname:"THIRD ≡ PARTY, Cicada",
@@ -517,7 +557,7 @@ export const igPosts = [
   //2011
   {
     id: 34,
-    image: '/music/detune.png',
+    image: img32,
     caption: "De Tune",
     album: "De Tune",
     djname:"THIRD ≡ PARTY, Nick Sheldon",
@@ -530,7 +570,7 @@ export const igPosts = [
   },
   {
     id: 35,
-    image: '/music/duel.png',
+    image: img33,
     caption: "Duel",
     album: "Duel",
     djname:"THIRD ≡ PARTY",
@@ -544,7 +584,7 @@ export const igPosts = [
   //2010
   {
     id: 36,
-    image: '/music/release.png',
+    image: img34,
     caption: "Release",
     album: "Release",
     djname:"THIRD ≡ PARTY",
@@ -557,7 +597,7 @@ export const igPosts = [
   },
   {
     id: 37,
-    image: '/music/rise.png',
+    image: img35,
     album: "Rise (Remixes)",
     djname:"THIRD ≡ PARTY, Abigail Bailey",
     releases: "2010-09-13",
@@ -591,7 +631,7 @@ export const igPosts = [
   },
   {
     id: 38,
-    image: '/music/hope_a.png',
+    image: img36,
     caption: "HOPE",
     album: "HOPE",
     djname:"THIRD ≡ PARTY",

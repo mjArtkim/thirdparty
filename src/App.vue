@@ -4,11 +4,13 @@ import Footer from '@/components/Footer.vue';
 </script>
 
 <template>
-  <section class="wrap">
-    <Header></Header>
-    <router-view />
-    <Footer></Footer>
-  </section>
+  <div id="app">
+    <section class="wrap">
+      <Header></Header>
+      <router-view />
+      <Footer></Footer>
+    </section>
+  </div>
 </template>
 
 <style scoped>

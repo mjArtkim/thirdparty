@@ -47,8 +47,9 @@ function toggleMenu() {
   isMenuMVisible.value = !isMenuMVisible.value;
   isMenuOpen.value = !isMenuOpen.value
   logoImg.value = isMenuOpen.value
-    ? new URL('@/assets/img/logo_item_active.png', import.meta.url).href
+    ? new URL('@/assets/img/m_gnb.png', import.meta.url).href
     : new URL('@/assets/img/logo_item.png', import.meta.url).href
+  isMusicMenuMVisible.value = false
 }
 const logoImg = ref(new URL('@/assets/img/logo_item.png', import.meta.url).href)
 function toggleMusicMenu() {
@@ -150,12 +151,12 @@ watch(isMusicMenuVisible, (visible) => {
     </transition>
     <div class="hd-list-m" :class="{ 'show': isMenuMVisible }">
       <ul class="hd-m-list">
-        <li class="hd-home"><router-link to="/">HOME</router-link></li>
+        <li class="hd-home"><router-link to="/" @click="toggleMenu">HOME</router-link></li>
         <li class="hd-music" @click="toggleMusicMenu">
           <a href="#">MUSIC</a>
           <ol class="hsm-m-list"  :class="{ 'show': isMusicMenuMVisible }">
             <li v-for="(item, index) in musicItems" :key="index" :style="{ animationDelay: `${index * 0.1}s` }">
-              <router-link :to="item.link">{{ item.name }}</router-link>
+              <router-link :to="item.link" @click="toggleMenu">{{ item.name }}</router-link>
             </li>
           </ol>
         </li>

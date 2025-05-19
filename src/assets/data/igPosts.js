@@ -13,7 +13,7 @@ import img12 from '@/assets/music/veinsremix.png'
 import img13 from '@/assets/music/wefoundlove.png'
 import img14 from '@/assets/music/takemeaway.png'
 import img15 from '@/assets/music/falling.png'
-import img16 from '@/assets/music/falling.png'
+import img16 from '@/assets/music/midnight.png'
 import img17 from '@/assets/music/likethis.png'
 import img18 from '@/assets/music/havenofear.png'
 import img19 from '@/assets/music/veins.png'
@@ -35,6 +35,7 @@ import img34 from '@/assets/music/release.png'
 import img35 from '@/assets/music/rise.png'
 import img36 from '@/assets/music/hope_a.png'
 import img37 from '@/assets/music/neverget.png'
+import img38 from '@/assets/music/wecanfindaway.png'
 
 
 
@@ -50,7 +51,10 @@ export const igPosts = [
     tag: "Progressive House, Dance",
     recolabel: "STMPD RCRDS B.V.",
     color: "#2B6D8F",
-    link: "https://youtu.be/sO95Xe24Pa4?si=Vthrb6Y_kEbDu68p",
+    linkyoutube: "https://youtu.be/sO95Xe24Pa4?si=Vthrb6Y_kEbDu68p",
+    linkapple: "https://music.apple.com/album/paradise-single/1778806431",
+    linkspotify: "https://open.spotify.com/album/3VY0mErp4L6ZsufkFl9DSw?si=B8_0zjkWSQms5wCJrO7iJQ",
+    linksound: "https://soundcloud.com/thirdpartymusic/third-party-romeo-blanco-paradise?si=bb3dad5cae714a0681d0d0352e4d5086&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
     type: 'Singles',
   },
   {
@@ -63,7 +67,10 @@ export const igPosts = [
     tag: "Progressive House, Dance",
     recolabel: "Protocol Recordings BV",
     color: "#245F39",
-    link: "https://youtu.be/BcMRnDUBmLw?si=rustVCs5bK-rpwJO",
+    linkyoutube: "https://youtu.be/BcMRnDUBmLw?si=rustVCs5bK-rpwJO",
+    linkapple: "https://music.apple.com/album/shut-up-nicky-romero-edit-single/1804383485",
+    linkspotify: "https://open.spotify.com/track/2VDGek9WSU4jMzaKPoFdiz?si=7f7ed5053a574c62",
+    linksound: "",
     type: 'Singles',
   },
   {
@@ -76,7 +83,10 @@ export const igPosts = [
     tag: "Progressive House, Dance",
     recolabel: "Protocol Recordings BV",
     color: "#A54D09",
-    link: "https://youtu.be/tpdXYJwT9Io?si=cM0-SbN-1_J0SJ9X",
+    linkyoutube: "https://youtu.be/tpdXYJwT9Io?si=cM0-SbN-1_J0SJ9X",
+    linkapple: "https://music.apple.com/album/bad-boy-single/1749493537",
+    linkspotify: "https://open.spotify.com/album/0sWfMsoSshIRZYdMxzBzaZ?si=ezZjF9q6Q6eMFSaWVS98CQ",
+    linksound: "",
     type: 'Singles',
   },
   {
@@ -89,7 +99,10 @@ export const igPosts = [
     tag: "Progressive House, Dance",
     recolabel: "STMPD RCRDS B.V.",
     color: "#33596D",
-    link: "https://youtu.be/Cz-47PulMw8?si=Waguqe-T_SBEJqV1",
+    linkyoutube: "https://youtu.be/Cz-47PulMw8?si=Waguqe-T_SBEJqV1",
+    linkapple: "https://music.apple.com/album/believe-single/1741002349",
+    linkspotify: "https://open.spotify.com/album/0gdOg7Dga6Mf0LiDZxWGmk?si=q5-AWaUFQlWSTSKk3mbmYQ",
+    linksound: "https://soundcloud.com/thirdpartymusic/believe?si=bc68d2cb2cc641bab0301cfc3999be4e&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
     type: 'Singles',
   },
   {
@@ -101,7 +114,10 @@ export const igPosts = [
     tag: "Progressive House, Dance",
     recolabel: "STMPD RCRDS B.V.",
     color: "#14262B",
-    link: "https://youtu.be/xVGoGYb55NI?si=dMMM6ApUhMxevs4M",
+    linkyoutube: "https://youtu.be/xVGoGYb55NI?si=dMMM6ApUhMxevs4M",
+    linkapple: "https://music.apple.com/album/carry-you-feat-declan-j-donovan-single/1727698270",
+    linkspotify: "https://open.spotify.com/track/31ZO9XuKt48Qb2eUTBynd2?si=d6556ac530bd4f7c",
+    linksound: "https://soundcloud.com/martingarrix/martin-garrix-third-party-feat-oaks-declan-j-donovan-carry-you?si=922750dd16af42e1a5996b182da2cca7&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
     type: 'Singles',
   },
   {
@@ -114,7 +130,10 @@ export const igPosts = [
     tag: "Progressive House, Dance",
     recolabel: "Release Records",
     color: "#262D56",
-    link: "https://music.apple.com/album/together/1605320588",
+    linkapple: "https://music.apple.com/album/together/1605320588",
+    linkyoutube: "https://youtube.com/playlist?list=OLAK5uy_kirROP1Qwcco7-7cfU6kTBIBuZKeZCDfc&si=5QXKC469QYttPTq1",
+    linkspotify: "https://open.spotify.com/album/00a5EKAAd7gfrblq8gY3WZ?si=ytNO6VMDQVSwRozJjbLv4A",
+    linksound: "https://soundcloud.com/thirdpartymusic/sets/together?si=4e1748cd3dbc47aea847c5573a5700e2&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
     type: "Album",
     tracks: [
       {
@@ -169,7 +188,10 @@ export const igPosts = [
     tag: "Progressive House, Dance",
     recolabel: "Release Records",
     color: "#AE3226",
-    link: "https://music.apple.com/album/keep-on-loving-you-single/1690787091",
+    linkapple: "https://music.apple.com/album/keep-on-loving-you-single/1690787091",
+    linkyoutube: "https://youtu.be/k7Jhl9qtrpE?si=PeUUF3HpNulYBNgW",
+    linkspotify: "https://open.spotify.com/album/1iTE9idOdxV4UC2TJiNi3M?si=bWbSB9hbScyAx8R0a23m-A",
+    linksound: "https://soundcloud.com/thirdpartymusic/third-party-keep-on-loving-you?si=8e4f8d9cb42d4fab81b795007b6c8488&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
     type: 'Singles',
   },
   {
@@ -182,7 +204,10 @@ export const igPosts = [
     tag: "Progressive House, Dance",
     recolabel: "STMPD RCRDS B.V.",
     color: "#121818",
-    link: "https://music.apple.com/album/thee-chords-feel-so-high-single/1678974103",
+    linkapple: "https://music.apple.com/album/thee-chords-feel-so-high-single/1678974103",
+    linkyoutube: "https://youtu.be/oo-FFIkoQ8s?si=wtgX_HIC6NdMZpkz",
+    linkspotify: "https://open.spotify.com/album/5WyKWUQzGbLnMHNXquiKk1?si=pwGuZGWtQIyLy9JF1EefNA",
+    linksound: "",
     type: 'Singles',
   },
   {
@@ -193,7 +218,10 @@ export const igPosts = [
     tag: "Progressive House, Dance",
     releases: "2023-03-17",
     recolabel: "Release Records",
-    link: "https://music.apple.com/album/together-the-remixes-ep/1677759057",
+    linkapple: "https://music.apple.com/album/together-the-remixes-ep/1677759057",
+    linkyoutube: "https://youtube.com/playlist?list=OLAK5uy_mVWCxC9UfzV5OUFFk3sFPeAvJHptciH1s&si=OHFmHzBp1a2H9kJu",
+    linkspotify: "https://open.spotify.com/album/1nUXlAazOhu2ejlWQM25z6?si=B9oQ3riWR1Kl_VyFV3cdsw",
+    linksound: "",
     color: "#8962DB",
     type: "EP",
     tracks: [
@@ -230,7 +258,10 @@ export const igPosts = [
     tag: "Progressive House, Dance",
     recolabel: "Protocol Recordings BV",
     color: "#FF2907",
-    link: "https://music.apple.com/album/for-the-people-single/1650354397",
+    linkapple: "https://music.apple.com/album/for-the-people-single/1650354397",
+    linkyoutube: "https://youtu.be/BOalykpIZug?si=eYATuzzztjJkMWyG",
+    linkspotify: "https://open.spotify.com/album/5QcP3EZoMWUi0ETWkh0NAj?si=lKWpHUjaQLKjvCRIZm11SA",
+    linksound: "https://soundcloud.com/nickyromero/nicky-romero-and-third-party-1?si=e37c8e7fd0664bd1817dafdbf2c01e79&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
     type: 'Singles',
   },
   {
@@ -243,7 +274,10 @@ export const igPosts = [
     tag: "Progressive House, Dance",
     recolabel: "Release Records",
     color: "#3349BC",
-    link: "https://music.apple.com/kr/album/never-get-enough-feat-kathy-brown-single/1635313075",
+    linkapple: "https://music.apple.com/kr/album/never-get-enough-feat-kathy-brown-single/1635313075",
+    linkyoutube: "https://youtu.be/kw0BLz0fHrA?si=IBwtOEW5qyrywEmC",
+    linkspotify: "https://open.spotify.com/album/1AeQlAOsNu4zGNOP1tNW9X?si=7rnHrWaPSPOO54OyPa4ORg",
+    linksound: "https://soundcloud.com/thirdpartymusic/never-get-enough-original-mix?si=75c012474cba4d46a75977093aedd505&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
     type: 'Singles',
   },
   {
@@ -256,7 +290,10 @@ export const igPosts = [
     tag: "Progressive House, Dance",
     recolabel: "Release Records",
     color: "#054C50",
-    link: "https://music.apple.com/album/joy-praye-remix-feat-kathy-brown/1630118459?i=1630118460",
+    linkapple: "https://music.apple.com/album/joy-praye-remix-feat-kathy-brown/1630118459?i=1630118460",
+    linkyoutube: "https://youtu.be/BaZAI2aLEMM?si=r8kRvoTVtCgbOHa8",
+    linkspotify: "https://open.spotify.com/album/5l3PcMkJ6wRmFghlBm7obz?si=qZQg5ovETlWh4hp4tpo0Zg",
+    linksound: "",
     type: 'Singles',
   },
   {
@@ -269,7 +306,10 @@ export const igPosts = [
     tag: "Progressive House, Dance",
     recolabel: "Release Records",
     color: "#EF432F",
-    link: "https://music.apple.com/album/joy-single/1623560970",
+    linkapple: "https://music.apple.com/album/joy-single/1623560970",
+    linkyoutube: "https://youtu.be/QYRQmaHalyw?si=bnEUijl7bWYm01TC",
+    linkspotify: "https://open.spotify.com/album/3eBF79K45I8Tn7zo7A05u4?si=nhAyIphTS3Kg-6yiB0wdxg",
+    linksound: "https://soundcloud.com/thirdpartymusic/third-party-feat-kathy-brown-joy?si=c5622dd962874c75ae52c24c4733ec87&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
     type: 'Singles',
   },
   //2021
@@ -283,7 +323,10 @@ export const igPosts = [
     tag: "Progressive House, Dance",
     recolabel: "Armada Music B.V. under exclusive license from Release Records",
     color: "#020004",
-    link: "https://music.apple.com/album/veins-avira-remix-single/1578818610",
+    linkapple: "https://music.apple.com/album/veins-avira-remix-single/1578818610",
+    linkyoutube: "https://youtube.com/playlist?list=OLAK5uy_k6OU3voSPqX3hN_Rsnt7WvVMB135a2w2c&si=pEg22yP34oDqjD20",
+    linkspotify: "https://open.spotify.com/album/3pWiu1vPlKVxxw7AjKNNUQ?si=vtUvy7zzTkKTUCWethK7NA",
+    linksound: "https://soundcloud.com/thirdpartymusic/sets/veins-avira-remix?si=3404025b22eb4ed7a600dca5ca308694&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
     type: 'Singles',
   },
 
@@ -298,7 +341,10 @@ export const igPosts = [
     tag: "Progressive House, Dance",
     recolabel: "Release Records",
     color: "#902523",
-    link: "https://music.apple.com/album/we-found-love-feat-errol-reid-radio-edit-single/1598573286",
+    linkapple: "https://music.apple.com/album/we-found-love-feat-errol-reid-radio-edit-single/1598573286",
+    linkyoutube: "https://youtu.be/lUnRZbxbzDo?si=otMGiXb5snqbtH4O",
+    linkspotify: "https://open.spotify.com/album/7fLT5POAV4XuWB97Nd3jAA?si=Sdm9Zj6YRfabGQLSACVDcQ",
+    linksound: "https://soundcloud.com/thirdpartymusic/we-found-love-w-gvn-feat-errol-reid-radio-edit?si=371a2f80828c440cb12fb53834c466e6&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
     type: 'Singles',
   },
   {
@@ -311,7 +357,10 @@ export const igPosts = [
     tag: "Progressive House, Dance",
     recolabel: "Release Records",
     color: "#4062AA",
-    link: "https://music.apple.com/album/take-me-away-radio-edit-single/1598573495",
+    linkapple: "https://music.apple.com/album/take-me-away-radio-edit-single/1598573495",
+    linkyoutube: "https://youtu.be/izwn-HOZWXI?si=wjHkfTCWSv-rO0nn",
+    linkspotify: "https://open.spotify.com/album/5hA35RHeO8ybNBzRkGKzW9?si=YrwoKZOAQ_u4XHJ_TSRSmw",
+    linksound: "https://soundcloud.com/thirdpartymusic/third-party-take-me-away?si=6d2ea8b182e949abae1fd347487a31f2&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
     type: 'Singles',
   },
   //2019
@@ -325,7 +374,10 @@ export const igPosts = [
     tag: "Progressive House, Dance",
     recolabel: "Release Records",
     color: "#4E91D7",
-    link: "https://music.apple.com/album/falling-feat-first-state-anita-kelsey-radio-edit-single/1598573836",
+    linkapple: "https://music.apple.com/album/falling-feat-first-state-anita-kelsey-radio-edit-single/1598573836",
+    linkyoutube: "https://youtu.be/mgfYt_xjaXM?si=4D-4js1vUT58UPxQ",
+    linkspotify: "https://open.spotify.com/album/1ZY0DaJ2xgbwMZEuUopEhf?si=pAfYS2khQiWLFTMvLII9IQ",
+    linksound: "https://soundcloud.com/thirdpartymusic/falling-radio-mix?si=9b28f2686f604bdaaef6d5ac265d18bf&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
     type: 'Singles',
   },
   //2018
@@ -339,7 +391,10 @@ export const igPosts = [
     tag: "Progressive House, Dance",
     recolabel: "Release Records",
     color: "#732771",
-    link: "https://music.apple.com/album/midnight-single/1598573879",
+    linkapple: "https://music.apple.com/album/midnight-single/1598573879",
+    linkyoutube: "https://youtu.be/TtsRFPz6Kd4?si=dntSQqUsn9rDu8aM",
+    linkspotify: "https://open.spotify.com/album/0MCwg7Ej166FwbT0lnGzH1?si=gsdO-9v7Rp6kqXmc7RuXLw",
+    linksound: "https://soundcloud.com/thirdpartymusic/midnight?si=ad0a2fd401344bdd8b10c4dcaddf4ebd&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
     type: 'Singles',
   },
   //2017
@@ -353,7 +408,10 @@ export const igPosts = [
     tag: "Progressive House, Dance",
     recolabel: "Release Records",
     color: "#DF232A",
-    link: "https://music.apple.com/album/like-this-radio-edit-single/1598574336",
+    linkapple: "https://music.apple.com/album/like-this-radio-edit-single/1598574336",
+    linkyoutube: "https://youtu.be/YO3ueyEo9fk?si=nMgPeJeV8GnZTQuh",
+    linkspotify: "https://open.spotify.com/album/2xESkyZCjJiMdxtEWLeg09?si=E2NKIRf4SWearb9xkGVwLA",
+    linksound: "https://soundcloud.com/thirdpartymusic/third-party-pete-k-cory-lasser-like-this-original-mix?si=b286098f7fc346698f9dd1fd22faa5c6&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
     type: 'Singles',
   },
   {
@@ -366,7 +424,10 @@ export const igPosts = [
     tag: "Progressive House, Dance",
     recolabel: "Release Records under exclusive license to Armada Music B.V.",
     color: "#030301",
-    link: "https://music.apple.com/album/have-no-fear-single/1197825828",
+    linkapple: "https://music.apple.com/album/have-no-fear-single/1197825828",
+    linkyoutube: "https://youtu.be/LPlV4NdMGSQ?si=GTAPxqnfAezpwczd",
+    linkspotify: "https://open.spotify.com/album/1zykVM7sdoWyGodVSMuBWT?si=4QVZ-7UsTkepiB79cUriSg",
+    linksound: "https://soundcloud.com/thirdpartymusic/third-party-have-no-fear-1?si=3db72f847b234e19b93802b54db9e60f&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
     type: 'Singles',
   },
   {
@@ -379,7 +440,10 @@ export const igPosts = [
     tag: "Progressive House, Dance",
     recolabel: "Release Records under exclusive license to Armada Music B.V.",
     color: "#050413",
-    link: "https://music.apple.com/album/veins-single/1186675559",
+    linkapple: "https://music.apple.com/album/veins-single/1186675559",
+    linkyoutube: "https://youtu.be/186nnb1ZgVU?si=s7G8_4N8dXwyfysM",
+    linkspotify: "https://open.spotify.com/album/1OpOXbiH33Nkc9P4PxRRMb?si=EyLzJjmhRQi0VOyWT8nvxg",
+    linksound: "https://soundcloud.com/thirdpartymusic/third-party-veins?si=560fadb25ddd4a9cb3a8f8febe679f7c&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
     type: 'Singles',
   },
   //2016
@@ -393,7 +457,10 @@ export const igPosts = [
     tag: "Progressive House, Dance",
     recolabel: "Armada Music B.V. under exclusive license from Release Records",
     color: "#8D7E9B",
-    link: "https://music.apple.com/album/start-it-single/1139251413",
+    linkapple: "https://music.apple.com/album/start-it-single/1139251413",
+    linkyoutube: "https://youtube.com/playlist?list=OLAK5uy_l7FGoxGhc3F-Mm9O08hLBFE_k7JodQnoA&si=W6oZ3tlCPjDKcyuI",
+    linkspotify: "https://open.spotify.com/album/47rjbxtJ0w1vqH9MTV3ukC?si=zKCW0AKQReCAMCQzp6rIvw",
+    linksound: "https://soundcloud.com/thirdpartymusic/sets/start-it-4?si=97154b2e427c461dbd694f52eb5654e5&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
     type: 'Singles',
   },
   {
@@ -406,7 +473,10 @@ export const igPosts = [
     tag: "Progressive House, Dance",
     recolabel: "#DLDKMUSIC under exclusive license to Armada Music B.V.",
     color: "#67158F",
-    link: "https://music.apple.com/album/never-let-you-go-single/1124060449",
+    linkapple: "https://music.apple.com/album/never-let-you-go-single/1124060449",
+    linkyoutube: "https://youtu.be/FN_UBZfEVA0?si=RVhZxJbjPNrLDYJ0",
+    linkspotify: "https://open.spotify.com/album/48vcTRjmHOQ6sr1DUNHDos?si=T9TfCUlpSz2es8jDGWsw4Q",
+    linksound: "https://soundcloud.com/armadamusic/third-party-sem-vox-never-let-you-go-out-now?si=a8e458c574bc4cc7a00002f6fb5e19ac&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
     type: 'Singles',
   },
   {
@@ -419,7 +489,10 @@ export const igPosts = [
     tag: "Progressive House, Dance",
     recolabel: "STMPD RECODS",
     color: "#364358",
-    link: "https://music.apple.com/album/lions-in-the-wild-single/1293743667",
+    linkapple: "https://music.apple.com/album/lions-in-the-wild-single/1293743667",
+    linkyoutube: "https://youtu.be/95D6zmJreQU?si=uw7PC0C4iOvKj1ko",
+    linkspotify: "https://open.spotify.com/album/2x8X4Dq12rXdQsmk41F3VV?si=iR-vBE5eSCGDQGkaxLOFoQ",
+    linksound: "https://soundcloud.com/martingarrix/lions-in-the-wild?si=0c36f25578ec49bfb18633086be242a5&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
     type: 'Singles',
   },
   {
@@ -432,7 +505,10 @@ export const igPosts = [
     tag: "Progressive House, Dance",
     recolabel: "Release Records under exclusive license to Armada Music B.V.",
     color: "#000000",
-    link: "https://music.apple.com/album/real-sound-single/1075964340",
+    linkapple: "https://music.apple.com/album/real-sound-single/1075964340",
+    linkyoutube: "https://youtube.com/playlist?list=OLAK5uy_k-Rz_ssWuzOJiU9PedMwiMrRSMsO_PiLA&si=Z7lsYZRo_1BeXo4_",
+    linkspotify: "https://open.spotify.com/album/0hT8wqXK0Ak20AROxboOJK?si=Q0c43ocuSPWsQDq_kCp9qA",
+    linksound: "https://soundcloud.com/thirdpartymusic/real-sound-w-sentinel-release-records?si=a012037edf894c469bfe0e495b755200&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
     type: 'Singles',
   },
   //2015
@@ -446,7 +522,10 @@ export const igPosts = [
     tag: "Progressive House, Dance",
     recolabel: "Release Records under exclusive license to Armada Music B.V.",
     color: "#A95EFC",
-    link: "https://music.apple.com/album/waiting-single/1055399639",
+    linkapple: "https://music.apple.com/album/waiting-single/1055399639",
+    linkyoutube: "https://youtu.be/7GvxZljsqCU?si=X9xWctmKIhOozfhi",
+    linkspotify: "https://open.spotify.com/album/7F8IqMQfKdVzzzBmSHfg48?si=9ITYhib3Ssm6IKtKJ5Ssnw",
+    linksound: "https://soundcloud.com/thirdpartymusic/waiting?si=6d473ab0dc0f41f7808a6eb603691630&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
     type: 'Singles',
   },
   {
@@ -458,7 +537,10 @@ export const igPosts = [
     tag: "Progressive House, Dance",
     recolabel: "SIZE Records",
     color: "#EBBB55",
-    link: "https://music.apple.com/album/nation-single/1039541977",
+    linkapple: "https://music.apple.com/album/nation-single/1039541977",
+    linkyoutube: "https://youtube.com/playlist?list=OLAK5uy_l4q3A-GAllV2Ll7lVNrCzJ6AQ2iIWIyNI&si=P3R_CeSaVUoPr_tZ",
+    linkspotify: "https://open.spotify.com/album/5KC3h3joZ5639zxVoJXgON?si=wCVYb6BmTiKRVzfJJptiYw",
+    linksound: "https://soundcloud.com/thirdpartymusic/sets/nation-ep?si=cf93fb61fe844652b248990ed47a9d9c&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
     type: 'EP',
     tracks: [
       {
@@ -485,7 +567,10 @@ export const igPosts = [
     tag: "Progressive House, Dance",
     recolabel: "Armada Music B.V.",
     color: "#029A1A",
-    link: "https://music.apple.com/album/arrival-single/1017296187",
+    linkapple: "https://music.apple.com/album/arrival-single/1017296187",
+    linkyoutube: "https://youtu.be/TXyD2ND-xVY?si=QtclTAIMChJlN088",
+    linkspotify: "https://open.spotify.com/album/1v6zTXnIcg4AFoyuyHz49m?si=7-3sVUO7RsqeSiAWrbSnFw",
+    linksound: "https://soundcloud.com/thirdpartymusic/arrival-release-records?si=0704a00887d04ded90c1d2a77471f50c&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
     type: 'Singles',
   },
   {
@@ -498,7 +583,10 @@ export const igPosts = [
     tag: "Progressive House, Dance",
     recolabel: "Release Records under exclusive license to Armada Music B.V.",
     color: "#0C0002",
-    link: "https://music.apple.com/album/collide-feat-daniel-gidlund-radio-edit-single/1006860402",
+    linkapple: "https://music.apple.com/album/collide-feat-daniel-gidlund-radio-edit-single/1006860402",
+    linkyoutube: "https://youtu.be/skUEk7DWZ9s?si=D_op_sWGoqCnptim",
+    linkspotify: "https://open.spotify.com/album/24LQD14NMUc8mkYjIqdCP8?si=ugICMu5tR2qE5VTIo78LOA",
+    linksound: "https://soundcloud.com/thirdpartymusic/third-party-collide-ft-daniel-gidlund?si=ad7455a6b3d24aae801d7c89575c48dc&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
     type: 'Singles',
   },
   {
@@ -511,7 +599,10 @@ export const igPosts = [
     tag: "Progressive House, Dance",
     recolabel: "Release Records under exclusive license to Armada Music B.V.",
     color: "#000000",
-    link: "https://music.apple.com/album/alive-single/996380182",
+    linkapple: "https://music.apple.com/album/alive-single/996380182",
+    linkyoutube: "https://youtu.be/-Q91aDx8A2k?si=EptzHRsxehwfOg18",
+    linkspotify: "https://open.spotify.com/album/71Cz3r6BeA6Nc49JJ6vKAk?si=-TU5QPf3Quuxazr5Nkh5PQ",
+    linksound: "https://soundcloud.com/thirdpartymusic/alive?si=00b42a6fb871446fa83735e843d8f025&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
     type: 'Singles',
   },
   {
@@ -524,7 +615,10 @@ export const igPosts = [
     tag: "Progressive House, Dance",
     recolabel: "SIZE Records",
     color: "#377CE4",
-    link: "https://music.apple.com/album/everyday-of-my-life-single/882233044",
+    linkapple: "https://music.apple.com/album/everyday-of-my-life-single/882233044",
+    linkyoutube: "https://youtu.be/OO3UTjgBBj8?si=sofVDh3Nr2NUGt4H",
+    linkspotify: "https://open.spotify.com/album/6zLsyGJFj14fsURHJxh1wo?si=Ytut_490QSmcIEYS6rFa4Q",
+    linksound: "https://soundcloud.com/thirdpartymusic/everyday-of-my-life-original-club-mix?si=15683b99041f457ba74927388a120431&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
     type: 'Singles',
   },
   //2012
@@ -538,7 +632,10 @@ export const igPosts = [
     tag: "Progressive House, Dance",
     recolabel: "SIZE Records",
     color: "#232323",
-    link: "https://music.apple.com/album/lights-single/948386206",
+    linkapple: "https://music.apple.com/album/lights-single/948386206",
+    linkyoutube: "https://youtube.com/playlist?list=OLAK5uy_n385yz0NaDDgJV7ARG1z7qfIAgAFtE_fI&si=xbjiYFmzGSR-SBnR",
+    linkspotify: "https://open.spotify.com/album/2x8P46sEJfTlJihTGd5hpt?si=pt4VfF03RYWlXTVukb8lcg",
+    linksound: "",
     type: 'Singles',
   },
   {
@@ -551,7 +648,10 @@ export const igPosts = [
     tag: "Progressive House, Dance",
     recolabel: "SIZE Records",
     color: "#F88316",
-    link: "https://music.apple.com/album/feel-single/948020345",
+    linkapple: "https://music.apple.com/album/feel-single/948020345",
+    linkyoutube: "https://youtu.be/s6xzAPtCXKk?si=QJiiPy8CNah4rHnI",
+    linkspotify: "https://open.spotify.com/album/1F426RbtrMNa738Xi1PRfC?si=ZDLhaRn9QCm0ION5f0ufPw",
+    linksound: "https://soundcloud.com/thirdpartymusic/third-party-vs-cicada-feel?si=87a1978fdeb34df6aedbb62536c23f71&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
     type: 'Singles',
   },
   //2011
@@ -565,7 +665,10 @@ export const igPosts = [
     tag: "Progressive House, Dance",
     recolabel: "Heat Recordings (HEAT046)",
     color: "#EC3225",
-    link: "https://music.apple.com/album/de-tune-single/436396492",
+    linkapple: "https://music.apple.com/album/de-tune-single/436396492",
+    linkyoutube: "https://youtube.com/playlist?list=OLAK5uy_nOQGD-y7_0aTjGGL2eTEEahmZBEF-EgYA&si=mxJ5Ivj8k9ga_Ep-",
+    linkspotify: "https://open.spotify.com/album/68nR3ryVHDmTC5vq1dNoTl?si=k1A-vNw5RsyqG1AMgJLcKw",
+    linksound: "https://soundcloud.com/thirdpartymusic/de-tune?si=2ac0eaf4b6b442ee920b4b199412e1d9&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
     type: 'Singles',
   },
   {
@@ -578,7 +681,10 @@ export const igPosts = [
     tag: "Progressive House, Dance",
     recolabel: "SIZE Records",
     color: "#E43132",
-    link: "https://music.apple.com/album/duel-single/948018469",
+    linkapple: "https://music.apple.com/album/duel-single/948018469",
+    linkyoutube: "https://youtube.com/playlist?list=OLAK5uy_kDZUUPvzgFECB-kV3YoX1wNztp84pYvS4&si=maxv1OF-zqRmwmn_",
+    linkspotify: "https://open.spotify.com/album/62YhqNI8AbFj4MMZiXWrvg?si=QF7-MXVNRhazW532lLXYfg",
+    linksound: "",
     type: 'Singles',
   },
   //2010
@@ -592,7 +698,10 @@ export const igPosts = [
     tag: "Progressive House, Dance",
     recolabel: "SIZE Records",
     color: "#FED127",
-    link: "https://music.apple.com/album/release-single/923048536",
+    linkapple: "https://music.apple.com/album/release-single/923048536",
+    linkyoutube: "https://youtube.com/playlist?list=OLAK5uy_mRbo4JQes2HPx2pI0dHwTn1BidGybTmIo&si=smi6o79hrRsZ8XDy",
+    linkspotify: "https://open.spotify.com/album/48Q24Nr3TSfEfDWS0XYEZz?si=77nvDLq7QN2G-k8hK2AxyA",
+    linksound: "https://soundcloud.com/thirdpartymusic/release?si=f8e3a6c90a3d496c92c021dfe856444f&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
     type: 'Singles',
   },
   {
@@ -604,7 +713,10 @@ export const igPosts = [
     tag: "Progressive House, Dance",
     recolabel: "Heat Recordings",
     color: "#EF5424",
-    link: "https://music.apple.com/album/rise-remixes-feat-feat-abigail-bailey-single/387165732",
+    linkapple: "https://music.apple.com/album/rise-remixes-feat-feat-abigail-bailey-single/387165732",
+    linkyoutube: "https://youtube.com/playlist?list=OLAK5uy_n4L71IJHjP0LeTCQ1-ZiiZd80ZFfXqKFQ&si=USOFva0RM6SBSgDD",
+    linkspotify: "https://open.spotify.com/album/0PFbQEYfEOpkAdmDRXYr3c?si=ijqFepb9TD6RanqU7_s5VA",
+    linksound: "https://soundcloud.com/thirdpartymusic/sets/rise-960690931?si=350bea37c4f646c6a247dae851c53985&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
     type: 'EP',
     tracks: [
       {
@@ -639,7 +751,10 @@ export const igPosts = [
     tag: "Progressive House, Dance",
     recolabel: "Release Records under exclusive license to Armada Music B.V.",
     color: "#030203",
-    link: "https://music.apple.com/album/hope/1195197116",
+    linkapple: "https://music.apple.com/album/hope/1195197116",
+    linkyoutube: "https://youtube.com/playlist?list=OLAK5uy_l7MF77YS_ZtG_n-YS0wrh3uEgkM1QxbKY&si=sN7m53qK4FrPUNIf",
+    linkspotify: "https://open.spotify.com/album/1DwFjjaJSW7OIbiCoJu05D?si=OdJeafd0SUi6-X_HOs8NFQ",
+    linksound: "https://soundcloud.com/thirdpartymusic/sets/hope-1?si=9ff6946f46ad45529a885e4b54b9a25b&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
     type: "Album",
     tracks: [
       {
@@ -683,5 +798,21 @@ export const igPosts = [
         djname: "THIRD ≡ PARTY",
       },
     ]
+  },
+  {
+    id: 38,
+    image: img38,
+    caption: "We Can Find A Way (Third Party Remix)",
+    album: "We Can Find A Way",
+    djname:"Stevie Krach, RedScope, THIRD ≡ PARTY",
+    releases: "2024-07-12",
+    tag: "Progressive House, Dance",
+    recolabel: "Release Records",
+    color: "#E03F07",
+    linkapple: "https://music.apple.com/kr/album/we-can-find-a-way-third-party-mix-single/1753946768",
+    linkyoutube: "https://youtu.be/Nzr-_6nySoY?si=_No1FPxIHx5B1r5e",
+    linkspotify: "https://open.spotify.com/album/7GXKO4RUsmcTc0cOncmOgj?si=DMMQBPDBSa-kqLOytXKm2A",
+    linksound: "",
+    type: 'Singles',
   },
 ]

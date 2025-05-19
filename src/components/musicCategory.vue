@@ -39,8 +39,21 @@ const filteredPosts = computed(() => {
 const visiblePosts = computed(() => filteredPosts.value.slice(0, visibleCount.value))
 
 function setType(type) {
-  router.push({ query: { ...route.query, type } })
-  visibleCount.value = 6
+  // router.push({ query: { ...route.query, type } })
+  selectedAlbumId.value = null
+  if (route.query.type === type) {
+    // 같은 탭이면 강제로 리셋 효과
+    visibleCount.value = 0
+    nextTick(() => {
+      visibleCount.value = igPosts.length
+    })
+  } else {
+    router.push({ query: { ...route.query, type } })
+
+    nextTick(() => {
+      visibleCount.value = type === 'ALL' ? igPosts.length : 6
+    })
+  }
 }
 let isLoading = false
 
@@ -86,9 +99,7 @@ onBeforeUnmount(() => {
 <template>
   <div class="pad-top100">
     <div class="type-tabs">
-      <button
-        v-for="type in types"
-        :key="type"
+      <button v-for="type in types" :key="type"
         :class="['music-tab-btn', { active: currentType === type }]"
 
         @click="setType(type)">
@@ -109,50 +120,78 @@ onBeforeUnmount(() => {
               <button @click="closeAlbum" class="close-album material-icons-round">close</button>
             <div>
               <div v-if="post.tracks && post.tracks.length" class="album-infor">
-                <img :src="post.image" alt="Album art"/>
-                <div class="album-contents">
-                  <h3>{{ post.album }}</h3>
-                  <p>발매일: {{ post.releases }}<br/>레이블: {{ post.recolabel }}</p>
-                  <ul>
-                    <li v-for="(track, index) in post.tracks" :key="index">
-                      <div>
-                        <strong>{{ track.caption }}</strong><br/>
-                        DJ: {{ track.djname }}<br/>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
+                <div class="infor-img"><img :src="post.image" alt="Album art"/></div>
+                <ul class="album-contents">
+                  <li class="alb-tit">{{ post.album }}</li>
+                  <li>{{ post.releases }}</li>
+                  <li>{{ post.recolabel }}</li>
+                  <li class="alb-track">Track List</li>
+                  <li class="track-inner">
+                    <ol v-for="(track, index) in post.tracks" :key="index">
+                      <li>{{ track.caption }}</li>
+                      <li class="fz-14">{{ track.djname }}</li>
+                    </ol>
+                  </li>
+                  <li class="alb-link">
+                    <ol>
+                      <li>
+                        <a v-if="post.linkapple" :href="post.linkapple" target="_blank">
+                          <i class="fa-brands fa-apple"></i>
+                          Apple Music
+                        </a>
+                      </li>
+                      <li>
+                        <a v-if="post.linkyoutube" :href="post.linkyoutube" target="_blank">
+                          <i class="fa-brands fa-youtube"></i>
+                          Youtube Music
+                        </a>
+                      </li>
+                      <li>
+                        <a v-if="post.linkspotify" :href="post.linkspotify" target="_blank">
+                          <i class="fa-brands fa-spotify"></i>
+                          Spotify
+                        </a>
+                      </li>
+                      <li>
+                        <a v-if="post.linksound" :href="post.linksound" target="_blank">
+                          <i class="fa-brands fa-soundcloud"></i>
+                          Sound Cloud
+                        </a>
+                      </li>
+                    </ol>
+                  </li> 
+                </ul>
+                
               </div>
               <div v-else class="album-infor">
                 <img :src="post.image" alt="Album art" />
                 <ul class="album-contents">
                   <li class="alb-tit">{{ post.caption }} </li>
-                  <li class="alb-type">{{ post.type }}</li>
                   <li class="alb-name">{{ post.djname }}<br/></li>
                   <li class="alb-rele">{{ post.releases }}<br/></li>
                   <li class="alb-tag">{{ post.tag }}<br/></li>
                   <li class="alb-link">
                     <ol>
                       <li>
-                        <a v-if="post.link" :href="post.link" target="_blank">
+                        <a v-if="post.linkapple" :href="post.linkapple" target="_blank">
                           <i class="fa-brands fa-apple"></i>
                           Apple Music
                         </a>
                       </li>
                       <li>
-                        <a v-if="post.link" :href="post.link" target="_blank">
+                        <a v-if="post.linkyoutube" :href="post.linkyoutube" target="_blank">
                           <i class="fa-brands fa-youtube"></i>
                           Youtube Music
                         </a>
                       </li>
                       <li>
-                        <a v-if="post.link" :href="post.link" target="_blank">
+                        <a v-if="post.linkspotify" :href="post.linkspotify" target="_blank">
                           <i class="fa-brands fa-spotify"></i>
                           Spotify
                         </a>
                       </li>
                       <li>
-                        <a v-if="post.link" :href="post.link" target="_blank">
+                        <a v-if="post.linksound" :href="post.linksound" target="_blank">
                           <i class="fa-brands fa-soundcloud"></i>
                           Sound Cloud
                         </a>
@@ -202,16 +241,19 @@ onBeforeUnmount(() => {
     }
   }
   .type-tabs {
-    position: fixed;
     display: flex;
-    flex-direction: column;
-    top: 45%;
-    gap: 20px;
     margin-bottom: 20px;
+    @media screen and (max-width: 768px) {
+      gap: 10px;
+    }
+    @media screen and (min-width: 769px) {
+      flex-direction: column;
+      position: fixed;
+      top: 45%;
+      gap: 20px;
+    }
   }
   .music-tab-btn {
-    width: 80px;
-    font-size: 18px;
     background-color: transparent;
     color: #fff;
     border: 1px solid #eee;
@@ -230,6 +272,15 @@ onBeforeUnmount(() => {
       font-weight: bold;
       background-color: rgba(255, 255, 255, 0.8);
       color: #353540;
+    }
+    @media screen and (max-width: 768px) {
+      flex-grow: 1;
+      padding: 10px 0;
+      font-size: 16px;
+    }
+    @media screen and (min-width: 769px) {
+      width: 80px;
+      font-size: 18px;
     }
   }
   .current-type {
@@ -252,11 +303,15 @@ onBeforeUnmount(() => {
     width: 100%;
     padding: 30px 30px 30px 100px;
     @media screen and (max-width: 616px) {
-      padding: 0;
+      padding: 0 0 20px 0;
       grid-template-columns: repeat(2, 1fr);
       gap: 20px;
     }
-    @media screen and (min-width: 617px)  and (max-width: 1500px) {
+    @media screen and (min-width: 617px)  and (max-width: 768px) {
+      padding: 0;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media screen and (min-width: 769px)  and (max-width: 1500px) {
       grid-template-columns: repeat(3, 1fr);
     }
     @media screen and (min-width: 1501px) and (max-width: 1780px) {
@@ -353,52 +408,102 @@ onBeforeUnmount(() => {
 
 .album-continer {
   width: 100%;
-  padding-right: 30px;
-  padding-left: 100px;
   margin-top: 30px;
   border-radius: 5px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  @media screen and (max-width: 768px) {
+
+    }
+  @media screen and (min-width: 769px) {
+    padding-right: 30px;
+    padding-left: 100px;
+  }
 }
 .album-box {
   position: relative;
   border-radius: 5px;
-  padding: 30px 40px;
+  height: 100%;
   scroll-margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @media screen and (max-width: 768px) {
+    padding: 20px;
+    }
+  @media screen and (min-width: 769px) {
+    padding: 30px 40px;
+  }
 }
 .close-album {
   position: absolute;
-  right: 30px;
-  top: 30px;
   border: none;
   background-color: transparent;
   color: #fff;
-  font-size: 3vw;
   cursor: pointer;
+  transform: rotate(0);
+  transition: ease-in-out 0.2s;
   &:hover {
     text-shadow: 1px 1px 4px rgba($color: #000000, $alpha: 0.5);
     color: #ddd;
+    transform: rotate(90deg);
   }
   &:active {
     color: #353540;
   }
+  @media screen and (max-width: 768px) {
+    right: 5px;
+    top: 5px;
+    font-size: 36px;
+  }
+  @media screen and (min-width: 769px) {
+    right: 30px;
+    top: 30px;
+    font-size: 3vw;
+  }
+}
+.infor-img {
+  height: 100%;
 }
 .album-infor {
   display: flex;
   img {
-    width: 30vw;
     border-radius: 5px;
     box-shadow: 0px 0px 6px rgba($color: #000000, $alpha: 0.5);
+  }
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    padding-top: 30px;
+    img {
+      width: 100%;
+      }
+    }
+  @media screen and (min-width: 769px) {
+    img {
+      width: 28vw;
+      min-width: 26vw;
+    }
   }
 }
 .album-contents {
   display: grid;
-  padding: 10px 0 0 30px;
   width: 100%;
   text-shadow: 1px 1px 3px rgba($color: #000000, $alpha: 0.5);
+  @media screen and (max-width: 768px) {
+    padding: 10px 0 0 0;
+    gap: 10px 0;
+    }
+  @media screen and (min-width: 769px) {
+    padding: 10px 0 0 30px;
+  }
 }
 .alb-tit {
-  font-size: 2vw;
   font-weight: bold;
+  @media screen and (max-width: 768px) {
+    font-size: 5vw;
+    }
+  @media screen and (min-width: 769px) {
+    font-size: 2vw;
+  }
 }
 .alb-link {
   border-top: 1px solid rgba(255, 255, 255, 0.4);
@@ -423,4 +528,26 @@ onBeforeUnmount(() => {
     margin-right: 5px;
   }
 }
+.alb-track {
+  font-size: 20px;
+  font-weight: bold;
+}
+.track-inner{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+  ol {
+    padding: 0 10px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+  }
+  @media screen and (max-width: 768px) {
+
+    }
+  @media screen and (min-width: 769px) {
+
+  }
+}
+
 </style>

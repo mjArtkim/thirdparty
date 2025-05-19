@@ -31,7 +31,7 @@ function goToLink(link) {
           <div class="ig-img-icon">
             <button class="ig-play" 
             :style="{ backgroundColor: post.color }"
-            @click="goToLink(post.link)"
+            @click="goToLink(post.linkyoutube)"
             >
             <span class="material-icons-outlined">play_circle_outline</span>
           </button>

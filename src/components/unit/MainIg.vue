@@ -62,7 +62,7 @@ function goToLink(link) {
 <style>
 .ig-card {
   width: 30em;
-  height: 620px;
+  height: 630px;
   padding: 15px;
   background: rgba( 255, 255, 255);
   border-radius: 20px;
@@ -273,7 +273,7 @@ function goToLink(link) {
 @media (min-width: 430px) and (max-width: 600px) {
   .ig-card {
     width: 300px;
-    height: 450px;
+    height: 470px;
   }
   .ig-container {
     grid-template-columns: 1fr;
@@ -329,7 +329,7 @@ function goToLink(link) {
 @media (min-width: 601px) and (max-width: 768px) {
   .ig-card {
     width: 300px;
-    height: 450px;
+    height: 470px;
   }
   .ig-container {
     grid-template-columns: 1fr;
@@ -383,7 +383,7 @@ function goToLink(link) {
 @media (min-width: 769px) and (max-width: 1080px) {
   .ig-card {
     width: 300px;
-    height: 450px;
+    height: 470px;
   }
   .ig-container {
     grid-template-columns: 1fr 1fr;

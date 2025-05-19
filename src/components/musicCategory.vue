@@ -303,7 +303,7 @@ onBeforeUnmount(() => {
     width: 100%;
     padding: 30px 30px 30px 100px;
     @media screen and (max-width: 616px) {
-      padding: 0 0 20px 0;
+      padding: 20px 0 20px 0;
       grid-template-columns: repeat(2, 1fr);
       gap: 20px;
     }

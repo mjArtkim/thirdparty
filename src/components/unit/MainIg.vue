@@ -180,6 +180,7 @@ function goToLink(link) {
   transform: rotate(-2deg);
 }
 .ig-play:hover span {
+  margin-top: 5px;
   font-size: 4em;
 }
 .ig-play:hover::after {
@@ -230,6 +231,7 @@ function goToLink(link) {
     margin-bottom: 0;
   }
   .ig-play span {
+    margin-top: 3px;
     font-size: 20px;
   }
   .ig-play:hover span {
@@ -285,6 +287,7 @@ function goToLink(link) {
     margin-bottom: 0;
   }
   .ig-play span {
+    margin-top: 3px;
     font-size: 26px;
   }
   .ig-play:hover span {
@@ -341,6 +344,7 @@ function goToLink(link) {
     margin-bottom: 0;
   }
   .ig-play span {
+    margin-top: 3px;
     font-size: 26px;
   }
   .ig-play:hover span {
@@ -395,6 +399,7 @@ function goToLink(link) {
     margin-bottom: 10px;
   }
   .ig-play span {
+    margin-top: 3px;
     font-size: 26px;
   }
   .ig-play:hover span {

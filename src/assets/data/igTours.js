@@ -41,7 +41,7 @@ export const igTours = [
   },
   {
     id: 6,
-    date: "2025-06-21",
+    date: "2025-08-22",
     title: "Creamfields 2025",
     city: "Cheshire West and Chester",
     country: "UK",
@@ -95,4 +95,5 @@ export const igTours = [
     country: "France",
     ticket: ""
   },
+  
 ]        

@@ -93,11 +93,11 @@ watch(isMusicMenuVisible, (visible) => {
         </a>
       </li>
       <li>
-        <a href="#"
+        <router-link to="/tourpage"
           @click.prevent="handleMenuClick('TOUR')"
           :class="{ active: activeMenu === 'TOUR' }">
           TOUR
-        </a>
+        </router-link>
       </li>
       <li>
         <a href="https://www.thirdpartypresents.com"
@@ -108,11 +108,11 @@ watch(isMusicMenuVisible, (visible) => {
         </a>
       </li>
       <li>
-        <a href="#"
+        <router-link to="/aboutpage"
           @click.prevent="handleMenuClick('ABOUT')"
           :class="{ active: activeMenu === 'ABOUT' }">
           ABOUT
-        </a>
+        </router-link>
       </li>
       <li>
         <a href="https://www.thirdpartypresents.com/pages/contact"
@@ -160,9 +160,9 @@ watch(isMusicMenuVisible, (visible) => {
             </li>
           </ol>
         </li>
-        <li class="hd-m-tour"><a href="#">TOUR</a></li>
+        <li class="hd-m-tour"><router-link to="/tourpage">TOUR</router-link></li>
         <li class="hd-m-tour"><a href="https://www.thirdpartypresents.com">SHOP</a></li>
-        <li class="hd-m-tour"><a href="#">ABOUT</a></li>
+        <li class="hd-m-tour"><router-link to="/aboutpage">ABOUT</router-link></li>
         <li class="hd-m-tour"><a href="https://www.thirdpartypresents.com/pages/contact">CONTACT</a></li>
       </ul>
     </div>

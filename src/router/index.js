@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import MainPageView from '@/components/MainPage.vue';
 import MusicCategoryView from '@/components/musicCategory.vue';
+import TourPageView from '@/components/TourPage.vue';
+import AboutPageView from '@/components/AboutPage.vue';
 
 const routes = [
   {
@@ -12,7 +14,17 @@ const routes = [
     path: '/musiccategory',
     name: 'musiccategory',
     component: MusicCategoryView,
-  }
+  },
+  {
+    path: '/tourpage',
+    name: 'tourpage',
+    component: TourPageView,
+  },
+  {
+    path: '/aboutpage',
+    name: 'aboutpage',
+    component: AboutPageView,
+  },
 ];
 
 const router = createRouter({

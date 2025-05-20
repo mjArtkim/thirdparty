@@ -57,7 +57,6 @@ function setType(type) {
 }
 let isLoading = false
 
-// 스크롤 이벤트 핸들러
 function onScroll() {
   const scrollPosition = window.innerHeight + window.scrollY
   const threshold = document.documentElement.offsetHeight - 100  

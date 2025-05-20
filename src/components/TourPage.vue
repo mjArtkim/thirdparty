@@ -190,6 +190,7 @@ const currentTabText = computed(() => {
   @media screen and (min-width: 900px) { bottom: -50px; left: 15%;}
 }
 .tour-right {
+  position: relative;
   padding: 30px;
   background-color: #222;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
@@ -203,7 +204,29 @@ const currentTabText = computed(() => {
     width: 90%;
     height: 100%;
     margin-top: 30px;
+    &::after {
+    position: absolute;
+    bottom: 0px;
+    display: block;
+    content: 'UPCOMMING SHOW';
+    clear: both;
+    width: 80%;
+    opacity: 0.3;
+    right: 30px;
+    font-size: 4vw;
+    text-align: right;
+    animation: shimmer 2s ease-in-out infinite;
+    }
+    @keyframes shimmer {
+      0%, 100% {
+        opacity: 0.1;
+      }
+      50% {
+        opacity: 0.3;
+      }
+    }
   }
+  
 }
 .tour-tap {
   display: flex;

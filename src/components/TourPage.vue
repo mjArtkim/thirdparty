@@ -250,10 +250,8 @@ const currentTabText = computed(() => {
 }
 
 .tour-current {
-  @media screen and (min-width: 900px)  {
-    font-weight: bold;
-    font-size: 24px;
-  }
+  font-weight: bold;
+  font-size: 24px;
 }
 
 .tour-list {
@@ -304,6 +302,7 @@ const currentTabText = computed(() => {
   border: none;
   line-height: 30px;
   z-index: 1;
+  font-size: 16px;
   margin: 20px;
   &::after {
     content: "";

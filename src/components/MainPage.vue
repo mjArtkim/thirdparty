@@ -253,7 +253,7 @@ onBeforeUnmount(() => {
 .main-4-tit {
   display: flex;
   align-items: center;
-  font-size: 8vw;
+  font-size: 7vw;
 }
 .main-4-tit img {
   height: 8vh;

@@ -4,6 +4,15 @@ import gsap from 'gsap';
 import TextPlugin from 'gsap/TextPlugin'
 import { Observer } from 'gsap/Observer';
 import { useRoute } from 'vue-router';
+import img1 from '@/assets/img/about1.png'
+import img2 from '@/assets/img/about2.png'
+import img3 from '@/assets/img/about3.png'
+import img4 from '@/assets/img/about4.png'
+import img5 from '@/assets/img/about5.png'
+import img6 from '@/assets/img/about6.png'
+import img7 from '@/assets/img/about7.png'
+import img8 from '@/assets/img/about8.png'
+
 gsap.registerPlugin(TextPlugin);
 const route = useRoute();
 
@@ -18,42 +27,42 @@ let currentIndex = 0;
 const slides = [
   {
     heading: 'AOBUT',
-    img: '/src/assets/img/about1.png',
+    img: img1,
     mytext: 'YES, YES, YES',
     mytext2: 'My Name Is THIRD PARTY',
   },
   {
     heading: 'TOGETHER',
-    img: '/src/assets/img/about2.png',
+    img: img2,
     mytext: ''
   },
   {
     heading: 'JONNIE&HARRY',
-    img: '/src/assets/img/about3.png',
+    img: img3,
     mytext: ''
   },
   {
     heading: 'PARTY',
-    img: '/src/assets/img/about4.png',
+    img: img4,
     mytext: ''
   }
 ];
 
 const overlayImages = [
   {
-    img: '/src/assets/img/about5.png',
+    img: img5,
     mytext3: 'YES, YES, YES',
   },
   {
-    img: '/src/assets/img/about6.png',
+    img: img6,
     mytext3: 'YES, YES, YES',
   },
   {
-    img:   '/src/assets/img/about7.png',
+    img: img7,
     mytext3: 'YES, YES, YES',
   },
   {
-    img: '/src/assets/img/about8.png',
+    img: img8,
     mytext3: 'YES, YES, YES',
   },
 ];
@@ -348,8 +357,7 @@ onMounted(() => {
   .overlay__content,
   .slide__container {
     padding: 0 3rem;
-    margin-top: 10vh;
-    height: 80vh;
+    height: calc(100vh - 100px);
   }
 
   .overlay__img-cont {
@@ -368,6 +376,24 @@ onMounted(() => {
   .slide__heading {
     grid-area: 1 / 1 / 4 / 10;
   }
+}
+@media screen and (max-width: 899px) {
+  .slide {
+    &__container {
+      height: 100vh;
+      margin-top: 150px;
+    }
+    &__heading {
+      margin-bottom: 10px;
+    }
+
+  }
+  .overlay {
+    img {
+      object-position: 50% 30%;
+    }
+  }
+
 }
 
 </style>

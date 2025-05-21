@@ -3,14 +3,16 @@
 </script>
 
 <template>
-  <div class="footer-container">
-    <ul class="foot-list">
-      <li><a href="https://www.instagram.com/thirdpartylive/" target="_blank" >Instargram</a></li>
-      <li><a href="https://www.threads.com/@thirdpartylive" target="_blank" >Threads</a></li>
-      <li><a href="https://www.youtube.com/@thirdpartychannel" target="_blank" >Youtube</a></li>
-    </ul>
-    <div class="foot-copy">© 2025, THIRD Ξ PARTY </div>
-  </div>
+  <footer>
+    <div class="footer-container">
+      <ul class="foot-list">
+        <li><a href="https://www.instagram.com/thirdpartylive/" target="_blank" >Instargram</a></li>
+        <li><a href="https://www.threads.com/@thirdpartylive" target="_blank" >Threads</a></li>
+        <li><a href="https://www.youtube.com/@thirdpartychannel" target="_blank" >Youtube</a></li>
+      </ul>
+      <div class="foot-copy">© 2025, THIRD Ξ PARTY </div>
+    </div>
+  </footer>
 </template>
 
 <style>

@@ -1,6 +1,20 @@
 <script setup>
+import { watch } from 'vue'
+import { useRoute } from 'vue-router'
 import Header from '@/components/Header.vue';
 import Footer from '@/components/Footer.vue';
+const route = useRoute()
+watch(
+  () => route.name,
+  (newRoute) => {
+    if (newRoute === 'aboutpage') {
+      document.body.style.overflow = 'aboutpage'
+    } else {
+      document.body.style.overflow = 'auto'
+    }
+  },
+  { immediate: true }
+)
 </script>
 
 <template>
@@ -8,7 +22,7 @@ import Footer from '@/components/Footer.vue';
     <section class="wrap">
       <Header></Header>
       <router-view />
-      <Footer></Footer>
+      <Footer v-if="route.name !== 'aboutpage'" ></Footer>
     </section>
   </div>
 </template>

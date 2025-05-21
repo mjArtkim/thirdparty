@@ -18,7 +18,6 @@ const handleScroll = () => {
   if (newSize < 100) newSize = 100
   backgroundSize.value = newSize
 }
-
 // PC용 마우스 이벤트
 const onMouseDown = (e) => {
   isDragging = true
@@ -33,46 +32,24 @@ const onMouseMove = (e) => {
 }
 const onMouseUp = () => {
   isDragging = false
-  scrollEl.value.style.cursor = 'grab'
-}
-
-// 모바일용 터치 이벤트
-const onTouchStart = (e) => {
-  isDragging = true
-  startY = e.touches[0].clientY
-  startScrollTop = scrollEl.value.scrollTop
-}
-const onTouchMove = (e) => {
-  if (!isDragging) return
-  const deltaY = e.touches[0].clientY - startY
-  scrollEl.value.scrollTop = startScrollTop - deltaY
-}
-const onTouchEnd = () => {
-  isDragging = false
 }
 
 onMounted(() => {
   window.addEventListener('scroll', handleScroll)
   if (scrollEl.value) {
     scrollEl.value.addEventListener('mousedown', onMouseDown)
-    scrollEl.value.addEventListener('touchstart', onTouchStart)
   }
   window.addEventListener('mousemove', onMouseMove)
   window.addEventListener('mouseup', onMouseUp)
-  window.addEventListener('touchmove', onTouchMove)
-  window.addEventListener('touchend', onTouchEnd)
 })
 
 onBeforeUnmount(() => {
   window.removeEventListener('scroll', handleScroll)
   if (scrollEl.value) {
     scrollEl.value.removeEventListener('mousedown', onMouseDown)
-    scrollEl.value.removeEventListener('touchstart', onTouchStart)
   }
   window.removeEventListener('mousemove', onMouseMove)
   window.removeEventListener('mouseup', onMouseUp)
-  window.removeEventListener('touchmove', onTouchMove)
-  window.removeEventListener('touchend', onTouchEnd)
 })
 </script>
 

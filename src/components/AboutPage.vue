@@ -26,15 +26,15 @@ let currentIndex = 0;
 
 const slides = [
   {
-    heading: 'THIRD',
+    heading: 'ABOUT',
     img: img1,
     mytext: 'YES, YES, YES',
     mytext2: 'My Name Is THIRD PARTY',
   },
   {
-    heading: 'PARTY',
+    heading: 'FROM.LONDON',
     img: img2,
-    mytext: 'Progressive House',
+    mytext: '',
     mytext2: ''
   },
   {
@@ -55,19 +55,15 @@ const slides = [
 const overlayImages = [
   {
     img: img5,
-    mytext3: 'YES, YES, YES',
   },
   {
     img: img6,
-    mytext3: 'YES, YES, YES',
   },
   {
     img: img7,
-    mytext3: 'YES, YES, YES',
   },
   {
     img: img8,
-    mytext3: 'YES, YES, YES',
   },
 ];
 
@@ -251,15 +247,15 @@ onMounted(() => {
     --width: 200;
     display: block;
     text-align: left;
-    font-size: clamp(2rem, 12vw, 12rem);
+    font-size: clamp(3rem, 13vw, 13rem);
     font-weight: 900;
     font-variation-settings: "wdth" var(--width);
     margin: 0;
-    padding: 0 0 0 40px;
+    padding: 0 0 0 10px;
     color: #f2f1fc;
     z-index: 999;
     mix-blend-mode: difference;
-    grid-area: 1 / 1 / 2 / 8;
+
     align-self: end;
     margin-bottom: 30px;
   }
@@ -283,7 +279,6 @@ onMounted(() => {
   &__img-cont {
     position: relative;
     width: 100%;
-    grid-area: 2 / 1 / 7 / 8;
     &::after{
       position: absolute;
       top: 0;
@@ -393,11 +388,11 @@ onMounted(() => {
 
   .slide__img-cont {
     margin-top: 0;
-    grid-area: 3 / 7 / 10 / 1;
+    grid-area: 10 / 1 / 3 / 8;;
   }
 
   .slide__heading {
-    grid-area: 1 / 1 / 4 / 10;
+    grid-area: 3 / 1 / 5 / 10;
   }
 }
 @media screen and (max-width: 899px) {
@@ -409,6 +404,7 @@ onMounted(() => {
     &__heading {
       margin-bottom: 10px;
       padding: 0 0 0 0px;
+      font-size: clamp(2.5rem, 10vw, 10rem);
     }
     &__innertxt{
       width: 100%;

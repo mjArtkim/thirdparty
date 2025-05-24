@@ -95,5 +95,60 @@ export const igTours = [
     country: "France",
     ticket: ""
   },
-  
+  {
+    id: 13,
+    date: "2025-07-05",
+    title: "Electropool",
+    city: "Blois",
+    country: "France",
+    ticket: "https://electropoolparty.fr"
+  },
+  {
+    id: 14,
+    date: "2025-07-12",
+    title: "TBA",
+    city: "TBA",
+    country: "TBA",
+    ticket: ""
+  },
+  {
+    id: 15,
+    date: "2025-07-18",
+    title: "TOMORROWLAND",
+    city: "BOOM",
+    country: "Belgium",
+    ticket: "https://belgium.tomorrowland.com/en/passes-packages/"
+  },
+  {
+    id: 16,
+    date: "2025-07-19",
+    title: "TOMORROWLAND",
+    city: "BOOM",
+    country: "Belgium",
+    ticket: "https://belgium.tomorrowland.com/en/passes-packages/"
+  },
+  {
+    id: 17,
+    date: "2025-07-24",
+    title: "PONY CLUB",
+    city: "TOULOUSE",
+    country: "france",
+    ticket: "https://www.poneyclubtoulouse.fr/billetterie#/en/event/steve-aoki-matisse-sadko-b2b-third-party--178258"
+  },
+  {
+    id: 18,
+    date: "2025-07-26",
+    title: "TOMORROWLAND",
+    city: "BOOM",
+    country: "Belgium",
+    ticket: "https://belgium.tomorrowland.com/en/passes-packages/"
+  },
+  {
+    id: 19,
+    date: "2025-08-23",
+    title: "TBA",
+    city: "TBA",
+    country: "TBA",
+    ticket: ""
+  },
 ]        

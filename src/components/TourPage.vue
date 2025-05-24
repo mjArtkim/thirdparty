@@ -204,19 +204,19 @@ const currentTabText = computed(() => {
     width: 90%;
     height: 100%;
     margin-top: 30px;
-    &::after {
-    position: absolute;
-    bottom: 0px;
-    display: block;
-    content: 'UPCOMMING SHOW';
-    clear: both;
-    width: 80%;
-    opacity: 0.3;
-    right: 30px;
-    font-size: 4vw;
-    text-align: right;
-    animation: shimmer 2s ease-in-out infinite;
-    }
+    // &::after {
+    // position: absolute;
+    // bottom: 0px;
+    // display: block;
+    // content: 'UPCOMMING SHOW';
+    // clear: both;
+    // width: 80%;
+    // opacity: 0.3;
+    // right: 30px;
+    // font-size: 4vw;
+    // text-align: right;
+    // animation: shimmer 2s ease-in-out infinite;
+    // }
     @keyframes shimmer {
       0%, 100% {
         opacity: 0.1;

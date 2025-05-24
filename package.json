@@ -25,10 +25,12 @@
     "vite-plugin-vue-devtools": "^7.7.2"
   },
   "scripts": {
+    "dev": "vite",
     "build": "vite build",
     "build:vue": "npm run build",
     "build:nuxt": "cd my-nuxt-app && npm install && npx nuxi generate",
     "copy:nuxt": "cp -r my-nuxt-app/.output/public dist/my-nuxt-app",
-    "build:all": "npm run build:vue && npm run build:nuxt && npm run copy:nuxt"
+    "build:all": "npm run build:vue && npm run build:nuxt && npm run copy:nuxt",
+    "preview": "vite preview"
   }
 }

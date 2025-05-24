@@ -1,0 +1,3 @@
+[submodule "my-nuxt-app"]
+	path = my-nuxt-app
+	url = https://github.com/mjArtkim/thirdparty

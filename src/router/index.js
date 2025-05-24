@@ -3,7 +3,7 @@ import MainPageView from '@/components/MainPage.vue';
 import MusicCategoryView from '@/components/musicCategory.vue';
 import TourPageView from '@/components/TourPage.vue';
 import AboutPageView from '@/components/AboutPage.vue';
-
+import NotFoundView from '@/components/unit/NotFound.vue';
 const routes = [
   {
     path: '/',
@@ -25,6 +25,12 @@ const routes = [
     name: 'aboutpage',
     component: AboutPageView,
   },
+  // 404 Page Require last
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'NotFound',
+    component: NotFoundView,
+  }
 ];
 
 const router = createRouter({

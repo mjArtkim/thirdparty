@@ -10,3 +10,7 @@ const app = createApp(App);
 app.use(router);         
 app.mount('#app');       
 AOS.init()
+window.addEventListener('DOMContentLoaded', () => {
+  const loader = document.getElementById('app-loader')
+  if (loader) loader.remove()
+})

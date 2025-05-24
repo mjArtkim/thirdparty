@@ -19,7 +19,7 @@ const route = useRoute();
 // Plugin 등록
 if (!gsap.core.globals().Observer) gsap.registerPlugin(Observer);
 
-const sections = ref([]);
+const sections = [];
 const count = ref(null);
 let animating = false;
 let currentIndex = 0;
@@ -70,7 +70,7 @@ const overlayImages = [
 const wrap = gsap.utils.wrap(0, slides.length);
 
 onMounted(() => {
-  const allSections = sections.value;
+  const allSections = sections;
   const images = gsap.utils.toArray('.image').reverse();
   const slideImages = gsap.utils.toArray('.slide__img');
   const outerWrappers = gsap.utils.toArray('.slide__outer');
@@ -94,6 +94,11 @@ onMounted(() => {
     const heading = currentSection.querySelector('.slide__heading');
     const nextSection = allSections[index];
     const nextHeading = nextSection.querySelector('.slide__heading');
+    if (!currentSection || !nextSection) {
+    console.warn("Section not found:", currentSection, nextSection);
+    animating = false;
+    return;
+  }
 
     gsap.set([allSections, images], { zIndex: 0, autoAlpha: 0 });
     gsap.set([allSections[currentIndex], images[index]], { zIndex: 1, autoAlpha: 1 });
@@ -162,7 +167,7 @@ onMounted(() => {
       v-for="(slide, index) in slides"
       :key="index"
       class="slide"
-      ref="sections"
+      :ref="el => sections[index] = el"
     >
       <div class="slide__outer">
         <div class="slide__inner">
@@ -200,11 +205,11 @@ onMounted(() => {
 ::-webkit-scrollbar {display: none !important;}
 .no-scrollbar {
   overflow: auto;
-  -ms-overflow-style: none;  /* IE 10+ */
-  scrollbar-width: none;     /* Firefox */
+  -ms-overflow-style: none;  
+  scrollbar-width: none; 
 }
 .no-scrollbar::-webkit-scrollbar {
-  display: none;             /* Chrome, Safari */
+  display: none; 
 }
 .slide {
   height: 100%;
@@ -397,23 +402,24 @@ onMounted(() => {
 @media screen and (max-width: 899px) {
   .slide {
     &__container {
-      height: 80vh;
+      height: 70vh;
       margin-top: 0px;
     }
     &__heading {
+      margin-top: 30px;
       margin-bottom: 10px;
       padding: 0 0 0 0px;
       font-size: clamp(2.5rem, 10vw, 10rem);
     }
     &__innertxt{
       width: 100%;
-      top: 100px;
+      top: 80px;
       left: 10%;
       font-size: 8vw;
     }
     &__innertxt2{
       width: 100%;
-      top: 150px;
+      top: 120px;
       left: 10%;
       font-size: 6vw;
     }

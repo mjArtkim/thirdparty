@@ -34,7 +34,10 @@ const handleScroll = () => {
     isScrolled.value = false;
   }
 }
-
+function handleClick(link) {
+  toggleMenu()
+  window.location.href = link
+}
 onMounted(() => {
   window.addEventListener('scroll', handleScroll);
 });
@@ -83,7 +86,9 @@ watch(isMusicMenuVisible, (visible) => {
 
 <template>
   <div class="hd-lists" :class="{ 'scrolled': isScrolled }">
-    <router-link to="/" class="z-index-2"><img class="logo-img" src="@/assets/img/logo_item.png"> </router-link>
+    <a href="/" class="z-index-2">
+      <img class="logo-img" src="@/assets/img/logo_item.png">
+    </a>
     <ul class="hd-list">
       <li class="hd-music">
         <a href="#"
@@ -93,11 +98,7 @@ watch(isMusicMenuVisible, (visible) => {
         </a>
       </li>
       <li>
-        <router-link to="/tourpage"
-          @click.prevent="handleMenuClick('TOUR')"
-          :class="{ active: activeMenu === 'TOUR' }">
-          TOUR
-        </router-link>
+        <a href="/tourpage" @click.prevent="handleClick('/tourpage')" :class="{ active: activeMenu === 'TOUR' }">TOUR</a>
       </li>
       <li>
         <a href="https://www.thirdpartypresents.com"
@@ -133,7 +134,7 @@ watch(isMusicMenuVisible, (visible) => {
             <div class="music-lists" v-for="(item, index) in musicItems" :key="index"
                 @mouseover="setBackgroundImage(index)" 
                 @focusin="setBackgroundImage(index)">
-              <router-link :to="item.link">{{ ['ALL', 'Albums', 'Singles', 'EP'][index] }}</router-link>
+                <a href="#" @click.prevent="handleClick(item.link)">{{ ['ALL', 'Albums', 'Singles', 'EP'][index] }}</a>
             </div>
           </li>
         </ol>
@@ -151,16 +152,20 @@ watch(isMusicMenuVisible, (visible) => {
     </transition>
     <div class="hd-list-m" :class="{ 'show': isMenuMVisible }">
       <ul class="hd-m-list">
-        <li class="hd-home"><router-link to="/" @click="toggleMenu">HOME</router-link></li>
+        <li class="hd-home">
+          <a href="/" @click="toggleMenu">HOME</a>
+        </li>
         <li class="hd-music" @click="toggleMusicMenu">
           <a href="#">MUSIC</a>
           <ol class="hsm-m-list"  :class="{ 'show': isMusicMenuMVisible }">
             <li v-for="(item, index) in musicItems" :key="index" :style="{ animationDelay: `${index * 0.1}s` }">
-              <router-link :to="item.link" @click="toggleMenu">{{ item.name }}</router-link>
+              <a :href="item.link" @click.prevent="handleClick(item.link)">
+                {{ item.name }}
+              </a>
             </li>
           </ol>
         </li>
-        <li class="hd-m-tour"><router-link to="/tourpage" @click="toggleMenu">TOUR</router-link></li>
+        <li class="hd-m-tour"><a href="/tourpage" @click="toggleMenu">TOUR</a></li>
         <li class="hd-m-tour"><a href="https://www.thirdpartypresents.com">SHOP</a></li>
         <li class="hd-m-tour"><router-link to="/aboutpage" @click="toggleMenu">ABOUT</router-link></li>
         <li class="hd-m-tour"><a href="https://www.thirdpartypresents.com/pages/contact">CONTACT</a></li>

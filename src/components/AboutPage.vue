@@ -233,7 +233,7 @@ onMounted(() => {
   &__container {
     position: relative;
     width: 100vw;
-    margin: 100px auto 0;
+    margin: 0px auto 0;
     height: calc(100vh - 100px);
     display: grid;
     grid-template-columns: repeat(10, 1fr);
@@ -255,7 +255,6 @@ onMounted(() => {
     color: #f2f1fc;
     z-index: 999;
     mix-blend-mode: difference;
-
     align-self: end;
     margin-bottom: 30px;
   }
@@ -263,7 +262,7 @@ onMounted(() => {
   &__innertxt{
     position: absolute;
     width: 45%;
-    top: 10px;
+    top: 10%;
     right: 0;
     z-index: 999;
     font-size: clamp(1rem, 2.5vw, 2.5rem);
@@ -271,8 +270,8 @@ onMounted(() => {
   &__innertxt2{
     position: absolute;
     width: 45%;
-    top: 60px;
-    right: -10%;
+    top: 15%;
+    right: 0;
     z-index: 999;
     font-size: clamp(1rem, 2.5vw, 2.5rem);
   }

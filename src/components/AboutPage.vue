@@ -26,25 +26,29 @@ let currentIndex = 0;
 
 const slides = [
   {
-    heading: 'AOBUT',
+    heading: 'THIRD',
     img: img1,
     mytext: 'YES, YES, YES',
     mytext2: 'My Name Is THIRD PARTY',
   },
   {
-    heading: 'TOGETHER',
+    heading: 'PARTY',
     img: img2,
-    mytext: ''
+    mytext: 'Progressive House',
+    mytext2: ''
   },
   {
     heading: 'JONNIE&HARRY',
     img: img3,
-    mytext: ''
+    mytext: '',
+    mytext2: ''
+
   },
   {
-    heading: 'PARTY',
+    heading: 'TOGETHER',
     img: img4,
-    mytext: ''
+    mytext: '',
+    mytext2: ''
   }
 ];
 
@@ -157,7 +161,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="h100vh">
+  <div class="no-scrollbar">
     <section
       v-for="(slide, index) in slides"
       :key="index"
@@ -197,8 +201,15 @@ onMounted(() => {
 
 
 <style lang="scss" scoped>
-::-webkit-scrollbar {display: none;}
-
+::-webkit-scrollbar {display: none !important;}
+.no-scrollbar {
+  overflow: auto;
+  -ms-overflow-style: none;  /* IE 10+ */
+  scrollbar-width: none;     /* Firefox */
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;             /* Chrome, Safari */
+}
 .slide {
   height: 100%;
   width: 100%;
@@ -225,7 +236,6 @@ onMounted(() => {
 
   &__container {
     position: relative;
-    max-width: 1600px;
     width: 100vw;
     margin: 100px auto 0;
     height: calc(100vh - 100px);
@@ -245,9 +255,9 @@ onMounted(() => {
     font-weight: 900;
     font-variation-settings: "wdth" var(--width);
     margin: 0;
-    padding: 0;
+    padding: 0 0 0 40px;
     color: #f2f1fc;
-    z-index: 99;
+    z-index: 999;
     mix-blend-mode: difference;
     grid-area: 1 / 1 / 2 / 8;
     align-self: end;
@@ -259,31 +269,43 @@ onMounted(() => {
     width: 45%;
     top: 10px;
     right: 0;
-    z-index: 99;
+    z-index: 999;
     font-size: clamp(1rem, 2.5vw, 2.5rem);
   }
   &__innertxt2{
     position: absolute;
     width: 45%;
     top: 60px;
-    right: 0;
-    z-index: 99;
+    right: -10%;
+    z-index: 999;
     font-size: clamp(1rem, 2.5vw, 2.5rem);
   }
   &__img-cont {
-    margin-top: 4rem;
+    position: relative;
+    width: 100%;
     grid-area: 2 / 1 / 7 / 8;
-
-    img {
+    &::after{
+      position: absolute;
+      top: 0;
+      display: block;
+      content: '';
+      clear: both;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color: #000000, $alpha: 0.3);
+      z-index: 1;
+    }
+  }
+  img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    }
   }
-    figure {
+  figure {
     margin: 0;
     overflow: hidden;
   }
+  
 }
 
 .slide:nth-of-type(1) {
@@ -323,12 +345,11 @@ onMounted(() => {
     overflow: hidden;
   }
   &__content {
-    max-width: 1400px;
+    max-width: 1700px;
     width: 100vw;
     margin: 0 auto;
     padding: 0 1rem;
-    height: calc(100vh - 120px);
-    margin-bottom: 10vh;
+    height: 95vh;
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(10, 1fr);
@@ -340,7 +361,10 @@ onMounted(() => {
     position: relative;
     overflow: hidden;
     margin: 0;
-    grid-area: 4 / 3 / 9 / 11;
+    // grid-area: 4 / 3 / 9 / 11;
+    border-radius: 10px;
+    box-shadow: inset 1px 1px 10px rgba($color: #efefef, $alpha: 0.03),
+                0 0 10px rgba($color: #000000, $alpha: 0.1);
 
     img {
     position: absolute;
@@ -356,12 +380,11 @@ onMounted(() => {
 @media screen and (min-width: 900px) {
   .overlay__content,
   .slide__container {
-    padding: 0 3rem;
-    height: calc(100vh - 100px);
+    padding: 0;
   }
 
   .overlay__img-cont {
-    grid-area: 5 / 4 / 10 / 11;
+    grid-area: 11 / 4 / 5 / -1;
   }
 
   .overlay__count {
@@ -370,7 +393,7 @@ onMounted(() => {
 
   .slide__img-cont {
     margin-top: 0;
-    grid-area: 3 / 2 / 8 / 7;
+    grid-area: 3 / 7 / 10 / 1;
   }
 
   .slide__heading {
@@ -380,11 +403,27 @@ onMounted(() => {
 @media screen and (max-width: 899px) {
   .slide {
     &__container {
-      height: 100vh;
-      margin-top: 150px;
+      height: 80vh;
+      margin-top: 0px;
     }
     &__heading {
       margin-bottom: 10px;
+      padding: 0 0 0 0px;
+    }
+    &__innertxt{
+      width: 100%;
+      top: 100px;
+      left: 10%;
+      font-size: 8vw;
+    }
+    &__innertxt2{
+      width: 100%;
+      top: 150px;
+      left: 10%;
+      font-size: 6vw;
+    }
+    &__img-cont {
+      grid-area: 8 / 1 / 2 / 10;
     }
 
   }
@@ -392,8 +431,10 @@ onMounted(() => {
     img {
       object-position: 50% 30%;
     }
+    &__img-cont {
+      grid-area: 5 / 2 / 15 / 13 !important;
+    }
   }
-
 }
 
 </style>

@@ -23,7 +23,6 @@ const onMouseDown = (e) => {
   isDragging = true
   startY = e.clientY
   startScrollTop = scrollEl.value.scrollTop
-  scrollEl.value.style.cursor = 'grabbing'
 }
 const onMouseMove = (e) => {
   if (!isDragging) return
@@ -205,7 +204,7 @@ onBeforeUnmount(() => {
   transition: ease-in 0.5s;
   padding-right: 10px; 
   scroll-behavior: smooth;
-  cursor: grab;
+  cursor: default;
 }
 .three-center::-webkit-scrollbar{
   width: 8px;

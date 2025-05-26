@@ -243,16 +243,14 @@ const currentTabText = computed(() => {
         padding: 5px 0;
         text-align: center;
         border-radius: 5px;
-        &:hover {
+        @media screen and (max-width: 899px) {
+          width: 90px;
+        }
+        @media screen and (min-width: 1400px)  {
+          &:hover {
           background-color: rgba(255, 255, 255, 0.5);
           font-weight: bold;
         }
-        &:active {
-          background-color: rgba(255, 255, 255, 0.8);
-          font-weight: bold;
-        }
-        @media screen and (max-width: 899px) {
-          width: 90px;
         }
       }
     .active {
@@ -312,7 +310,6 @@ const currentTabText = computed(() => {
   height: 38px;
   color: #000;
   border-radius: 5px;
-  background: transparent;
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
@@ -344,19 +341,20 @@ const currentTabText = computed(() => {
       4px 4px 5px 0px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
   }
-  &:hover {
-    color: #fff;
-    &::after {
-      left: 0;
-      width: 100%;
-    }
-  }
-
-  &:active {
-    top: 2px;
-  }
   a {
     position: relative;
+  }
+  @media screen and (min-width: 900px)  {
+    &:active {
+      top: 2px;
+    }
+    &:hover {
+      color: #fff;
+      &::after {
+        left: 0;
+        width: 100%;
+      }
+    }
   }
 }
 
@@ -422,17 +420,6 @@ const currentTabText = computed(() => {
       7px 7px 20px 0px rgba(0, 0, 0, 0.1),
       4px 4px 5px 0px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
-  }
-  &:hover {
-    color: #fff;
-    &::after {
-      left: 0;
-      width: 100%;
-    }
-  }
-
-  &:active {
-    top: 2px;
   }
   a {
     position: relative;

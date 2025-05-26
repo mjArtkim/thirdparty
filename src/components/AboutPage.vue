@@ -202,9 +202,13 @@ onMounted(() => {
 
 
 <style lang="scss" scoped>
+html, body, #app {
+  height: 100%;
+  overflow: hidden;
+}
 ::-webkit-scrollbar {display: none !important;}
 .no-scrollbar {
-  overflow: auto;
+  overflow: hidden;
   -ms-overflow-style: none;  
   scrollbar-width: none; 
 }

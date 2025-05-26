@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, ref } from 'vue';
+import { ref, onMounted, computed } from 'vue';
 import gsap from 'gsap';
 import TextPlugin from 'gsap/TextPlugin'
 import { Observer } from 'gsap/Observer';
@@ -159,10 +159,11 @@ onMounted(() => {
     }
   });
 });
+
 </script>
 
 <template>
-  <div class="no-scrollbar">
+  <div class="no-scrollbar" :style="{ height: storeListHeight + 'px' }">
     <section
       v-for="(slide, index) in slides"
       :key="index"
@@ -209,10 +210,14 @@ html, body, #app {
 ::-webkit-scrollbar {display: none !important;}
 .no-scrollbar {
   overflow: hidden;
+  position: relative;
   -ms-overflow-style: none;  
   scrollbar-width: none; 
 }
 .no-scrollbar::-webkit-scrollbar {
+  display: none; 
+}
+.slide::-webkit-scrollbar {
   display: none; 
 }
 .slide {
@@ -221,7 +226,9 @@ html, body, #app {
   top: 0;
   position: fixed;
   visibility: hidden;
-
+  -ms-overflow-style: none;  
+  scrollbar-width: none; 
+  overscroll-behavior: none;
   &__outer,
   &__inner {
     width: 100%;
@@ -343,7 +350,8 @@ html, body, #app {
   left: 0;
   right: 0;
   z-index: 2;
-    figure {
+  overscroll-behavior: none;
+  figure {
     margin: 0;
     overflow: hidden;
   }
@@ -410,25 +418,25 @@ html, body, #app {
       margin-top: 0px;
     }
     &__heading {
-      margin-top: 30px;
+      // margin-top: 30px;
       margin-bottom: 10px;
       padding: 0 0 0 0px;
       font-size: clamp(2.5rem, 10vw, 10rem);
     }
     &__innertxt{
       width: 100%;
-      top: 80px;
+      top: 65px;
       left: 10%;
       font-size: 8vw;
     }
     &__innertxt2{
       width: 100%;
-      top: 120px;
+      top: 110px;
       left: 10%;
       font-size: 6vw;
     }
     &__img-cont {
-      grid-area: 8 / 1 / 2 / 10;
+      grid-area: 8 / 1 / 2 / 12;
     }
 
   }
@@ -437,7 +445,7 @@ html, body, #app {
       object-position: 50% 30%;
     }
     &__img-cont {
-      grid-area: 5 / 2 / 15 / 13 !important;
+      grid-area:5/3/9/12 !important;
     }
   }
 }

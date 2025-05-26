@@ -338,7 +338,7 @@ watch(isMusicMenuVisible, (visible) => {
     display: none;
     top: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     padding: 20px 30px;
     background-color: #0f0f0f;
     z-index: 1;

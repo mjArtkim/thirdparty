@@ -213,6 +213,7 @@ html, body, #app {
   position: relative;
   -ms-overflow-style: none;  
   scrollbar-width: none; 
+  height: 90vh;
 }
 .no-scrollbar::-webkit-scrollbar {
   display: none; 
@@ -446,6 +447,9 @@ html, body, #app {
     }
     &__img-cont {
       grid-area:5/3/9/12 !important;
+    }
+    &__content {
+    height: 90vh;
     }
   }
 }

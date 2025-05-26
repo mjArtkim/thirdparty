@@ -212,18 +212,13 @@ onBeforeUnmount(() => {
           data-aos-duration="1000"
           @click="selectAlbum(post.id)"
           >
+          <div class="b-game-pin">{{ post.releases.slice(0, 4) }}</div>
           <div class="b-game-card__cover">
             <template v-if="post.tracks && post.tracks.length" >
               <img :src="post.image" alt="" class="b-game-card__cover" />
-              <h3>{{ post.album }}</h3>
-              <div>발매일: {{ post.releases }}</div>
             </template>
             <template v-else>
               <img :src="post.image" alt="" class="b-game-card__cover" />
-              <div>
-                <h3>{{ post.album }}</h3>
-                <div>발매일: {{ post.releases }}</div>
-              </div>
             </template>
           </div>
         </div>
@@ -304,7 +299,7 @@ onBeforeUnmount(() => {
     @media screen and (max-width: 616px) {
       padding: 20px 0 20px 0;
       grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
+      gap: 30px 20px;
     }
     @media screen and (min-width: 617px)  and (max-width: 768px) {
       padding: 0;
@@ -390,7 +385,25 @@ onBeforeUnmount(() => {
       transform: rotateX(7deg) translateY(-6px) scale(1.05);
     }
   }
-  .fade-slide-enter-active,
+  .b-game-pin {
+    position: absolute;
+    z-index: 2;
+    bottom: -16px;
+    left: 5px;
+    // border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 2px;
+    padding: 0 2px;
+    text-shadow: 1px 1px 1px rgba($color: #000000, $alpha: 1.0);
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    @media screen and (max-width: 768px) {
+      font-size: 12px;
+    }
+    @media screen and (min-width: 769px) {
+      font-size: 14px;
+    }
+  }
+.fade-slide-enter-active,
 .fade-slide-leave-active {
   transition: all 0.4s ease;
 }
@@ -462,6 +475,7 @@ onBeforeUnmount(() => {
 }
 .infor-img {
   height: 100%;
+
 }
 .album-infor {
   display: flex;

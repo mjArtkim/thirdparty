@@ -105,11 +105,11 @@ export const igTours = [
   },
   {
     id: 14,
-    date: "2025-07-12",
-    title: "TBA",
-    city: "TBA",
-    country: "TBA",
-    ticket: ""
+    date: "2025-07-13",
+    title: "S2OTaiwan 2025",
+    city: "TAIPEI",
+    country: "Taiwan",
+    ticket: "https://linktr.ee/s2otaiwan2025?fbclid=PAZXh0bgNhZW0CMTEAAaeLO2wVeWDOTtOCNadEOK6SywRUF8Nqa2Wv4295ovbmCrkwVEmCi7mEkswUxg_aem_1GHkX1Dha2ogudzDunAOCA"
   },
   {
     id: 15,
@@ -132,7 +132,7 @@ export const igTours = [
     date: "2025-07-24",
     title: "PONY CLUB",
     city: "TOULOUSE",
-    country: "france",
+    country: "France",
     ticket: "https://www.poneyclubtoulouse.fr/billetterie#/en/event/steve-aoki-matisse-sadko-b2b-third-party--178258"
   },
   {
@@ -145,10 +145,11 @@ export const igTours = [
   },
   {
     id: 19,
-    date: "2025-08-23",
-    title: "TBA",
-    city: "TBA",
-    country: "TBA",
+    date: "2025-09-25",
+    title: "PARTY PEOPLE",
+    city: "London",
+    country: "UK",
     ticket: ""
   },
+
 ]        

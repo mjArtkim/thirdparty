@@ -23,9 +23,9 @@ const bgFade = ref(false)
 const activeMenu = ref('')
 const musicItems = [
   { name: 'ALL', link: '/musiccategory?type=ALL' },
-  { name: 'Album', link: '/musiccategory?type=Album' },
   { name: 'Singles', link: '/musiccategory?type=Singles' },
   { name: 'EP', link: '/musiccategory?type=EP' },
+  { name: 'Album', link: '/musiccategory?type=Album' },
 ];
 const handleScroll = () => {
   if (window.scrollY > 50) { 
@@ -134,7 +134,7 @@ watch(isMusicMenuVisible, (visible) => {
             <div class="music-lists" v-for="(item, index) in musicItems" :key="index"
                 @mouseover="setBackgroundImage(index)" 
                 @focusin="setBackgroundImage(index)">
-                <a href="#" @click.prevent="handleClick(item.link)">{{ ['ALL', 'Albums', 'Singles', 'EP'][index] }}</a>
+                <a href="#" @click.prevent="handleClick(item.link)">{{ ['ALL', 'Singles', 'EP', 'Albums'][index] }}</a>
             </div>
           </li>
         </ol>

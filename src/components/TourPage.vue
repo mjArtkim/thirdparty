@@ -52,7 +52,7 @@ const currentTabText = computed(() => {
             </li>
           </ol>
           <div class="tour-ticket">
-            <a v-if="tour.ticket" :href="tour.ticket" target="_blank">
+            <a v-if="tour.ticket && currentTab !== 'past'" :href="tour.ticket" target="_blank">
             <button class="ticket-btn">
               Tickets
             </button>
@@ -76,7 +76,7 @@ const currentTabText = computed(() => {
                 <div>{{ tour.date }}</div>
               </div>
               <div class="m-tour-ticket">
-                <a v-if="tour.ticket" :href="tour.ticket" target="_blank">
+                <a v-if="tour.ticket && currentTab !== 'past'" :href="tour.ticket" target="_blank">
                   <button class="m-ticket-btn">
                     Tickets
                   </button>

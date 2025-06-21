@@ -149,7 +149,14 @@ export const igTours = [
     title: "PARTY PEOPLE",
     city: "London",
     country: "UK",
-    ticket: ""
+    ticket: "https://dice.fm/partner/outernet-venue-ltd/event/mxagpl-third-party-presents-party-people-london-20th-sep-here-at-outernet-london-tickets?dice_id=6264422&dice_channel=web&dice_tags=organic&dice_campaign=Outernet+Venue+Ltd&dice_feature=mio_marketing&laylo-email=mjtwins1%40naver.com&laylo-fid=5e1f6e4f956c4ffbb36cfc5e162a88f6&laylo-pid=66679d6b-1cde-42c3-a1f1-6a98301eed8e&_branch_match_id=1361234391967349699&utm_source=web&utm_campaign=Outernet+Venue+Ltd&utm_medium=mio_marketing&_branch_referrer=H4sIAAAAAAAAAy3KQQ6CMBBA0dPIrkBpGYsJ8RAewLTTGa22hRQicePZJdHF3%2Fy8%2B7rOy6lpYsjP2gekmlMzozJemm5Pn6N9x0lQsiGO6bFuIS%2FyoNtsX1RqnFL1A3PwIwAcBw9OSPQkdIdKWMlSgB2MaiWRN%2FTnvPOeJANpHnpAzeycAmTcL3TWGIbqU4iplJBvV1embaEyXizbEr6pmURItgAAAA%3D%3D"
   },
-
+  {
+    id: 20,
+    date: "2025-07-11",
+    title: "THE H CLUB",
+    city: "Jakarta",
+    country: "Indonesia",
+    ticket: "https://desty.page/hwgroup.id/the.h.club?fbclid=PAZXh0bgNhZW0CMTEAAaexJDP3kTQt42NZtpdDxota9rLXA48cHaT544-ouFVr71uI-SedlEc23Rfxvg_aem_97avLEIGPlz-BuhkGt_JdQ"
+  },
 ]        

@@ -159,4 +159,12 @@ export const igTours = [
     country: "Indonesia",
     ticket: "https://desty.page/hwgroup.id/the.h.club?fbclid=PAZXh0bgNhZW0CMTEAAaexJDP3kTQt42NZtpdDxota9rLXA48cHaT544-ouFVr71uI-SedlEc23Rfxvg_aem_97avLEIGPlz-BuhkGt_JdQ"
   },
+  {
+    id: 21,
+    date: "2025-09-27",
+    title: "DLDK",
+    city: "Queretaro",
+    country: "Mexico",
+    ticket: "https://dldk.com/tickets/"
+  },
 ]        

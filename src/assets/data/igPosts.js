@@ -36,6 +36,7 @@ import img35 from '@/assets/music/rise.png'
 import img36 from '@/assets/music/hope_a.png'
 import img37 from '@/assets/music/neverget.png'
 import img38 from '@/assets/music/wecanfindaway.png'
+import img39 from '@/assets/music/takemethere.png'
 
 
 
@@ -809,6 +810,22 @@ export const igPosts = [
     tag: "Progressive House, Dance",
     recolabel: "Release Records",
     color: "#E03F07",
+    linkapple: "https://music.apple.com/kr/album/we-can-find-a-way-third-party-mix-single/1753946768",
+    linkyoutube: "https://youtu.be/Nzr-_6nySoY?si=_No1FPxIHx5B1r5e",
+    linkspotify: "https://open.spotify.com/album/7GXKO4RUsmcTc0cOncmOgj?si=DMMQBPDBSa-kqLOytXKm2A",
+    linksound: "",
+    type: 'Singles',
+  },
+  {
+    id: 40,
+    image: img39,
+    caption: "Take Me There",
+    album: "Take Me There",
+    djname:"Sick Individuals & Matisse Sadko & THIRD ≡ PARTY",
+    releases: "2025-07-11",
+    tag: "Progressive House, Dance",
+    recolabel: "1001 Recordings",
+    color: "#7A9899",
     linkapple: "https://music.apple.com/kr/album/we-can-find-a-way-third-party-mix-single/1753946768",
     linkyoutube: "https://youtu.be/Nzr-_6nySoY?si=_No1FPxIHx5B1r5e",
     linkspotify: "https://open.spotify.com/album/7GXKO4RUsmcTc0cOncmOgj?si=DMMQBPDBSa-kqLOytXKm2A",

@@ -827,7 +827,7 @@ export const igPosts = [
     recolabel: "1001 Recordings",
     color: "#7A9899",
     linkapple: "https://music.apple.com/kr/album/take-me-there/1821774483?i=1821774485",
-    linkyoutube: "https://youtu.be/bt40wF2qxXk?si=TOWRfWgiC_LcLxRU",
+    linkyoutube: "https://youtu.be/3VJnpmvYt2w?si=dZ14NkoZLQ1r8cR_",
     linkspotify: "https://open.spotify.com/album/1407RKhcxe58TPTwOtp9vF?si=PQZyJFnKROKzcn_4_nE_Gw",
     linksound: "https://soundcloud.com/sickindividuals/take-me-there?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
     type: 'Singles',

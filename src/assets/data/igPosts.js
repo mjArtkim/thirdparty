@@ -826,10 +826,10 @@ export const igPosts = [
     tag: "Progressive House, Dance",
     recolabel: "1001 Recordings",
     color: "#7A9899",
-    linkapple: "https://music.apple.com/kr/album/we-can-find-a-way-third-party-mix-single/1753946768",
-    linkyoutube: "https://youtu.be/Nzr-_6nySoY?si=_No1FPxIHx5B1r5e",
+    linkapple: "https://music.apple.com/kr/album/take-me-there/1821774483?i=1821774485",
+    linkyoutube: "",
     linkspotify: "https://open.spotify.com/album/7GXKO4RUsmcTc0cOncmOgj?si=DMMQBPDBSa-kqLOytXKm2A",
-    linksound: "",
+    linksound: "https://soundcloud.com/sickindividuals/take-me-there?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
     type: 'Singles',
   },
 ]

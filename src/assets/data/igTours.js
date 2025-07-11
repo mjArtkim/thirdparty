@@ -174,5 +174,12 @@ export const igTours = [
     city: "Amsterdam",
     country: "Nederland",
     ticket: "https://chicagosocialclub.nl/tickets/?eventId=e_9rshe&fbclid=PAZXh0bgNhZW0CMTEAAacCzK93NJtFa4S3emLwvhqG25Chz9aY60o5Hu1POkdU1BEdxrx6hH9C-jht_g_aem_7nV0hy-yRRa1mLmSzxgkUQ"
+  },  {
+    id: 23,
+    date: "2025-07-17",
+    title: "Invited Brussels by Tomorrowland",
+    city: "Bruxelles",
+    country: "Belgium",
+    ticket: ""
   },
 ]        

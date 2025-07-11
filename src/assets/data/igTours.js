@@ -180,6 +180,6 @@ export const igTours = [
     title: "Invited Brussels by Tomorrowland",
     city: "Bruxelles",
     country: "Belgium",
-    ticket: ""
+    ticket: "https://belgium.tomorrowland.com/en/passes-packages/travel-packages/experiences/invited-brussels/"
   },
 ]        

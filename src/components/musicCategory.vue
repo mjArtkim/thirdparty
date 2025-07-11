@@ -168,7 +168,7 @@ onBeforeUnmount(() => {
                   <li class="alb-tit">{{ post.caption }} </li>
                   <li class="alb-name">{{ post.djname }}<br/></li>
                   <li class="alb-rele">{{ post.releases }}<br/></li>
-                  <li class="alb-tag">{{ post.tag }}<br/></li>
+                  <li class="alb-tag">{{ post.recolabel }}<br/></li>
                   <li class="alb-link">
                     <ol>
                       <li>

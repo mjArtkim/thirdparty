@@ -14,6 +14,7 @@ const sortedTours = computed(() => {
     return igTours
       .filter(tour => new Date(tour.date) < today)
       .sort((a, b) => new Date(b.date) - new Date(a.date)) 
+      .slice(0,10)
   }
 })
 const currentTabText = computed(() => {

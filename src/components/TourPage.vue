@@ -52,11 +52,22 @@ const currentTabText = computed(() => {
             </li>
           </ol>
           <div class="tour-ticket">
-            <a v-if="tour.ticket && currentTab !== 'past'" :href="tour.ticket" target="_blank">
-            <button class="ticket-btn">
-              Tickets
+            <!-- 과거 공연이면 'End' 버튼 -->
+            <button v-if="currentTab === 'past'" class="end-btn" disabled>
+              END
             </button>
-          </a>
+
+            <!-- 티켓 정보가 있는 경우 -->
+            <a v-else-if="tour.ticket" :href="tour.ticket" target="_blank">
+              <button class="ticket-btn">
+                Tickets
+              </button>
+            </a>
+
+            <!-- 티켓 정보가 없는 경우 -->
+            <button v-else class="end-btn" disabled>
+              Not Info
+            </button>
           </div>
         </li>
       </ul>
@@ -76,11 +87,19 @@ const currentTabText = computed(() => {
                 <div>{{ tour.date }}</div>
               </div>
               <div class="m-tour-ticket">
-                <a v-if="tour.ticket && currentTab !== 'past'" :href="tour.ticket" target="_blank">
+                <button v-if="currentTab === 'past'" class="m-end-btn" disabled>
+                  END
+                </button>
+
+                <a v-else-if="tour.ticket" :href="tour.ticket" target="_blank">
                   <button class="m-ticket-btn">
                     Tickets
                   </button>
                 </a>
+
+                <button v-else class="m-end-btn" disabled>
+                  Not Info
+                </button>
               </div>
             </li>
           </ol>
@@ -304,7 +323,17 @@ const currentTabText = computed(() => {
 .tour-ticket {
   text-align: center;
 }
-
+.end-btn {
+  width: 100px;
+  height: 38px;
+  color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  cursor: default;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  font-size: 16px;
+  margin: 20px;
+}
 .ticket-btn {
   width: 100px;
   height: 38px;
@@ -385,6 +414,17 @@ const currentTabText = computed(() => {
 .m-tour-ticket {
   text-align: center;
 }
+.m-end-btn {
+  width: 80px;
+  height: 38px;
+  color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  cursor: default;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  font-size: 13px;
+  margin-left: 10px;
+}
 .m-ticket-btn {
   width: 80px;
   height: 38px;
@@ -402,6 +442,7 @@ const currentTabText = computed(() => {
   background-color: #fff;
   border: none;
   line-height: 30px;
+  font-size: 13px;
     z-index: 1;
     margin-left: 10px;
   &::after {

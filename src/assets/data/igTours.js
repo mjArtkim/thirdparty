@@ -33,7 +33,7 @@ export const igTours = [
   },
   {
     id: 5,
-    date: "2025-08-01",
+    date: "2025-08-03",
     title: "Veld Music Festival 2025",
     city: "Toronto",
     country: "Canada",
@@ -41,7 +41,7 @@ export const igTours = [
   },
   {
     id: 6,
-    date: "2025-08-22",
+    date: "2025-08-23",
     title: "Creamfields 2025",
     city: "Cheshire West and Chester",
     country: "UK",
@@ -145,7 +145,7 @@ export const igTours = [
   },
   {
     id: 19,
-    date: "2025-09-25",
+    date: "2025-09-20",
     title: "PARTY PEOPLE",
     city: "London",
     country: "UK",
@@ -182,4 +182,85 @@ export const igTours = [
     country: "Belgium",
     ticket: "https://belgium.tomorrowland.com/en/passes-packages/travel-packages/experiences/invited-brussels/"
   },
+  {
+    id: 24,
+    date: "2025-07-24",
+    title: "OPIUM",
+    city: "TOULOUSE",
+    country: "France",
+    ticket: ""
+  },
+  {
+    id: 25,
+    date: "2025-08-01",
+    title: "PURE",
+    city: "SUNNYVALE",
+    country: "USA",
+    ticket: "https://www.tixr.com/groups/purenightclub/events/third-party-143375"
+  },
+  {
+    id: 26,
+    date: "2025-08-08",
+    title: "SUPERMIAMI",
+    city: "Beijing",
+    country: "China",
+    ticket: ""
+  },
+  {
+    id: 27,
+    date: "2025-08-09",
+    title: "SUPERMIAMI",
+    city: "Taiyuan",
+    country: "China",
+    ticket: ""
+  },
+  {
+    id: 28,
+    date: "2025-08-13",
+    title: "Club Gala Wed",
+    city: "Foshan",
+    country: "China",
+    ticket: ""
+  },
+  {
+    id: 29,
+    date: "2025-08-15",
+    title: "PLAYHOUSE",
+    city: "Chengdu",
+    country: "China",
+    ticket: ""
+  },
+  {
+    id: 30,
+    date: "2025-08-16",
+    title: "BOTTLE CLUB",
+    city: "Changsha",
+    country: "China",
+    ticket: ""
+  },
+  {
+    id: 31,
+    date: "2025-08-29",
+    title: "EPIC",
+    city: "Prague",
+    country: "Czech",
+    ticket: "https://tickets.epicprague.com/en/tickets/events/1196/book.html"
+  },
+
+  {
+    id: 32,
+    date: "2025-09-25",
+    title: "USHUAIA",
+    city: "Ibiza",
+    country: "Spain",
+    ticket: "https://www.clubtickets.com/clubbing/ushuaia-ibiza/martin-garrix/2025-09-25?aff=CT006&_gl=1*ny8pyd*_gcl_au*MTYzMTgyNDM4Ni4xNzUzMDk2ODM1*_ga*MTU3MDk5MjYyNi4xNzUzMDk2ODM1*_ga_Q9YJE2M1KT*czE3NTMwOTY4MzUkbzEkZzEkdDE3NTMwOTY4NDEkajU0JGwwJGgw*_ga_24GBDKCQD0*czE3NTMwOTY4MzQkbzEkZzEkdDE3NTMwOTY4NDEkajU0JGwwJGgw&_ga=2.239650115.150749504.1753096836-1570992626.1753096835"
+  },
+  // {
+  //   id: 33,
+  //   date: "2025-08-30",
+  //   title: "SUMMER PEAK",
+  //   city: "Zrce Beach",
+  //   country: "Croatia",
+  //   ticket: "https://summerpeak.eu/tickets-pakete/"
+  // },
 ]        

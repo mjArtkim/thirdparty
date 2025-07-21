@@ -159,7 +159,7 @@ const currentTabText = computed(() => {
   position: absolute;
   top: -130px;
   z-index: -1;
-  background-image: url('/src/assets/img/tour.png');
+  background-image: url('/src/assets/img/tour.webp');
   background-size: 75%;
   background-repeat: no-repeat;
   @media screen and (max-width: 899px) {
@@ -201,7 +201,7 @@ const currentTabText = computed(() => {
     width: 100%;
     bottom: -108vh; 
     left: 0;
-    background-image: url('/src/assets/img/tour_bg2.png');
+    background-image: url('/src/assets/img/tour_bg2.webp');
     background-size: 75%;
     background-repeat: no-repeat;
     background-position: top right;

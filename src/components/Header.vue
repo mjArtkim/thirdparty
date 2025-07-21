@@ -73,13 +73,13 @@ function setBackgroundImage(index) {
   bgFade.value = true;
 
   setTimeout(() => {
-    bgImage.value = new URL(`../assets/img/depth2_bg${index}.png`, import.meta.url).href;
+    bgImage.value = new URL(`../assets/img/depth2_bg${index}.webp`, import.meta.url).href;
     bgFade.value = false;
   }, 250);
 }
 watch(isMusicMenuVisible, (visible) => {
   if (visible) {
-    bgImage.value = new URL('../assets/img/depth2_bg0.png', import.meta.url).href;
+    bgImage.value = new URL('../assets/img/depth2_bg0.webp', import.meta.url).href;
   }
 });
 </script>
@@ -260,7 +260,7 @@ watch(isMusicMenuVisible, (visible) => {
   font-weight: bold;
 }
 .bg-gnb-img {
-  background: url('@/assets/img/depth2_bg0.png') center;
+  background: url('@/assets/img/depth2_bg0.webp') center;
   background-repeat: no-repeat;
   height: 100vh;
   margin-top: 40px;

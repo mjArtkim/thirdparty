@@ -186,7 +186,7 @@ onBeforeUnmount(() => {
   width: 100%;
   margin-top: 5vh;
   height: 100vh;
-  background-image: url('/src/assets/img/main_3_bg.png');
+  background-image: url('/src/assets/img/main_3_bg.webp');
   background-size: 180%;
   background-repeat: no-repeat;
   background-position: top center;
@@ -292,7 +292,7 @@ onBeforeUnmount(() => {
 
 @media (max-width: 429px) {
   .main-three {
-    background-image: url('/src/assets/img/main_bg_4.png');
+    background-image: url('/src/assets/img/main_bg_4.webp');
     background-size: 180%;
   }
   .main-tit {
@@ -355,7 +355,7 @@ onBeforeUnmount(() => {
 
 @media (min-width: 430px) and (max-width: 600px) {
   .main-three {
-    background-image: url('/src/assets/img/main_bg_4.png');
+    background-image: url('/src/assets/img/main_bg_4.webp');
     background-size: 180%;
   }
   .marquee-content {
@@ -415,7 +415,7 @@ onBeforeUnmount(() => {
 /* 중간 크기 태블릿 (768px 이하) */
 @media (min-width: 601px) and  (max-width: 768px) {
   .main-three {
-    background-image: url('/src/assets/img/main_bg_4.png');
+    background-image: url('/src/assets/img/main_bg_4.webp');
     background-size: 180%;
   }
   .marquee-content {

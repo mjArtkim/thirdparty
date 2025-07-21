@@ -5,7 +5,7 @@
       <p>Sorry, the page you are looking for does not exist.</p>
     </div>
     <div class="sorry">
-      <img src="@/assets/img/sorry.png">
+      <img src="@/assets/img/sorry.webp">
       <a href="/" >Go back to Home</a>
     </div>
   </div>

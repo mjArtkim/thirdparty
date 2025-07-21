@@ -4,14 +4,14 @@ import gsap from 'gsap';
 import TextPlugin from 'gsap/TextPlugin'
 import { Observer } from 'gsap/Observer';
 import { useRoute } from 'vue-router';
-import img1 from '@/assets/img/about1.png'
-import img2 from '@/assets/img/about2.png'
-import img3 from '@/assets/img/about3.png'
-import img4 from '@/assets/img/about4.png'
-import img5 from '@/assets/img/about5.png'
-import img6 from '@/assets/img/about6.png'
-import img7 from '@/assets/img/about7.png'
-import img8 from '@/assets/img/about8.png'
+import img1 from '@/assets/img/about1.webp'
+import img2 from '@/assets/img/about2.webp'
+import img3 from '@/assets/img/about3.webp'
+import img4 from '@/assets/img/about4.webp'
+import img5 from '@/assets/img/about5.webp'
+import img6 from '@/assets/img/about6.webp'
+import img7 from '@/assets/img/about7.webp'
+import img8 from '@/assets/img/about8.webp'
 
 gsap.registerPlugin(TextPlugin);
 const route = useRoute();

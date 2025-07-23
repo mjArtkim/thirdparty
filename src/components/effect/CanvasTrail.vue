@@ -136,7 +136,7 @@ onMounted(() => {
       // this.a0 = Math.random() * Math.PI;
       // this.a1 = Math.random() * Math.PI;
       // this.a2 = Math.random() * Math.PI;
-      this.a0 = 0;  // 직선 경로
+      this.a0 = 0;  
       this.a1 = 0;
       this.a2 = 0;
 
@@ -190,12 +190,10 @@ const trailOffset = window.innerHeight / 4.65
     trails.push(new ns.trailer([0xffffff, 0xf0f0f0, 0xeeeeee, 0xf0f0f0, 0xffffff], trailOffset))   // 세 번째 선 (아래쪽)
 
     reset()
-    // 애니메이션을 2분 동안 실행 후 멈추기
     const animationInterval = setInterval(compute, 70)
     setTimeout(() => {
       clearInterval(animationInterval)
-      console.log("Animation stopped after 2 minutes.")
-    }, 90000) // 2분 후 멈추기
+    }, 60000) // 
   }
 
   initCanvas()

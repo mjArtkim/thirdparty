@@ -3,6 +3,7 @@ import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { igPosts } from '@/assets/data/igPosts'
 import { nextTick } from 'vue'
+import dayjs from 'dayjs'
 
 const route = useRoute()
 const router = useRouter()
@@ -30,19 +31,18 @@ const filteredPosts = computed(() => {
   const posts = currentType.value === 'ALL'
     ? igPosts
     : igPosts.filter(post => post.type === currentType.value)
-
-  return posts.slice().sort((a, b) => {
-    return new Date(b.releases) - new Date(a.releases)
+    return posts.slice().sort((a, b) => {
+    const timeA = dayjs(a.releases).isValid() ? dayjs(a.releases).valueOf() : 0
+    const timeB = dayjs(b.releases).isValid() ? dayjs(b.releases).valueOf() : 0
+    return timeB - timeA
   })
 })
 
 const visiblePosts = computed(() => filteredPosts.value.slice(0, visibleCount.value))
 
 function setType(type) {
-  // router.push({ query: { ...route.query, type } })
   selectedAlbumId.value = null
   if (route.query.type === type) {
-    // 같은 탭이면 강제로 리셋 효과
     visibleCount.value = 0
     nextTick(() => {
       visibleCount.value = igPosts.length
@@ -87,20 +87,23 @@ function loadMoreGradually() {
 }
 
 onMounted(() => {
+  
   window.addEventListener('scroll', onScroll)
 })
 
 onBeforeUnmount(() => {
   window.removeEventListener('scroll', onScroll)
 })
+
 </script>
 
 <template>
   <div class="pad-top100">
     <div class="type-tabs">
       <button v-for="type in types" :key="type"
+        
         :class="['music-tab-btn', { active: currentType === type }]"
-
+        
         @click="setType(type)">
         {{ type }}
       </button>
@@ -122,7 +125,7 @@ onBeforeUnmount(() => {
                 <div class="infor-img"><img :src="post.image" alt="Album art"/></div>
                 <ul class="album-contents">
                   <li class="alb-tit">{{ post.album }}</li>
-                  <li>{{ post.releases }}</li>
+                  <li>{{ dayjs(post.releases).format('YYYY-MM-DD') }}</li>
                   <li>{{ post.recolabel }}</li>
                   <li class="alb-track">Track List</li>
                   <li class="track-inner">
@@ -167,7 +170,7 @@ onBeforeUnmount(() => {
                 <ul class="album-contents">
                   <li class="alb-tit">{{ post.caption }} </li>
                   <li class="alb-name">{{ post.djname }}<br/></li>
-                  <li class="alb-rele">{{ post.releases }}<br/></li>
+                  <li class="alb-rele">{{ dayjs(post.releases).format('YYYY-MM-DD') }}<br/></li>
                   <li class="alb-tag">{{ post.recolabel }}<br/></li>
                   <li class="alb-link">
                     <ol>

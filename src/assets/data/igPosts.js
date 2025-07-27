@@ -1,42 +1,42 @@
-import img1 from '@/assets/music/paradise.png'
-import img2 from '@/assets/music/shut_up.png'
-import img3 from '@/assets/music/bad_boy.png'
-import img4 from '@/assets/music/believe.png'
-import img5 from '@/assets/music/carry_you.png'
-import img6 from '@/assets/music/together.png'
-import img7 from '@/assets/music/keepon.png'
-import img8 from '@/assets/music/thee_c.png'
-import img9 from '@/assets/music/together_ep.png'
-import img10 from '@/assets/music/forthepeople.png'
-import img11 from '@/assets/music/joy.png'
-import img12 from '@/assets/music/veinsremix.png'
-import img13 from '@/assets/music/wefoundlove.png'
-import img14 from '@/assets/music/takemeaway.png'
-import img15 from '@/assets/music/falling.png'
-import img16 from '@/assets/music/midnight.png'
-import img17 from '@/assets/music/likethis.png'
-import img18 from '@/assets/music/havenofear.png'
-import img19 from '@/assets/music/veins.png'
-import img20 from '@/assets/music/startit.png'
-import img21 from '@/assets/music/neverletyougo.png'
-import img22 from '@/assets/music/lion.png'
-import img23 from '@/assets/music/realsound.png'
-import img24 from '@/assets/music/waiting.png'
-import img25 from '@/assets/music/nation.png'
-import img26 from '@/assets/music/arrival.png'
-import img27 from '@/assets/music/collide.png'
-import img28 from '@/assets/music/alive.png'
-import img29 from '@/assets/music/everyday.png'
-import img30 from '@/assets/music/lights.png'
-import img31 from '@/assets/music/feel.png'
-import img32 from '@/assets/music/detune.png'
-import img33 from '@/assets/music/duel.png'
-import img34 from '@/assets/music/release.png'
-import img35 from '@/assets/music/rise.png'
-import img36 from '@/assets/music/hope_a.png'
-import img37 from '@/assets/music/neverget.png'
-import img38 from '@/assets/music/wecanfindaway.png'
-import img39 from '@/assets/music/takemethere.png'
+import img1 from '@/assets/music/paradise.webp'
+import img2 from '@/assets/music/shut_up.webp'
+import img3 from '@/assets/music/bad_boy.webp'
+import img4 from '@/assets/music/believe.webp'
+import img5 from '@/assets/music/carry_you.webp'
+import img6 from '@/assets/music/together.webp'
+import img7 from '@/assets/music/keepon.webp'
+import img8 from '@/assets/music/thee_c.webp'
+import img9 from '@/assets/music/together_ep.webp'
+import img10 from '@/assets/music/forthepeople.webp'
+import img11 from '@/assets/music/joy.webp'
+import img12 from '@/assets/music/veinsremix.webp'
+import img13 from '@/assets/music/wefoundlove.webp'
+import img14 from '@/assets/music/takemeaway.webp'
+import img15 from '@/assets/music/falling.webp'
+import img16 from '@/assets/music/midnight.webp'
+import img17 from '@/assets/music/likethis.webp'
+import img18 from '@/assets/music/havenofear.webp'
+import img19 from '@/assets/music/veins.webp'
+import img20 from '@/assets/music/startit.webp'
+import img21 from '@/assets/music/neverletyougo.webp'
+import img22 from '@/assets/music/lion.webp'
+import img23 from '@/assets/music/realsound.webp'
+import img24 from '@/assets/music/waiting.webp'
+import img25 from '@/assets/music/nation.webp'
+import img26 from '@/assets/music/arrival.webp'
+import img27 from '@/assets/music/collide.webp'
+import img28 from '@/assets/music/alive.webp'
+import img29 from '@/assets/music/everyday.webp'
+import img30 from '@/assets/music/lights.webp'
+import img31 from '@/assets/music/feel.webp'
+import img32 from '@/assets/music/detune.webp'
+import img33 from '@/assets/music/duel.webp'
+import img34 from '@/assets/music/release.webp'
+import img35 from '@/assets/music/rise.webp'
+import img36 from '@/assets/music/hope_a.webp'
+import img37 from '@/assets/music/neverget.webp'
+import img38 from '@/assets/music/wecanfindaway.webp'
+import img39 from '@/assets/music/takemethere.webp'
 
 
 
@@ -48,7 +48,7 @@ export const igPosts = [
     caption: "PARADISE",
     album: "PARADISE",
     djname:"THIRD ≡ PARTY, Romeo Blanco",
-    releases: "2024-12-06",
+    releases: "2024-12-06T00:00:00",
     tag: "Progressive House, Dance",
     recolabel: "STMPD RCRDS B.V.",
     color: "#2B6D8F",
@@ -64,7 +64,7 @@ export const igPosts = [
     caption: "SHUT UP",
     album: "SHUT UP",
     djname:"THIRD ≡ PARTY, Mark Roma, Nicky Romero",
-    releases: "2025-04-11",
+    releases: "2025-04-11T00:00:00",
     tag: "Progressive House, Dance",
     recolabel: "Protocol Recordings BV",
     color: "#245F39",
@@ -80,7 +80,7 @@ export const igPosts = [
     caption: "BAD BOY",
     album: "BAD BOY",
     djname:"THIRD ≡ PARTY, Nicky Romero",
-    releases: "2024-06-14",
+    releases: "2024-06-14T00:00:00",
     tag: "Progressive House, Dance",
     recolabel: "Protocol Recordings BV",
     color: "#A54D09",
@@ -96,7 +96,7 @@ export const igPosts = [
     caption: "BELIEVE",
     album: "BELIEVE",
     djname:"THIRD ≡ PARTY",
-    releases: "2024-05-03",
+    releases: "2024-05-03T00:00:00",
     tag: "Progressive House, Dance",
     recolabel: "STMPD RCRDS B.V.",
     color: "#33596D",
@@ -111,7 +111,7 @@ export const igPosts = [
     image: img5,
     caption: "CARRY YOU",
     djname:"THIRD ≡ PARTY, Martin Garrix, Oaks",
-    releases: "2024-02-16",
+    releases: "2024-02-16T00:00:00",
     tag: "Progressive House, Dance",
     recolabel: "STMPD RCRDS B.V.",
     color: "#14262B",
@@ -127,7 +127,7 @@ export const igPosts = [
     caption: "TOGETHER",
     album: "TOGETHER",
     djname:"THIRD ≡ PARTY",
-    releases: "2019-03-15",
+    releases: "2019-03-15T00:00:00",
     tag: "Progressive House, Dance",
     recolabel: "Release Records",
     color: "#262D56",
@@ -176,16 +176,13 @@ export const igPosts = [
     ]
   },
   /////here Data Add UP SIDE Data Change ex - New realease or something / and 1~6 had a Main View
-  // 2025
-  // 2024
-  // 2023
   {
     id: 7,
     image: img7,
     caption: "Keep On Loving you",
     album: "Keep On Loving you",
     djname:"THIRD ≡ PARTY",
-    releases: "2023-06-16",
+    releases: "2023-06-16T00:00:00",
     tag: "Progressive House, Dance",
     recolabel: "Release Records",
     color: "#AE3226",
@@ -201,7 +198,7 @@ export const igPosts = [
     caption: "Thee Chords (Feel So High)",
     album: "Thee Chords (Feel So High)",
     djname:"THIRD ≡ PARTY",
-    releases: "2023-04-21",
+    releases: "2023-04-21T00:00:00",
     tag: "Progressive House, Dance",
     recolabel: "STMPD RCRDS B.V.",
     color: "#121818",
@@ -217,7 +214,7 @@ export const igPosts = [
     album: "Together (The Remixes)",
     djname: "THIRD ≡ PARTY",
     tag: "Progressive House, Dance",
-    releases: "2023-03-17",
+    releases: "2023-03-17T00:00:00",
     recolabel: "Release Records",
     linkapple: "https://music.apple.com/album/together-the-remixes-ep/1677759057",
     linkyoutube: "https://youtube.com/playlist?list=OLAK5uy_mVWCxC9UfzV5OUFFk3sFPeAvJHptciH1s&si=OHFmHzBp1a2H9kJu",
@@ -255,7 +252,7 @@ export const igPosts = [
     caption: "For the People",
     album: "For the People",
     djname:"THIRD ≡ PARTY, Nicky Romero",
-    releases: "2022-10-28",
+    releases: "2022-10-28T00:00:00",
     tag: "Progressive House, Dance",
     recolabel: "Protocol Recordings BV",
     color: "#FF2907",
@@ -271,7 +268,7 @@ export const igPosts = [
     caption: "Never Get Enough [feat. Kathy Brown]",
     album: "Never Get Enough ",
     djname:"THIRD ≡ PARTY",
-    releases: "2022.08.05",
+    releases: "2022.08.05T00:00:00",
     tag: "Progressive House, Dance",
     recolabel: "Release Records",
     color: "#3349BC",
@@ -287,7 +284,7 @@ export const igPosts = [
     caption: "JOY (Praye Remix) [feat. Kathy Brown]",
     album: "JOY",
     djname:"THIRD ≡ PARTY",
-    releases: "2022-08-05",
+    releases: "2022-08-05T00:00:00",
     tag: "Progressive House, Dance",
     recolabel: "Release Records",
     color: "#054C50",
@@ -303,7 +300,7 @@ export const igPosts = [
     caption: "JOY",
     album: "JOY",
     djname:"THIRD ≡ PARTY",
-    releases: "2022-06-10",
+    releases: "2022-06-10T00:00:00",
     tag: "Progressive House, Dance",
     recolabel: "Release Records",
     color: "#EF432F",
@@ -320,7 +317,7 @@ export const igPosts = [
     caption: "Veins (Avira Remix)",
     album: "Veins (Avira Remix)",
     djname:"THIRD ≡ PARTY",
-    releases: "2021-07-16",
+    releases: "2021-07-16T00:00:00",
     tag: "Progressive House, Dance",
     recolabel: "Armada Music B.V. under exclusive license from Release Records",
     color: "#020004",
@@ -338,7 +335,7 @@ export const igPosts = [
     caption: "We Found Love [feat. Errol Reid]",
     album: "We Found Love [feat. Errol Reid]",
     djname:"THIRD ≡ PARTY, GVN",
-    releases: "2020-11-13",
+    releases: "2020-11-13T00:00:00",
     tag: "Progressive House, Dance",
     recolabel: "Release Records",
     color: "#902523",
@@ -354,7 +351,7 @@ export const igPosts = [
     caption: "Take Me Away",
     album: "Take Me Away",
     djname:"THIRD ≡ PARTY",
-    releases: "2020-03-27",
+    releases: "2020-03-27T00:00:00",
     tag: "Progressive House, Dance",
     recolabel: "Release Records",
     color: "#4062AA",
@@ -371,7 +368,7 @@ export const igPosts = [
     caption: "Falling (feat. First State & Anita Kelsey)",
     album: "Falling",
     djname:"THIRD ≡ PARTY",
-    releases: "2019-03-08",
+    releases: "2019-03-08T00:00:00",
     tag: "Progressive House, Dance",
     recolabel: "Release Records",
     color: "#4E91D7",
@@ -388,7 +385,7 @@ export const igPosts = [
     caption: "Midnight",
     album: "Midnight",
     djname:"THIRD ≡ PARTY",
-    releases: "2018-07-06",
+    releases: "2018-07-06T00:00:00",
     tag: "Progressive House, Dance",
     recolabel: "Release Records",
     color: "#732771",
@@ -405,7 +402,7 @@ export const igPosts = [
     caption: "Like This",
     album: "Like This",
     djname:"THIRD ≡ PARTY, Pete K, Cory Lasser",
-    releases: "2017-08-11",
+    releases: "2017-08-11T00:00:00",
     tag: "Progressive House, Dance",
     recolabel: "Release Records",
     color: "#DF232A",
@@ -421,7 +418,7 @@ export const igPosts = [
     caption: "Have No Fear",
     album: "Have No Fear",
     djname:"THIRD ≡ PARTY",
-    releases: "2017-02-17",
+    releases: "2017-02-17T00:00:00",
     tag: "Progressive House, Dance",
     recolabel: "Release Records under exclusive license to Armada Music B.V.",
     color: "#030301",
@@ -437,7 +434,7 @@ export const igPosts = [
     caption: "Veins",
     album: "Veins",
     djname:"THIRD ≡ PARTY",
-    releases: "2017-01-16",
+    releases: "2017-01-16T00:00:00",
     tag: "Progressive House, Dance",
     recolabel: "Release Records under exclusive license to Armada Music B.V.",
     color: "#050413",
@@ -454,7 +451,7 @@ export const igPosts = [
     caption: "Start It",
     album: "Start It",
     djname:"THIRD ≡ PARTY, Sentinel",
-    releases: "2016-08-08",
+    releases: "2016-08-08T00:00:00",
     tag: "Progressive House, Dance",
     recolabel: "Armada Music B.V. under exclusive license from Release Records",
     color: "#8D7E9B",
@@ -470,7 +467,7 @@ export const igPosts = [
     caption: "Never Let You Go",
     album: "Never Let You Go",
     djname:"THIRD ≡ PARTY, Sem Vox",
-    releases: "2016-07-08",
+    releases: "2016-07-08T00:00:00",
     tag: "Progressive House, Dance",
     recolabel: "#DLDKMUSIC under exclusive license to Armada Music B.V.",
     color: "#67158F",
@@ -486,7 +483,7 @@ export const igPosts = [
     caption: "Lions in the Wild",
     album: "Lions in the Wild",
     djname:"THIRD ≡ PARTY, Martin Garrix",
-    releases: "2016-05-27",
+    releases: "2016-05-27T00:00:00",
     tag: "Progressive House, Dance",
     recolabel: "STMPD RECODS",
     color: "#364358",
@@ -502,7 +499,7 @@ export const igPosts = [
     caption: "Real Sound",
     album: "Real Sound",
     djname:"THIRD ≡ PARTY, Sentinel",
-    releases: "2016-02-08",
+    releases: "2016-02-08T00:00:00",
     tag: "Progressive House, Dance",
     recolabel: "Release Records under exclusive license to Armada Music B.V.",
     color: "#000000",
@@ -519,7 +516,7 @@ export const igPosts = [
     caption: "Waiting",
     album: "Waiting",
     djname:"THIRD ≡ PARTY",
-    releases: "2015-11-23",
+    releases: "2015-11-23T00:00:00",
     tag: "Progressive House, Dance",
     recolabel: "Release Records under exclusive license to Armada Music B.V.",
     color: "#A95EFC",
@@ -534,7 +531,7 @@ export const igPosts = [
     image: img25,
     album: "Nation",
     djname:"THIRD ≡ PARTY, Arias",
-    releases: "2015-09-25",
+    releases: "2015-09-25T00:00:00",
     tag: "Progressive House, Dance",
     recolabel: "SIZE Records",
     color: "#EBBB55",
@@ -564,7 +561,7 @@ export const igPosts = [
     caption: "Arrival",
     album: "Arrival",
     djname:"THIRD ≡ PARTY",
-    releases: "2015-08-19",
+    releases: "2015-08-19T00:00:00",
     tag: "Progressive House, Dance",
     recolabel: "Armada Music B.V.",
     color: "#029A1A",
@@ -580,7 +577,7 @@ export const igPosts = [
     caption: "Collide [feat. Daniel Gidlund]",
     album: "Collide",
     djname:"THIRD ≡ PARTY",
-    releases: "2015-06-17",
+    releases: "2015-06-17T00:00:00",
     tag: "Progressive House, Dance",
     recolabel: "Release Records under exclusive license to Armada Music B.V.",
     color: "#0C0002",
@@ -596,7 +593,7 @@ export const igPosts = [
     caption: "Alive",
     album: "Alive",
     djname:"THIRD ≡ PARTY",
-    releases: "2015-05-27",
+    releases: "2015-05-27T00:00:00",
     tag: "Progressive House, Dance",
     recolabel: "Release Records under exclusive license to Armada Music B.V.",
     color: "#000000",
@@ -612,7 +609,7 @@ export const igPosts = [
     caption: "Everyday of My Life",
     album: "Everyday of My Life",
     djname:"THIRD ≡ PARTY",
-    releases: "2015-05-27",
+    releases: "2015-05-27T00:00:00",
     tag: "Progressive House, Dance",
     recolabel: "SIZE Records",
     color: "#377CE4",
@@ -629,7 +626,7 @@ export const igPosts = [
     caption: "Lights",
     album: "Lights",
     djname:"THIRD ≡ PARTY, Steve Angello",
-    releases: "2012-10-26",
+    releases: "2012-10-26T00:00:00",
     tag: "Progressive House, Dance",
     recolabel: "SIZE Records",
     color: "#232323",
@@ -645,7 +642,7 @@ export const igPosts = [
     caption: "Feel",
     album: "Feel",
     djname:"THIRD ≡ PARTY, Cicada",
-    releases: "2012-03-12",
+    releases: "2012-03-12T00:00:00",
     tag: "Progressive House, Dance",
     recolabel: "SIZE Records",
     color: "#F88316",
@@ -662,7 +659,7 @@ export const igPosts = [
     caption: "De Tune",
     album: "De Tune",
     djname:"THIRD ≡ PARTY, Nick Sheldon",
-    releases: "2011-05-22",
+    releases: "2011-05-22T00:00:00",
     tag: "Progressive House, Dance",
     recolabel: "Heat Recordings (HEAT046)",
     color: "#EC3225",
@@ -678,7 +675,7 @@ export const igPosts = [
     caption: "Duel",
     album: "Duel",
     djname:"THIRD ≡ PARTY",
-    releases: "2011-05-18",
+    releases: "2011-05-18T00:00:00",
     tag: "Progressive House, Dance",
     recolabel: "SIZE Records",
     color: "#E43132",
@@ -695,7 +692,7 @@ export const igPosts = [
     caption: "Release",
     album: "Release",
     djname:"THIRD ≡ PARTY",
-    releases: "2010-10-13",
+    releases: "2010-10-13T00:00:00",
     tag: "Progressive House, Dance",
     recolabel: "SIZE Records",
     color: "#FED127",
@@ -710,7 +707,7 @@ export const igPosts = [
     image: img35,
     album: "Rise (Remixes)",
     djname:"THIRD ≡ PARTY, Abigail Bailey",
-    releases: "2010-09-13",
+    releases: "2010-09-13T00:00:00",
     tag: "Progressive House, Dance",
     recolabel: "Heat Recordings",
     color: "#EF5424",
@@ -748,7 +745,7 @@ export const igPosts = [
     caption: "HOPE",
     album: "HOPE",
     djname:"THIRD ≡ PARTY",
-    releases: "2017-02-24",
+    releases: "2017-02-24T00:00:00",
     tag: "Progressive House, Dance",
     recolabel: "Release Records under exclusive license to Armada Music B.V.",
     color: "#030203",
@@ -806,7 +803,7 @@ export const igPosts = [
     caption: "We Can Find A Way (Third Party Remix)",
     album: "We Can Find A Way",
     djname:"Stevie Krach, RedScope, THIRD ≡ PARTY",
-    releases: "2024-07-12",
+    releases: "2024-07-12T00:00:00",
     tag: "Progressive House, Dance",
     recolabel: "Release Records",
     color: "#E03F07",
@@ -822,7 +819,7 @@ export const igPosts = [
     caption: "Take Me There",
     album: "Take Me There",
     djname:"Sick Individuals & Matisse Sadko & THIRD ≡ PARTY",
-    releases: "2025-07-11",
+    releases: "2025-07-11T00:00:00",
     tag: "Progressive House, Dance",
     recolabel: "1001 Recordings",
     color: "#7A9899",

@@ -302,7 +302,7 @@ onBeforeUnmount(() => {
     font-size: 13vw; 
   }
   .main-4 {
-    height: 80vh;
+    height: 83vh;
     padding: 0 30px;
   }
   .main-4-tit {
@@ -340,7 +340,7 @@ onBeforeUnmount(() => {
   }
   .third-bar-container {
     align-self: stretch;
-    justify-self: start;
+    justify-self: center;
     margin-top: 40px;
   }
   .thirdbar {

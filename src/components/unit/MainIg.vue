@@ -1,6 +1,6 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
-
+import dayjs from 'dayjs'
 import { igPosts } from '@/assets/data/igPosts.js'
 
 const posts = ref([])
@@ -43,7 +43,7 @@ function goToLink(link) {
         </div>
         <div class="ig-con-flex">
             <div class="ig-con-label">{{ post.recolabel }}</div>
-            <div class="ig-con-txt">Released : {{ post.releases }}</div>
+            <div class="ig-con-txt">Released : {{ dayjs(post.releases).format('YYYY-MM-DD') }}</div>
           </div>
         <!-- <div class="ig-tag">
           <span

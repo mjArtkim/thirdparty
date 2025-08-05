@@ -7,8 +7,9 @@
     <div class="footer-container">
       <ul class="foot-list">
         <li><a href="https://www.instagram.com/thirdpartylive/" target="_blank" >Instargram</a></li>
-        <li><a href="https://www.threads.com/@thirdpartylive" target="_blank" >Threads</a></li>
+        <li><a href="https://www.threads.com/@thirdpartylive" target="_blank">Threads</a></li>
         <li><a href="https://www.youtube.com/@thirdpartychannel" target="_blank" >Youtube</a></li>
+        <li><a href="https://www.youtube.com/@thirdpartychannel" target="_blank">Team Progressive House</a></li>
       </ul>
       <div class="foot-copy">© 2025, THIRD Ξ PARTY </div>
     </div>
@@ -18,7 +19,7 @@
 <style>
 .footer-container {
   position: relative;
-  height: 200px;
+  height: 230px;
   border-top: 1px solid #eee;
   margin: 0 50px;
 }
@@ -48,9 +49,6 @@
     margin: 0 30px;
   }
   .foot-list {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     margin-top: 20px;
     padding: 0;
   }
@@ -68,9 +66,6 @@
     margin: 0 30px;
   }
   .foot-list {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     margin-top: 20px;
     padding: 0;
   }
@@ -90,9 +85,9 @@
   }
   .foot-list {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
     margin-top: 20px;
+    gap: 10px;
     padding: 0;
   }
 }

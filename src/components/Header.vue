@@ -63,7 +63,6 @@ function handleMenuClick(menu) {
     activeMenu.value = ''
     if (menu === 'MUSIC') isMusicMenuVisible.value = false
   } else {
-    // 다른 메뉴 클릭했을 때 해당 메뉴 활성화
     activeMenu.value = menu
     isMusicMenuVisible.value = menu === 'MUSIC'
   }
@@ -101,19 +100,19 @@ watch(isMusicMenuVisible, (visible) => {
         <a href="/tourpage" @click.prevent="handleClick('/tourpage')" :class="{ active: activeMenu === 'TOUR' }">TOUR</a>
       </li>
       <li>
+        <router-link to="/aboutpage"
+          @click.prevent="handleMenuClick('ABOUT')"
+          :class="{ active: activeMenu === 'ABOUT' }">
+          ABOUT
+        </router-link>
+      </li>
+      <li>
         <a href="https://www.thirdpartypresents.com"
           target="_blank"
           @click="handleMenuClick('SHOP')"
           :class="{ active: activeMenu === 'SHOP' }">
           SHOP
         </a>
-      </li>
-      <li>
-        <router-link to="/aboutpage"
-          @click.prevent="handleMenuClick('ABOUT')"
-          :class="{ active: activeMenu === 'ABOUT' }">
-          ABOUT
-        </router-link>
       </li>
       <li>
         <a href="https://www.thirdpartypresents.com/pages/contact"
@@ -166,8 +165,8 @@ watch(isMusicMenuVisible, (visible) => {
           </ol>
         </li>
         <li class="hd-m-tour"><a href="/tourpage" @click="toggleMenu">TOUR</a></li>
-        <li class="hd-m-tour"><a href="https://www.thirdpartypresents.com">SHOP</a></li>
         <li class="hd-m-tour"><router-link to="/aboutpage" @click="toggleMenu">ABOUT</router-link></li>
+        <li class="hd-m-tour"><a href="https://www.thirdpartypresents.com">SHOP</a></li>
         <li class="hd-m-tour"><a href="https://www.thirdpartypresents.com/pages/contact">CONTACT</a></li>
       </ul>
     </div>
@@ -195,7 +194,7 @@ watch(isMusicMenuVisible, (visible) => {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  text-align: right;
+  text-align: center;
   padding-right: 3vw;
   overflow: hidden;
   z-index: 1;

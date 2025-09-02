@@ -263,4 +263,12 @@ export const igTours = [
   //   country: "Croatia",
   //   ticket: "https://summerpeak.eu/tickets-pakete/"
   // },
+   {
+    id: 34,
+    date: "2025-12-12",
+    title: "DWP",
+    city: "GWK CULTURAL PARK BALI",
+    country: "Indonesia",
+    ticket: "https://dwpfest.com/?fbclid=PAVERFWAMjTPRleHRuA2FlbQIxMQABp9MId319Dnd5cHs1gplmeVV4GQpH8Q0LL6AUci1M3n7u8v81DnlgfPUk8lzf_aem_wfaiPRj4q3HTCuuLm6H-qg"
+  },
 ]        

@@ -255,20 +255,20 @@ export const igTours = [
     country: "Spain",
     ticket: "https://www.clubtickets.com/clubbing/ushuaia-ibiza/martin-garrix/2025-09-25?aff=CT006&_gl=1*ny8pyd*_gcl_au*MTYzMTgyNDM4Ni4xNzUzMDk2ODM1*_ga*MTU3MDk5MjYyNi4xNzUzMDk2ODM1*_ga_Q9YJE2M1KT*czE3NTMwOTY4MzUkbzEkZzEkdDE3NTMwOTY4NDEkajU0JGwwJGgw*_ga_24GBDKCQD0*czE3NTMwOTY4MzQkbzEkZzEkdDE3NTMwOTY4NDEkajU0JGwwJGgw&_ga=2.239650115.150749504.1753096836-1570992626.1753096835"
   },
-  // {
-  //   id: 33,
-  //   date: "2025-08-30",
-  //   title: "SUMMER PEAK",
-  //   city: "Zrce Beach",
-  //   country: "Croatia",
-  //   ticket: "https://summerpeak.eu/tickets-pakete/"
-  // },
-   {
-    id: 34,
+  {
+    id: 33,
     date: "2025-12-12",
     title: "DWP",
     city: "GWK CULTURAL PARK BALI",
     country: "Indonesia",
     ticket: "https://dwpfest.com/?fbclid=PAVERFWAMjTPRleHRuA2FlbQIxMQABp9MId319Dnd5cHs1gplmeVV4GQpH8Q0LL6AUci1M3n7u8v81DnlgfPUk8lzf_aem_wfaiPRj4q3HTCuuLm6H-qg"
+  },
+  {
+    id: 34,
+    date: "2026-02-14",
+    title: "DLDK",
+    city: "Ergo arean, GDANSK",
+    country: "Poland",
+    ticket: "https://dldk.com/events/dont-let-daddy-know-poland-2026/"
   },
 ]        

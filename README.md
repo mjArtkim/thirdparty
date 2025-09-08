@@ -5,6 +5,12 @@ It was created as a **personal project** to practice modern web development with
 
 ---
 
+## 🌍 Link
+
+🔗 https://www.djthirdparty.com
+
+---
+
 ## 🚀 Tech Stack
 
 - ⚡ **Vue 3 (Composition API + `<script setup>`)**

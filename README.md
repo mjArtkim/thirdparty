@@ -17,6 +17,7 @@ It was created as a **personal project** to practice modern web development with
 - 🟨 **JavaScript (ES6+)**
 - ⚙️ **Vite**
 - 🎨 **SCSS**
+- 🌐 **Responsive & Mobile-friendly design**
 
 ---
 

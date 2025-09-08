@@ -16,7 +16,6 @@ import img8 from '@/assets/img/about8.webp'
 gsap.registerPlugin(TextPlugin);
 const route = useRoute();
 
-// Plugin 등록
 if (!gsap.core.globals().Observer) gsap.registerPlugin(Observer);
 
 const sections = [];

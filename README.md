@@ -1,16 +1,26 @@
-# thirdparty
+# 🎨 ThirdParty Project
 
-This template should help get you started developing with Vue 3 in Vite.
+This project is a **Vue 3 + JavaScript + Vite** web application.  
+It was created as a **personal project** to practice modern web development with Vue 3.
 
-## Recommended IDE Setup
+---
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## 🚀 Tech Stack
 
-## Customize configuration
+- ⚡ **Vue 3 (Composition API + `<script setup>`)**
+- 🟨 **JavaScript (ES6+)**
+- ⚙️ **Vite**
+- 🎨 **SCSS**
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+---
 
-## Project Setup
+## 📸 Preview
+
+![screenshot](./src/assets/img/scs_tp.png)
+
+---
+
+## 🛠️ Project Setup
 
 ```sh
 npm install

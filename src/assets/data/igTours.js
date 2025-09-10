@@ -271,4 +271,12 @@ export const igTours = [
     country: "Poland",
     ticket: "https://dldk.com/events/dont-let-daddy-know-poland-2026/"
   },
+  {
+    id: 35,
+    date: "2025-10-31",
+    title: "ZOUK",
+    city: "Singapore River",
+    country: "Singapore",
+    ticket: "https://zoukgroup.com/singapore/zouk/event/EVE109748600020251031/halloween/"
+  },
 ]        

@@ -279,4 +279,20 @@ export const igTours = [
     country: "Singapore",
     ticket: "https://zoukgroup.com/singapore/zouk/event/EVE109748600020251031/halloween/"
   },
+  {
+    id: 36,
+    date: "2025-10-02",
+    title: "VOID",
+    city: "Bangkok",
+    country: "Thailand",
+    ticket: "https://linktr.ee/void.club?fbclid=PAZXh0bgNhZW0CMTEAAafOJB8yUn1WjutngfmZPShLYe9jJEf0IsjEndEBTXhXKOiTKEPkqN3tX1eZQA_aem_5_5b7PS9g45BJx8RoO-Bjg"
+  },
+  {
+    id: 36,
+    date: "2025-11-01",
+    title: "PITT",
+    city: "Kuala Lumpur",
+    country: "Malaysia",
+    ticket: ""
+  },
 ]        

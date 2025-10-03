@@ -1,3 +1,4 @@
+
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import dayjs from 'dayjs'
@@ -23,18 +24,18 @@ function goToLink(link) {
       data-aos="fade-up"
       data-aos-duration="800"
       >
-      <li class="ig-card" v-for="post in limitedPosts" :key="post.id">
+      <li class="ig-card" v-for="post in limitedPosts" :key="post.id" :style="{ '--bg-color': post.maincolor }">
         <div class="ig-img-con">
           <div class="ig-img">
             <img :src="post.image" alt="post image" />
           </div>
-          <div class="ig-img-icon">
+          <div class="ig-img-icon" >
             <button class="ig-play" 
-            :style="{ backgroundColor: post.color }"
+            :style="{ backgroundColor: post.maincolor }"
             @click="goToLink(post.linkyoutube)"
             >
-            <span class="material-icons-outlined">play_circle_outline</span>
-          </button>
+              <span class="material-icons-outlined">play_circle_outline</span>
+            </button>
           </div>
         </div>
         <div class="ig-content">
@@ -60,17 +61,37 @@ function goToLink(link) {
 </template>
 
 <style>
+:root {
+  --border-radius: 20px;
+}
 .ig-card {
+  position: relative;
   width: 30em;
   height: 630px;
   padding: 15px;
-  background: rgba( 255, 255, 255);
+  background: var(--bg-color);
   border-radius: 20px;
   box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.8);
   transition: 0.3s;
+  backdrop-filter: blur(3px) brightness(0.9) contrast(140%) saturate(200%);
+  -webkit-backdrop-filter: blur(3px)  brightness(0.9) contrast(140%) saturate(200%);
   filter: brightness(1) saturate(1.2) contrast(0.85);
   transform: scale(1) translateZ(0);
 }
+.ig-card::before{ 
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1.5px;
+  border-radius: inherit;
+  background: linear-gradient(145deg, #ffffff8d 0%, #a0a0a05b 50%, #ffffff68 100%);
+  filter: blur(50px);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+} 
 .ig-card:hover {
   transform: scale(1.05) translateZ(0);
 }
@@ -99,36 +120,43 @@ function goToLink(link) {
   justify-content: center;
 }
 .ig-img img{
-  width: 98%;
-  border-radius: 20px;
+  width: 100%;
+  border-radius: var(--border-radius);
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
 }
 .ig-img-icon {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: -8px;
+  right: -8px;
   width: 25%;
   height: 25%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
-  border-top-left-radius: 30%;
-  border-bottom-right-radius: 10px;
+  backdrop-filter: blur(3px) brightness(0.9) contrast(140%) saturate(200%);
+  -webkit-backdrop-filter: blur(3px)  brightness(0.9) contrast(140%) saturate(200%);
+  border-top-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 .ig-play {
   position: relative;
-  width: 80%;
-  height: 80%;
-  border-radius: 30%;
+  width: 75%;
+  height: 75%;
+  border-radius: var(--border-radius);
   border: 0;
   transition: 0.3s;
   cursor: pointer;
   color: #fff;
+  font-size: 0.8em;
+  background-color: var(--bg-color);
+  backdrop-filter: blur(3px) brightness(0.9) contrast(140%) saturate(200%);
+  -webkit-backdrop-filter: blur(3px)  brightness(0.9) contrast(140%) saturate(200%);
   text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
 }
 .ig-play:hover {
-  width: 90%;
-  height: 90%;
+  width: 85%;
+  height: 85%;
   text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
 }
 .ig-play:active {
@@ -145,7 +173,7 @@ function goToLink(link) {
   line-height: 22px;
   text-align: center;
   vertical-align: middle;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: var(--bg-color);
   border-radius: 5px;
   border: 1px solid rgba(255, 255, 255, 0.5);
   transition: 0.3s;
@@ -153,7 +181,7 @@ function goToLink(link) {
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
-.ig-img-icon::before{
+/* .ig-img-icon::before{
   position: absolute;
   content: "";
   top: -15px;
@@ -162,8 +190,10 @@ function goToLink(link) {
   width: 2rem;
   height: 1.6rem;
   border-bottom-right-radius: 2em;
-  border-right: 10px solid rgb(255, 255, 255);
-  border-bottom: 10px solid rgb(255, 255, 255);
+  backdrop-filter: blur(3px) brightness(0.9) contrast(140%) saturate(200%);
+  -webkit-backdrop-filter: blur(3px)  brightness(0.9) contrast(140%) saturate(200%);
+  border-right: 10px solid var(--bg-color);
+  border-bottom: 10px solid var(--bg-color);
   transform: rotate(-4deg);
 }
 .ig-img-icon::after{
@@ -175,10 +205,12 @@ function goToLink(link) {
   width: 1.5rem;
   height: 1.5rem;
   border-bottom-right-radius: 2em;
-  border-right: 10px solid rgb(255, 255, 255);
-  border-bottom: 10px solid rgb(255, 255, 255);
+  backdrop-filter: blur(3px) brightness(0.9) contrast(140%) saturate(200%);
+  -webkit-backdrop-filter: blur(3px)  brightness(0.9) contrast(140%) saturate(200%);
+  border-right: 10px solid var(--bg-color);
+  border-bottom: 10px solid var(--bg-color);
   transform: rotate(-2deg);
-}
+} */
 .ig-play:hover span {
   margin-top: 5px;
   font-size: 4em;
@@ -199,10 +231,11 @@ function goToLink(link) {
   font-size: 28px;
   font-weight: bold;
   line-height: 1.5;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
 }
 .ig-con-name {
   font-size: 18px;
-  color: #333;
+  color: #fff;
 }
 .ig-con-flex {
   display: flex;
@@ -210,13 +243,11 @@ function goToLink(link) {
   padding: 0 20px;
   color: #888;
 }
-/* 작은 모바일 (300px 이하) */
-@media (max-width: 300px) {
-  /* 스타일 정의 */
-}
 
-/* 모바일 (320px 이상) */
 @media (max-width: 429px) {
+  :root {
+    --border-radius: 10px;
+  }
   .ig-card {
     width: 250px;
     height: 430px;
@@ -230,6 +261,10 @@ function goToLink(link) {
     margin-top: 0;
     margin-bottom: 0;
   }
+  .ig-img-icon {
+    bottom: -4px;
+    right: -4px;
+  }
   .ig-play span {
     margin-top: 3px;
     font-size: 20px;
@@ -237,7 +272,8 @@ function goToLink(link) {
   .ig-play:hover span {
     font-size: 26px;
   }
-  .ig-img-icon::before{
+
+  /* .ig-img-icon::before{
     top: -12px;
     right: -6px;
     width: 20px;
@@ -254,7 +290,7 @@ function goToLink(link) {
     border-right: 8px solid rgb(255, 255, 255);
     border-bottom: 8px solid rgb(255, 255, 255);
     transform: rotate(3deg);
-  }
+  } */
   .ig-content {
     padding: 10px;
   }
@@ -273,6 +309,9 @@ function goToLink(link) {
 }
 
 @media (min-width: 430px) and (max-width: 600px) {
+  :root {
+    --border-radius: 10px;
+  }
   .ig-card {
     width: 300px;
     height: 470px;
@@ -293,7 +332,11 @@ function goToLink(link) {
   .ig-play:hover span {
     font-size: 30px;
   }
-  .ig-img-icon::before{
+  .ig-img-icon {
+    bottom: -5px;
+    right: -5px;
+  }
+  /* .ig-img-icon::before{
     top: -13px;
     right: -5px;
     width: 20px;
@@ -310,7 +353,7 @@ function goToLink(link) {
     border-right: 8px solid rgb(255, 255, 255);
     border-bottom: 8px solid rgb(255, 255, 255);
     transform: rotate(3deg);
-  }
+  } */
   .ig-content {
     padding: 10px;
   }
@@ -350,7 +393,7 @@ function goToLink(link) {
   .ig-play:hover span {
     font-size: 30px;
   }
-  .ig-img-icon::before{
+  /* .ig-img-icon::before{
     top: -13px;
     right: -5px;
     width: 20px;
@@ -367,7 +410,7 @@ function goToLink(link) {
     border-right: 8px solid rgb(255, 255, 255);
     border-bottom: 8px solid rgb(255, 255, 255);
     transform: rotate(3deg);
-  }
+  } */
   .ig-content {
     padding: 10px;
   }
@@ -385,6 +428,7 @@ function goToLink(link) {
   }
 }
 @media (min-width: 769px) and (max-width: 1080px) {
+  
   .ig-card {
     width: 300px;
     height: 470px;
@@ -405,7 +449,7 @@ function goToLink(link) {
   .ig-play:hover span {
     font-size: 30px;
   }
-  .ig-img-icon::before{
+  /* .ig-img-icon::before{
     top: -13px;
     right: -5px;
     width: 20px;
@@ -422,7 +466,7 @@ function goToLink(link) {
     border-right: 8px solid rgb(255, 255, 255);
     border-bottom: 8px solid rgb(255, 255, 255);
     transform: rotate(3deg);
-  }
+  } */
   .ig-content {
     padding: 10px;
   }

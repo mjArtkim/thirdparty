@@ -466,9 +466,10 @@ onBeforeUnmount(() => {
     color: #353540;
   }
   @media screen and (max-width: 768px) {
-    right: 5px;
-    top: 5px;
+    right: 8px;
+    top: 10px;
     font-size: 36px;
+    padding: 0;
   }
   @media screen and (min-width: 769px) {
     right: 30px;
@@ -488,7 +489,7 @@ onBeforeUnmount(() => {
   }
   @media screen and (max-width: 768px) {
     flex-direction: column;
-    padding-top: 30px;
+
     img {
       width: 100%;
       }

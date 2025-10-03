@@ -38,14 +38,16 @@ function goToLink(link) {
             </button>
           </div>
         </div>
-        <div class="ig-content">
-          <div class="ig-con-tit" :style="{ color: post.color }">{{ post.caption }}</div>
-          <div class="ig-con-name">{{ post.djname }}</div>
-        </div>
-        <div class="ig-con-flex">
-            <div class="ig-con-label">{{ post.recolabel }}</div>
-            <div class="ig-con-txt">Released : {{ dayjs(post.releases).format('YYYY-MM-DD') }}</div>
+        <div>
+          <div class="ig-content">
+            <div class="ig-con-tit" :style="{ color: post.color }">{{ post.caption }}</div>
+            <div class="ig-con-name">{{ post.djname }}</div>
           </div>
+          <div class="ig-con-flex">
+              <div class="ig-con-label">{{ post.recolabel }}</div>
+              <div class="ig-con-txt">Released : {{ dayjs(post.releases).format('YYYY-MM-DD') }}</div>
+          </div>
+        </div>
         <!-- <div class="ig-tag">
           <span
             v-for="(tagItem, index) in post.tag ? post.tag.split(',') : []"
@@ -67,7 +69,7 @@ function goToLink(link) {
 .ig-card {
   position: relative;
   width: 30em;
-  height: 630px;
+  height: 650px;
   padding: 15px;
   background: var(--bg-color);
   border-radius: 20px;
@@ -112,7 +114,8 @@ function goToLink(link) {
 }
 .ig-img-con {
   position: relative;
-  width: 100%;
+  margin: 5px auto;
+  width: 97%;
 }
 .ig-img {
   display: flex;
@@ -250,7 +253,7 @@ function goToLink(link) {
   }
   .ig-card {
     width: 250px;
-    height: 430px;
+    height: 450px;
   }
   .ig-container {
     grid-template-columns: 1fr;
@@ -314,7 +317,7 @@ function goToLink(link) {
   }
   .ig-card {
     width: 300px;
-    height: 470px;
+    height: 490px;
   }
   .ig-container {
     grid-template-columns: 1fr;
@@ -375,7 +378,7 @@ function goToLink(link) {
 @media (min-width: 601px) and (max-width: 768px) {
   .ig-card {
     width: 300px;
-    height: 470px;
+    height: 490px;
   }
   .ig-container {
     grid-template-columns: 1fr;
@@ -431,7 +434,7 @@ function goToLink(link) {
   
   .ig-card {
     width: 300px;
-    height: 470px;
+    height: 490px;
   }
   .ig-container {
     grid-template-columns: 1fr 1fr;

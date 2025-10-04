@@ -296,7 +296,7 @@ export const igTours = [
     ticket: ""
   },
   {
-    id: 36,
+    id: 37,
     date: "2025-10-04",
     title: "OCTIPUS",
     city: "Makati City",

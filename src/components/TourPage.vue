@@ -4,17 +4,25 @@ import { igTours } from '@/assets/data/igTours.js'
 
 const today = new Date()
 const currentTab = ref('upcoming')
-
+today.setHours(0, 0, 0, 0)
 const sortedTours = computed(() => {
   if (currentTab.value === 'upcoming') {
     return igTours
-      .filter(tour => new Date(tour.date) >= today)
+      .filter(tour => {
+        const tourDate = new Date(tour.date)
+        tourDate.setHours(0, 0, 0, 0)
+        return tourDate >= today
+      })
       .sort((a, b) => new Date(a.date) - new Date(b.date))
   } else {
     return igTours
-      .filter(tour => new Date(tour.date) < today)
-      .sort((a, b) => new Date(b.date) - new Date(a.date)) 
-      .slice(0,10)
+      .filter(tour => {
+        const tourDate = new Date(tour.date)
+        tourDate.setHours(0, 0, 0, 0)
+        return tourDate < today
+      })
+      .sort((a, b) => new Date(b.date) - new Date(a.date))
+      .slice(0, 10)
   }
 })
 const currentTabText = computed(() => {

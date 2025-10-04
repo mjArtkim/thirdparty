@@ -295,4 +295,12 @@ export const igTours = [
     country: "Malaysia",
     ticket: ""
   },
+  {
+    id: 36,
+    date: "2025-10-04",
+    title: "OCTIPUS",
+    city: "Makati City",
+    country: "Philippines",
+    ticket: "https://octopusmakati.helixpay.ph/"
+  },
 ]        

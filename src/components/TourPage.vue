@@ -54,6 +54,7 @@ const currentTabText = computed(() => {
           <ol>
             <li class="tour-tit">
               <div>{{ tour.title }}</div>
+              <div>{{ tour.set }}</div>
             </li>
             <li class="tour-londat">
               <div>{{ tour.city }} / {{ tour.country }}</div>
@@ -61,19 +62,15 @@ const currentTabText = computed(() => {
             </li>
           </ol>
           <div class="tour-ticket">
-            <!-- 과거 공연이면 'End' 버튼 -->
             <button v-if="currentTab === 'past'" class="end-btn" disabled>
               END
             </button>
-
-            <!-- 티켓 정보가 있는 경우 -->
             <a v-else-if="tour.ticket" :href="tour.ticket" target="_blank">
               <button class="ticket-btn">
                 Tickets
               </button>
             </a>
 
-            <!-- 티켓 정보가 없는 경우 -->
             <button v-else class="end-btn" disabled>
               Not Info
             </button>
@@ -89,6 +86,7 @@ const currentTabText = computed(() => {
           <ol>
             <li class="m-tour-tit">
               <div>{{ tour.title }}</div>
+              <div>{{ tour.set }}</div>
             </li>
             <li class="m-tour-londat">
               <div class="fz-14">
@@ -232,19 +230,6 @@ const currentTabText = computed(() => {
     width: 90%;
     height: 100%;
     margin-top: 30px;
-    // &::after {
-    // position: absolute;
-    // bottom: 0px;
-    // display: block;
-    // content: 'UPCOMMING SHOW';
-    // clear: both;
-    // width: 80%;
-    // opacity: 0.3;
-    // right: 30px;
-    // font-size: 4vw;
-    // text-align: right;
-    // animation: shimmer 2s ease-in-out infinite;
-    // }
     @keyframes shimmer {
       0%, 100% {
         opacity: 0.1;
@@ -317,10 +302,15 @@ const currentTabText = computed(() => {
   grid-template-columns: 85% 15%;
   padding: 10px 30px;
 }
-.tour-tit > div{
-  font-weight: bold !important;
-  padding-bottom: 10px;
-  font-size: 18px;
+.tour-tit { 
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  div{
+    font-weight: bold !important;
+    padding-bottom: 10px;
+    font-size: 18px;
+  }
 }
 .tour-londat {
   width: 100%;
@@ -352,9 +342,6 @@ const currentTabText = computed(() => {
   transition: all 0.3s ease;
   position: relative;
   display: inline-block;
-  box-shadow:inset 2px 2px 2px 0px rgba(0, 0, 0, 0.3),
-                    2px 2px 5px 0px rgba(255, 255, 255, 0.1),
-                    2px 2px 5px 0px rgba(255, 255, 255, 0.1);
   outline: none;
   background-color: #fff;
   border: none;
@@ -370,13 +357,8 @@ const currentTabText = computed(() => {
     top: 0;
     right: 0;
     z-index: -1;
-    background-image: linear-gradient(315deg, #6e6e6e 0%, #0d0d0d 74%);
-    background-color: #f0ecfc;
-    border-radius: 5px;
-    box-shadow:
-      inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
-      7px 7px 20px 0px rgba(0, 0, 0, 0.1),
-      4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+    background-color: #0d0d0d;
+    border-radius: 3px;
     transition: all 0.3s ease;
   }
   a {
@@ -444,9 +426,6 @@ const currentTabText = computed(() => {
   transition: all 0.3s ease;
   position: relative;
   display: inline-block;
-  box-shadow:inset 2px 2px 2px 0px rgba(0, 0, 0, 0.3),
-                    2px 2px 5px 0px rgba(255, 255, 255, 0.1),
-                    2px 2px 5px 0px rgba(255, 255, 255, 0.1);
   outline: none;
   background-color: #fff;
   border: none;
@@ -462,13 +441,8 @@ const currentTabText = computed(() => {
     top: 0;
     right: 0;
     z-index: -1;
-    background-image: linear-gradient(315deg, #6e6e6e 0%, #0d0d0d 74%);
-    background-color: #f0ecfc;
-    border-radius: 5px;
-    box-shadow:
-      inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
-      7px 7px 20px 0px rgba(0, 0, 0, 0.1),
-      4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+    background-color: #0d0d0d;
+    border-radius: 3px;
     transition: all 0.3s ease;
   }
   a {

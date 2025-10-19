@@ -279,7 +279,7 @@ export const igPosts = [
     caption: "Never Get Enough [feat. Kathy Brown]",
     album: "Never Get Enough ",
     djname:"THIRD ≡ PARTY",
-    releases: "2022.08.05T00:00:00",
+    releases: "2022-08-05T00:00:00",
     tag: "Progressive House, Dance",
     recolabel: "Release Records",
     color: "#3349BC",

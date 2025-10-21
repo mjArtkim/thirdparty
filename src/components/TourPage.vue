@@ -1,13 +1,28 @@
 <script setup>
-import { ref, computed } from 'vue'
-import { igTours } from '@/assets/data/igTours.js'
+import { ref, computed, onMounted } from 'vue'
+import { db } from '@/firebase.js'
+import { collection, onSnapshot } from 'firebase/firestore'
+import { useRouter } from 'vue-router'
 
+const router = useRouter()
 const today = new Date()
 const currentTab = ref('upcoming')
+
 today.setHours(0, 0, 0, 0)
+const tours = ref([])
+
+// Firestore 실시간 구독
+onMounted(() => {
+  const toursCollection = collection(db, 'tours')
+  onSnapshot(toursCollection, (snapshot) => {
+    tours.value = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }))
+  })
+})
+
+// 탭별 정렬
 const sortedTours = computed(() => {
   if (currentTab.value === 'upcoming') {
-    return igTours
+    return tours.value
       .filter(tour => {
         const tourDate = new Date(tour.date)
         tourDate.setHours(0, 0, 0, 0)
@@ -15,7 +30,7 @@ const sortedTours = computed(() => {
       })
       .sort((a, b) => new Date(a.date) - new Date(b.date))
   } else {
-    return igTours
+    return tours.value
       .filter(tour => {
         const tourDate = new Date(tour.date)
         tourDate.setHours(0, 0, 0, 0)
@@ -25,6 +40,7 @@ const sortedTours = computed(() => {
       .slice(0, 10)
   }
 })
+
 const currentTabText = computed(() => {
   return currentTab.value === 'upcoming' ? 'Upcoming' : 'Past'
 })
@@ -112,6 +128,9 @@ const currentTabText = computed(() => {
           </ol>
         </li>
       </ul>
+      <div>
+      <router-link to="/login">+</router-link>
+      </div>
     </div>
   </section>
 </template>

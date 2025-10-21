@@ -79,33 +79,35 @@ const deleteTourItem = async (id) => {
       <ul class="admin__list">
         <li v-for="t in tours" :key="t.id">
           <div class="admin__tit">
-            <div>
+            <div class="admin__inner">
               <div v-if="!t.isEditing">{{ t.title }}</div>
               <input v-else v-model="t.title" />
             </div>
-            <div>
+            <div class="admin__inner">
               <div v-if="!t.isEditing">{{ t.set }}</div>
               <input v-else v-model="t.set" />
             </div>
-          </div>
-          <div class="admin__tit">
-            <span v-if="!t.isEditing">{{ t.city }} / {{ t.country }} ({{ t.date }})</span>
-            <div v-else>
-              <input v-model="t.city" placeholder="City" />
-              <input v-model="t.country" placeholder="Country" />
-              <input v-model="t.date" placeholder="Date (YYYY-MM-DD)" />
+            <div class="admin__inner">
+              <div v-if="!t.isEditing">{{ t.city }} / {{ t.country }} ({{ t.date }})</div>
+              <div v-else>
+                <input v-model="t.city" placeholder="City" />
+                <input v-model="t.country" placeholder="Country" />
+                <input v-model="t.date" placeholder="Date (YYYY-MM-DD)" />
+              </div>
+            </div>
+            <div class="admin__inner">
+              <div v-if="t.ticket && !t.isEditing">
+                <a :href="t.ticket" target="_blank">View Ticket</a>
+              </div>
+              <div v-else-if="t.isEditing">
+                <input v-model="t.ticket" placeholder="Ticket URL" />
+              </div>
             </div>
           </div>
-          <div v-if="t.ticket && !t.isEditing">
-            <a :href="t.ticket" target="_blank">View Ticket</a>
-          </div>
-          <div v-else-if="t.isEditing">
-            <input v-model="t.ticket" placeholder="Ticket URL" />
-          </div>
           <div class="admin__btn">
-            <button v-if="!t.isEditing" @click="t.isEditing = true">Edit</button>
-            <button v-else @click="saveTour(t)">Save</button>
-            <button @click="deleteTourItem(t.id)">Delete</button>
+            <button v-if="!t.isEditing" @click="t.isEditing = true" class="ad-btne">Edit</button>
+            <button v-else @click="saveTour(t)" class="ad-btns">Save</button>
+            <button @click="deleteTourItem(t.id)" class="ad-btnd">Delete</button>
           </div>
         </li>
       </ul>
@@ -167,8 +169,7 @@ const deleteTourItem = async (id) => {
     padding: 10px;
     li {
       border-top: 1px solid #ddd;
-      margin: 5px 0;
-      padding: 10px;
+      padding: 15px;
       display: flex;
       gap: 10px;
       align-items: center;
@@ -178,6 +179,48 @@ const deleteTourItem = async (id) => {
     display: flex;
     align-items: center;
     font-size: 16px;
+    gap: 10px;
+  }
+  &__inner {
+    input {
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      padding: 3px 5px;
+    }
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    button {
+      font-size: 16px;
+      padding: 3px 5px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+    }
+    .ad-btne {
+      background-color: #076400;
+      color: #ddd;
+      &:hover{
+        background-color: #21901a;
+      }
+    }
+    .ad-btns {
+      background-color: #2563eb;
+      color: #ddd;
+      &:hover{
+        background: #4f46e5;
+      }
+    }
+    .ad-btnd {
+      background: #ef4444;
+      color: #ddd;
+      &:hover{
+        background: #dc2626;
+      }
+    }
   }
 }
 

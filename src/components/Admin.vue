@@ -88,11 +88,14 @@ const deleteTourItem = async (id) => {
               <input v-else v-model="t.set" />
             </div>
             <div class="admin__inner">
-              <div v-if="!t.isEditing">{{ t.city }} / {{ t.country }} ({{ t.date }})</div>
-              <div v-else>
-                <input v-model="t.city" placeholder="City" />
-                <input v-model="t.country" placeholder="Country" />
-                <input v-model="t.date" placeholder="Date (YYYY-MM-DD)" />
+              <div v-if="!t.isEditing" class="admin-flex">
+                <div>{{ t.city }}</div>
+                <div>{{ t.country }} ({{ t.date }})</div>
+              </div>
+              <div v-else class="admin-flex">
+                <div><input v-model="t.city" placeholder="City" /></div>
+                <div><input v-model="t.country" placeholder="Country" /></div>
+                <div><input v-model="t.date" placeholder="Date (YYYY-MM-DD)" /></div>
               </div>
             </div>
             <div class="admin__inner">
@@ -126,6 +129,7 @@ const deleteTourItem = async (id) => {
     padding-bottom: 30px;
   }
   &__input{
+    width: 100%;
     display: flex;
     flex-direction: column;
     border: 1px solid rgba(255, 255, 255, 0.5);
@@ -152,6 +156,7 @@ const deleteTourItem = async (id) => {
     }
   }
   &__enter {
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
@@ -188,6 +193,11 @@ const deleteTourItem = async (id) => {
       border-radius: 5px;
       padding: 3px 5px;
     }
+    .admin-flex{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
   }
   &__btn {
     display: flex;
@@ -220,6 +230,46 @@ const deleteTourItem = async (id) => {
       &:hover{
         background: #dc2626;
       }
+    }
+  }
+}
+
+@media (max-width: 960px){
+  .admin{
+    &__enter {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    &__list {
+      li {
+        width: 100%;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+    &__tit {
+      width: 100%;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+    &__inner {
+      width: 100%;
+      input {
+        width: 100%;
+      }
+      .admin-flex{
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        div {
+          width: 100%;
+        }
+      }
+    }
+    &__btn {
+      width: 100%;
+      margin-top: 5px;
+      justify-content: end;
     }
   }
 }

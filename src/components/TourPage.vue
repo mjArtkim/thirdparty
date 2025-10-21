@@ -128,8 +128,8 @@ const currentTabText = computed(() => {
           </ol>
         </li>
       </ul>
-      <div>
-      <router-link to="/login">+</router-link>
+      <div class="login-admin">
+        <router-link to="/login">+</router-link>
       </div>
     </div>
   </section>
@@ -467,5 +467,11 @@ const currentTabText = computed(() => {
   a {
     position: relative;
   }
+}
+.login-admin {
+  position: absolute;
+  bottom: 0;
+  right: 5px;
+  a{color: #555555;}
 }
 </style>

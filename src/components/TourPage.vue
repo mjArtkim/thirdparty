@@ -494,7 +494,7 @@ const currentTabText = computed(() => {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 300px;
+  height: 700px;
   color: #666;
 }
 

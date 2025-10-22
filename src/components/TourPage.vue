@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { db } from '@/firebase.js'
 import { collection, onSnapshot } from 'firebase/firestore'
 import { useRouter } from 'vue-router'
@@ -13,6 +13,8 @@ const currentTab = ref('upcoming')
 today.setHours(0, 0, 0, 0)
 const tours = ref([])
 const isMobile = ref(window.innerWidth < 899)
+const loading = ref(true)
+
 function handleResize() {
   isMobile.value = window.innerWidth < 899
 }
@@ -28,6 +30,7 @@ onMounted(() => {
         dateObj: new Date(data.date)
       }
     })
+    loading.value = false
     setTimeout(() => AOS.refresh(), 100)
   })
 
@@ -41,20 +44,12 @@ onMounted(() => {
 const sortedTours = computed(() => {
   if (currentTab.value === 'upcoming') {
     return tours.value
-      .filter(tour => {
-        const tourDate = new Date(tour.date)
-        tourDate.setHours(0, 0, 0, 0)
-        return tourDate >= today
-      })
-      .sort((a, b) => new Date(a.date) - new Date(b.date))
+      .filter(tour => tour.dateObj >= today)
+      .sort((a, b) => a.dateObj - b.dateObj)
   } else {
     return tours.value
-      .filter(tour => {
-        const tourDate = new Date(tour.date)
-        tourDate.setHours(0, 0, 0, 0)
-        return tourDate < today
-      })
-      .sort((a, b) => new Date(b.date) - new Date(a.date))
+      .filter(tour => tour.dateObj < today)
+      .sort((a, b) => b.dateObj - a.dateObj)
       .slice(0, 10)
   }
 })
@@ -79,6 +74,10 @@ const currentTabText = computed(() => {
           <div :class="{ active: currentTab === 'past' }" @click="currentTab = 'past'">Past</div>
         </li>
       </ul>
+      <div v-if="loading" class="loading-box" data-aos="fade-in">
+        <div class="loading-spinner"></div>
+        <p>Loading Tours...</p>
+      </div>
       <template v-if="!isMobile">
         <ul 
           v-for="tour in sortedTours" 
@@ -496,5 +495,29 @@ const currentTabText = computed(() => {
   bottom: 0;
   right: 5px;
   a{color: #555555;}
+}
+
+.loading-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  color: #666;
+}
+
+.loading-spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid #ccc;
+  border-top-color: #000;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 </style>

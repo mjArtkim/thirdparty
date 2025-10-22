@@ -3,8 +3,7 @@ import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { db } from '@/firebase.js'
 import { collection, onSnapshot } from 'firebase/firestore'
 import { useRouter } from 'vue-router'
-import AOS from 'aos'
-import 'aos/dist/aos.css'
+
 
 const router = useRouter()
 const today = new Date()
@@ -31,13 +30,6 @@ onMounted(() => {
       }
     })
     loading.value = false
-    setTimeout(() => AOS.refresh(), 100)
-  })
-
-  AOS.init({
-    once: true, 
-    duration: 700,
-    easing: 'ease-out'
   })
 })
 

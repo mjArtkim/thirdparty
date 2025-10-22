@@ -3,6 +3,8 @@ import { ref, computed, onMounted } from 'vue'
 import { db } from '@/firebase.js'
 import { collection, onSnapshot } from 'firebase/firestore'
 import { useRouter } from 'vue-router'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 const router = useRouter()
 const today = new Date()
@@ -10,16 +12,32 @@ const currentTab = ref('upcoming')
 
 today.setHours(0, 0, 0, 0)
 const tours = ref([])
-
-// Firestore 실시간 구독
+const isMobile = ref(window.innerWidth < 899)
+function handleResize() {
+  isMobile.value = window.innerWidth < 899
+}
 onMounted(() => {
+  window.addEventListener('resize', handleResize)
   const toursCollection = collection(db, 'tours')
   onSnapshot(toursCollection, (snapshot) => {
-    tours.value = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }))
+    tours.value = snapshot.docs.map(doc => {
+      const data = doc.data()
+      return {
+        id: doc.id,
+        ...data,
+        dateObj: new Date(data.date)
+      }
+    })
+    setTimeout(() => AOS.refresh(), 100)
+  })
+
+  AOS.init({
+    once: true, 
+    duration: 700,
+    easing: 'ease-out'
   })
 })
 
-// 탭별 정렬
 const sortedTours = computed(() => {
   if (currentTab.value === 'upcoming') {
     return tours.value
@@ -53,7 +71,7 @@ const currentTabText = computed(() => {
       <div class="tour-left-txt1" data-aos="fade-up" data-aos-duration="500">TOUR</div>
       <div class="tour-left-txt2" data-aos="fade-up" data-aos-duration="1200">TOUR</div>
     </div>
-    <div class="tour-right">
+    <div class="tour-right" >
       <ul class="tour-tap">
         <li class="tour-current">{{ currentTabText }}</li>
         <li>
@@ -61,73 +79,78 @@ const currentTabText = computed(() => {
           <div :class="{ active: currentTab === 'past' }" @click="currentTab = 'past'">Past</div>
         </li>
       </ul>
-      <ul v-for="tour in sortedTours" :key="tour.id" class="tour-list" 
-        data-aos="fade-up" 
-        data-aos-anchor-placement="top-bottom"
-        data-aos-duration="700"
-        >
-        <li class="tour-list-inner" >
-          <ol>
-            <li class="tour-tit">
-              <div>{{ tour.title }}</div>
-              <div>{{ tour.set }}</div>
-            </li>
-            <li class="tour-londat">
-              <div>{{ tour.city }} / {{ tour.country }}</div>
-              <div>{{ tour.date }}</div>
-            </li>
-          </ol>
-          <div class="tour-ticket">
-            <button v-if="currentTab === 'past'" class="end-btn" disabled>
-              END
-            </button>
-            <a v-else-if="tour.ticket" :href="tour.ticket" target="_blank">
-              <button class="ticket-btn">
-                Tickets
-              </button>
-            </a>
-
-            <button v-else class="end-btn" disabled>
-              Not Info
-            </button>
-          </div>
-        </li>
-      </ul>
-      <ul v-for="tour in sortedTours" :key="tour.id" class="m-tour-list" 
-        data-aos="fade-up" 
-        data-aos-anchor-placement="top-bottom"
-        data-aos-duration="700"
-        >
-        <li class="m-tour-list-inner">
-          <ol>
-            <li class="m-tour-tit">
-              <div>{{ tour.title }}</div>
-              <div>{{ tour.set }}</div>
-            </li>
-            <li class="m-tour-londat">
-              <div class="fz-14">
+      <template v-if="!isMobile">
+        <ul 
+          v-for="tour in sortedTours" 
+          :key="tour.id" 
+          class="tour-list" 
+          data-aos="fade-up" 
+          data-aos-anchor-placement="top-bottom"
+          data-aos-duration="700"
+          >
+          <li class="tour-list-inner" >
+            <ol>
+              <li class="tour-tit">
+                <div>{{ tour.title }}</div>
+                <div>{{ tour.set }}</div>
+              </li>
+              <li class="tour-londat">
                 <div>{{ tour.city }} / {{ tour.country }}</div>
                 <div>{{ tour.date }}</div>
-              </div>
-              <div class="m-tour-ticket">
-                <button v-if="currentTab === 'past'" class="m-end-btn" disabled>
-                  END
+              </li>
+            </ol>
+            <div class="tour-ticket">
+              <button v-if="currentTab === 'past'" class="end-btn" disabled>
+                END
+              </button>
+              <a v-else-if="tour.ticket" :href="tour.ticket" target="_blank">
+                <button class="ticket-btn">
+                  Tickets
                 </button>
-
-                <a v-else-if="tour.ticket" :href="tour.ticket" target="_blank">
-                  <button class="m-ticket-btn">
-                    Tickets
+              </a>
+              <button v-else class="end-btn" disabled>
+                Not Info
+              </button>
+            </div>
+          </li>
+        </ul>
+      </template>
+      <template v-else>
+        <ul v-for="tour in sortedTours" :key="tour.id" class="m-tour-list" 
+          data-aos="fade-up" 
+          data-aos-anchor-placement="top-bottom"
+          data-aos-duration="700"
+          >
+          <li class="m-tour-list-inner">
+            <ol>
+              <li class="m-tour-tit">
+                <div>{{ tour.title }}</div>
+                <div>{{ tour.set }}</div>
+              </li>
+              <li class="m-tour-londat">
+                <div class="fz-14">
+                  <div>{{ tour.city }} / {{ tour.country }}</div>
+                  <div>{{ tour.date }}</div>
+                </div>
+                <div class="m-tour-ticket">
+                  <button v-if="currentTab === 'past'" class="m-end-btn" disabled>
+                    END
                   </button>
-                </a>
+                  <a v-else-if="tour.ticket" :href="tour.ticket" target="_blank">
+                    <button class="m-ticket-btn">
+                      Tickets
+                    </button>
+                  </a>
 
-                <button v-else class="m-end-btn" disabled>
-                  Not Info
-                </button>
-              </div>
-            </li>
-          </ol>
-        </li>
-      </ul>
+                  <button v-else class="m-end-btn" disabled>
+                    Not Info
+                  </button>
+                </div>
+              </li>
+            </ol>
+          </li>
+        </ul>
+      </template>
       <div class="login-admin">
         <router-link to="/login">+</router-link>
       </div>

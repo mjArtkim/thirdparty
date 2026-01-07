@@ -11,7 +11,7 @@
         <li><a href="https://www.youtube.com/@thirdpartychannel" target="_blank" >Youtube</a></li>
         <li><a href="https://prog.djthirdparty.com" target="_blank">Team Progressive House</a></li>
       </ul>
-      <div class="foot-copy">© 2025, THIRD Ξ PARTY </div>
+      <div class="foot-copy">© 2026, THIRD Ξ PARTY </div>
     </div>
   </footer>
 </template>

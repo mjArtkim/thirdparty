@@ -882,7 +882,7 @@ export const igPosts = [
     color: "#D22506",
     maincolor: "rgba(210, 37, 6, 0.3)",
     linkapple: "https://music.apple.com/kr/album/enemy/1840882919?i=1840883161",
-    linkyoutube: "",
+    linkyoutube: "https://youtu.be/CZOTfDRwng8?si=lZN9m5yB3DlnkFXb",
     linkspotify: "https://open.spotify.com/track/2HJygGM6KHVsydgxGhrpqk?si=30d6523cbf224f3e",
     linksound: "",
     type: 'Singles',

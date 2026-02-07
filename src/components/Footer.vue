@@ -11,7 +11,7 @@
         <li><a href="https://www.youtube.com/@thirdpartychannel" target="_blank" >Youtube</a></li>
         <li><a href="https://prog.djthirdparty.com" target="_blank">Team Progressive House</a></li>
       </ul>
-      <div class="foot-copy">© 2026, THIRD Ξ PARTY </div>
+      <div class="foot-copy">© 2026, THIRD Ξ PARTY Designed & Developed by <a href="https://www.ideartm.com" target="_blank" rel="noopener noreferrer">Minji Kim</a></div>
     </div>
   </footer>
 </template>
@@ -19,7 +19,7 @@
 <style>
 .footer-container {
   position: relative;
-  height: 230px;
+  height: 250px;
   border-top: 1px solid #eee;
   margin: 0 50px;
 }
@@ -39,7 +39,10 @@
   position: absolute;
   bottom: 50px;
 }
-/* 모바일 (320px 이상) */
+.foot-copy a {
+    font-weight: bold;
+}
+  /* 모바일 (320px 이상) */
 @media (min-width: 320px) {
   /* 스타일 정의 */
 }
@@ -55,9 +58,12 @@
   .foot-list li{
     padding: 0 10px;
   }
-  .foot-copy {
-    bottom: 30px;
+  .foot-copy {  
+    position: relative;
+    text-align: center;
     font-size: 14px;
+    margin-top: 20px;
+    bottom: 0;
   }
 }
 
@@ -73,8 +79,11 @@
     padding: 0 10px;
   }
   .foot-copy {
-    bottom: 30px;
+    position: relative;
+    text-align: center;
     font-size: 14px;
+    margin-top: 20px;
+    bottom: 0;
   }
 }
 

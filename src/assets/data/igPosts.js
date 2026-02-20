@@ -900,7 +900,7 @@ export const igPosts = [
     color: "#090909",
     maincolor: "rgba(9, 9, 9, 0.3)",
     linkapple: "https://music.apple.com/kr/album/love-me-again-again-dubvision-third-party-remix/1863682741?i=1863682744",
-    linkyoutube: "https://youtu.be/CZOTfDRwng8?si=lZN9m5yB3DlnkFXb",
+    linkyoutube: "",
     linkspotify: "https://open.spotify.com/track/0Az2NLbpGUqE2kJ8LEFdfZ?si=9fbf5a10de30449",
     linksound: "",
     type: 'Singles',

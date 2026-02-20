@@ -38,6 +38,7 @@ import img37 from '@/assets/music/neverget.webp'
 import img38 from '@/assets/music/wecanfindaway.webp'
 import img39 from '@/assets/music/takemethere.webp'
 import img40 from '@/assets/music/enemy.webp'
+import img41 from '@/assets/music/lovemeagain.webp'
 
 
 
@@ -884,6 +885,23 @@ export const igPosts = [
     linkapple: "https://music.apple.com/kr/album/enemy/1840882919?i=1840883161",
     linkyoutube: "https://youtu.be/CZOTfDRwng8?si=lZN9m5yB3DlnkFXb",
     linkspotify: "https://open.spotify.com/track/2HJygGM6KHVsydgxGhrpqk?si=30d6523cbf224f3e",
+    linksound: "",
+    type: 'Singles',
+  },
+    {
+    id: 42,
+    image: img41,
+    caption: "Love Me Again",
+    album: "Love Me Again (Dubvision & Third Party Remix)",
+    djname:"John Newman,Dubvision & Third Party",
+    releases: "2026-02-20T00:00:00",
+    tag: "Progressive House, Dance",
+    recolabel: "Numana Music / D.A.P.",
+    color: "#090909",
+    maincolor: "rgba(9, 9, 9, 0.3)",
+    linkapple: "https://music.apple.com/kr/album/love-me-again-again-dubvision-third-party-remix/1863682741?i=1863682744",
+    linkyoutube: "https://youtu.be/CZOTfDRwng8?si=lZN9m5yB3DlnkFXb",
+    linkspotify: "https://open.spotify.com/track/0Az2NLbpGUqE2kJ8LEFdfZ?si=9fbf5a10de30449",
     linksound: "",
     type: 'Singles',
   },

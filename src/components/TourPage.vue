@@ -23,24 +23,59 @@ onMounted(() => {
   onSnapshot(toursCollection, (snapshot) => {
     tours.value = snapshot.docs.map(doc => {
       const data = doc.data()
+      const { dateObj, dateDisplay, isTBA } = normalizeDate(data.date)
       return {
         id: doc.id,
         ...data,
-        dateObj: new Date(data.date)
+        dateObj,
+        dateDisplay,
+        isTBA
       }
     })
     loading.value = false
   })
 })
 
+function normalizeDate(rawDate) {
+  if (rawDate && typeof rawDate.toDate === 'function') {
+    const parsed = rawDate.toDate()
+    if (!Number.isNaN(parsed.getTime())) {
+      return {
+        dateObj: parsed,
+        dateDisplay: parsed.toLocaleDateString('en-CA'),
+        isTBA: false
+      }
+    }
+  }
+
+  if (typeof rawDate === 'string') {
+    const trimmed = rawDate.trim()
+    const parsed = trimmed ? new Date(trimmed) : null
+    if (parsed && !Number.isNaN(parsed.getTime())) {
+      return {
+        dateObj: parsed,
+        dateDisplay: trimmed,
+        isTBA: false
+      }
+    }
+  }
+
+  return { dateObj: null, dateDisplay: 'TBA', isTBA: true }
+}
+
 const sortedTours = computed(() => {
   if (currentTab.value === 'upcoming') {
     return tours.value
-      .filter(tour => tour.dateObj >= today)
-      .sort((a, b) => a.dateObj - b.dateObj)
+      .filter(tour => tour.isTBA || tour.dateObj >= today)
+      .sort((a, b) => {
+        if (a.isTBA && !b.isTBA) return 1
+        if (!a.isTBA && b.isTBA) return -1
+        if (a.isTBA && b.isTBA) return 0
+        return a.dateObj - b.dateObj
+      })
   } else {
     return tours.value
-      .filter(tour => tour.dateObj < today)
+      .filter(tour => tour.dateObj && tour.dateObj < today)
       .sort((a, b) => b.dateObj - a.dateObj)
       .slice(0, 10)
   }
@@ -87,7 +122,7 @@ const currentTabText = computed(() => {
               </li>
               <li class="tour-londat">
                 <div>{{ tour.city }} / {{ tour.country }}</div>
-                <div>{{ tour.date }}</div>
+                <div>{{ tour.dateDisplay }}</div>
               </li>
             </ol>
             <div class="tour-ticket">
@@ -121,7 +156,7 @@ const currentTabText = computed(() => {
               <li class="m-tour-londat">
                 <div class="fz-14">
                   <div>{{ tour.city }} / {{ tour.country }}</div>
-                  <div>{{ tour.date }}</div>
+                  <div>{{ tour.dateDisplay }}</div>
                 </div>
                 <div class="m-tour-ticket">
                   <button v-if="currentTab === 'past'" class="m-end-btn" disabled>

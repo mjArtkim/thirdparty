@@ -12,6 +12,17 @@ onAuthStateChanged(auth, (u) => {
 const tours = ref([])
 const toursCollection = collection(db, 'tours')
 
+const isTBAValue = (value) => {
+  if (!value) return true
+  if (typeof value === 'string' && value.trim().toUpperCase() === 'TBA') return true
+  return false
+}
+
+const normalizeAdminDate = (value) => {
+  const isTBA = isTBAValue(value)
+  return { isTBA, date: isTBA ? '' : value }
+}
+
 const newTour = ref({
   title: '',
   date: '',
@@ -20,25 +31,50 @@ const newTour = ref({
   country: '',
   ticket: ''
 })
+const newTourTBA = ref(false)
 
 const fetchTours = async () => {
   const q = query(toursCollection, orderBy('date', 'desc'))
   const snapshot = await getDocs(q) 
-  tours.value = snapshot.docs.map(doc => ({ id: doc.id, isEditing: false, ...doc.data() }))
+  tours.value = snapshot.docs.map(doc => {
+    const data = doc.data()
+    const { isTBA, date } = normalizeAdminDate(data.date)
+    return { id: doc.id, isEditing: false, isTBA, ...data, date }
+  })
 }
 onMounted(fetchTours)
 
+const setNewTourTBA = (checked) => {
+  newTourTBA.value = checked
+  if (checked) newTour.value.date = ''
+}
+
+const setTourTBA = (tour, checked) => {
+  tour.isTBA = checked
+  if (checked) {
+    tour._prevDate = tour.date
+    tour.date = ''
+  } else if (!tour.date && tour._prevDate) {
+    tour.date = tour._prevDate
+  }
+}
+
 const addTour = async () => {
   if (!newTour.value.title) return alert('Enter Title!')
-  await addDoc(toursCollection, newTour.value)
+  const payload = {
+    ...newTour.value,
+    date: newTourTBA.value ? '' : newTour.value.date
+  }
+  await addDoc(toursCollection, payload)
   newTour.value = { title: '', date: '', set: '', city: '', country: '', ticket: '' }
+  newTourTBA.value = false
   fetchTours()
 }
 
 const saveTour = async (tour) => {
   const updated = {
     title: tour.title,
-    date: tour.date,
+    date: tour.isTBA ? '' : tour.date,
     set: tour.set,
     city: tour.city,
     country: tour.country,
@@ -67,7 +103,13 @@ const deleteTourItem = async (id) => {
         <h3>Tour ADD</h3>
         <div class="admin__enter">
           <input v-model="newTour.title" placeholder="Title" />
-          <input v-model="newTour.date" placeholder="Date (YYYY-MM-DD)" />
+          <div class="admin__date">
+            <input v-model="newTour.date" placeholder="Date (YYYY-MM-DD)" :disabled="newTourTBA" />
+            <label class="admin__tba">
+              <input type="checkbox" :checked="newTourTBA" @change="setNewTourTBA($event.target.checked)" />
+              TBA
+            </label>
+          </div>
           <input v-model="newTour.set" placeholder="Set" />
           <input v-model="newTour.city" placeholder="City" />
           <input v-model="newTour.country" placeholder="Country" />
@@ -90,12 +132,18 @@ const deleteTourItem = async (id) => {
             <div class="admin__inner">
               <div v-if="!t.isEditing" class="admin-flex">
                 <div>{{ t.city }}</div>
-                <div>{{ t.country }} ({{ t.date }})</div>
+                <div>{{ t.country }} ({{ t.isTBA ? 'TBA' : t.date }})</div>
               </div>
               <div v-else class="admin-flex">
                 <div><input v-model="t.city" placeholder="City" /></div>
                 <div><input v-model="t.country" placeholder="Country" /></div>
-                <div><input v-model="t.date" placeholder="Date (YYYY-MM-DD)" /></div>
+                <div class="admin__date">
+                  <input v-model="t.date" placeholder="Date (YYYY-MM-DD)" :disabled="t.isTBA" />
+                  <label class="admin__tba">
+                    <input type="checkbox" :checked="t.isTBA" @change="setTourTBA(t, $event.target.checked)" />
+                    TBA
+                  </label>
+                </div>
               </div>
             </div>
             <div class="admin__inner">
@@ -165,6 +213,28 @@ const deleteTourItem = async (id) => {
       padding: 5px 10px;
     }
   }
+  &__date {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    input {
+      flex: 1;
+    }
+  }
+  &__tba {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    white-space: nowrap;
+    input {
+      width: auto;
+      height: auto;
+      padding: 0;
+      margin: 0;
+    }
+  }
   &__listtit{
     font-size: 24px;
     font-weight: 600;
@@ -192,6 +262,16 @@ const deleteTourItem = async (id) => {
       border: none;
       border-radius: 5px;
       padding: 3px 5px;
+    }
+    .admin__tba {
+      input {
+        width: auto;
+        height: auto;
+        padding: 0;
+        margin: 0;
+        border: none;
+        border-radius: 0;
+      }
     }
     .admin-flex{
       display: flex;

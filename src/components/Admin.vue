@@ -9,6 +9,8 @@ onAuthStateChanged(auth, (u) => {
   user.value = u
 })
 
+const setTagOptions = ['HALŌ']
+
 const tours = ref([])
 const toursCollection = collection(db, 'tours')
 
@@ -21,6 +23,39 @@ const isTBAValue = (value) => {
 const normalizeAdminDate = (value) => {
   const isTBA = isTBAValue(value)
   return { isTBA, date: isTBA ? '' : value }
+}
+
+const escapeRegExp = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+
+const extractSetTags = (setValue) => {
+  if (typeof setValue !== 'string') return []
+  const tags = []
+  const regex = /\[([^\]]+)\]/g
+  let match
+  while ((match = regex.exec(setValue)) !== null) {
+    const tag = match[1].trim()
+    if (tag) tags.push(tag)
+  }
+  return tags
+}
+
+const uniqueSetTags = (setValue) => {
+  const tags = extractSetTags(setValue)
+  return Array.from(new Set(tags))
+}
+
+const hasSetTag = (setValue, tag) => {
+  return extractSetTags(setValue).includes(tag)
+}
+
+const toggleSetTag = (setValue, tag, checked) => {
+  const raw = typeof setValue === 'string' ? setValue : ''
+  const pattern = new RegExp(`\\[\\s*${escapeRegExp(tag)}\\s*\\]`, 'gi')
+  let next = raw.replace(pattern, '').replace(/\s{2,}/g, ' ').trim()
+  if (checked) {
+    next = next ? `${next} [${tag}]` : `[${tag}]`
+  }
+  return next
 }
 
 const newTour = ref({
@@ -63,7 +98,8 @@ const addTour = async () => {
   if (!newTour.value.title) return alert('Enter Title!')
   const payload = {
     ...newTour.value,
-    date: newTourTBA.value ? '' : newTour.value.date
+    date: newTourTBA.value ? '' : newTour.value.date,
+    setTags: uniqueSetTags(newTour.value.set)
   }
   await addDoc(toursCollection, payload)
   newTour.value = { title: '', date: '', set: '', city: '', country: '', ticket: '' }
@@ -76,6 +112,7 @@ const saveTour = async (tour) => {
     title: tour.title,
     date: tour.isTBA ? '' : tour.date,
     set: tour.set,
+    setTags: uniqueSetTags(tour.set),
     city: tour.city,
     country: tour.country,
     ticket: tour.ticket
@@ -110,7 +147,19 @@ const deleteTourItem = async (id) => {
               TBA
             </label>
           </div>
-          <input v-model="newTour.set" placeholder="Set" />
+          <div class="admin__date">
+            <input v-model="newTour.set" placeholder="Set" />
+            <div class="admin__tags admin__tags--full">
+              <label v-for="tag in setTagOptions" :key="tag" class="admin__tag">
+                <input
+                  type="checkbox"
+                  :checked="hasSetTag(newTour.set, tag)"
+                  @change="newTour.set = toggleSetTag(newTour.set, tag, $event.target.checked)"
+                />
+                [{{ tag }}]
+              </label>
+            </div>
+          </div>
           <input v-model="newTour.city" placeholder="City" />
           <input v-model="newTour.country" placeholder="Country" />
           <input v-model="newTour.ticket" placeholder="Ticket URL" />
@@ -127,7 +176,20 @@ const deleteTourItem = async (id) => {
             </div>
             <div class="admin__inner">
               <div v-if="!t.isEditing">{{ t.set }}</div>
-              <input v-else v-model="t.set" />
+              <div v-else class="admin__set-edit">
+                <input v-model="t.set" />
+                <div class="admin__tags">
+                  <span class="admin__tags-label">Set Tags</span>
+                  <label v-for="tag in setTagOptions" :key="tag" class="admin__tag">
+                    <input
+                      type="checkbox"
+                      :checked="hasSetTag(t.set, tag)"
+                      @change="t.set = toggleSetTag(t.set, tag, $event.target.checked)"
+                    />
+                    [{{ tag }}]
+                  </label>
+                </div>
+              </div>
             </div>
             <div class="admin__inner">
               <div v-if="!t.isEditing" class="admin-flex">
@@ -212,6 +274,35 @@ const deleteTourItem = async (id) => {
       font-size: 16px;
       padding: 5px 10px;
     }
+  }
+  &__tags {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 14px;
+    &-label {
+      font-weight: 600;
+    }
+  }
+  &__tags--full {
+    grid-column: 1 / -1;
+  }
+  &__tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    input {
+      width: auto;
+      height: auto;
+      padding: 0;
+      margin: 0;
+    }
+  }
+  &__set-edit {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
   }
   &__date {
     display: flex;

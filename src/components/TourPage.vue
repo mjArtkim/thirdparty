@@ -1010,6 +1010,7 @@ const calendarTbaTours = computed(() => {
 @media screen and (max-width: 899px) {
   .tour-calendar-toolbar {
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   .tour-calendar-month {
@@ -1020,32 +1021,55 @@ const calendarTbaTours = computed(() => {
 
   .tour-calendar-weekdays,
   .tour-calendar-grid {
-    gap: 6px;
+    grid-template-columns: 1fr;
+    gap: 10px;
   }
 
-  .tour-calendar-weekdays > div {
-    font-size: 10px;
-    letter-spacing: 0.04em;
+  .tour-calendar-weekdays,
+  .tour-calendar-cell.is-empty,
+  .tour-calendar-cell:not(.has-tours):not(.is-today) {
+    display: none;
   }
 
   .tour-calendar-cell {
-    min-height: 96px;
-    padding: 8px;
-    gap: 8px;
+    min-height: auto;
+    padding: 10px;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 38px minmax(0, 1fr);
+    gap: 10px;
+    align-items: start;
   }
 
   .tour-calendar-date {
-    font-size: 15px;
+    font-size: 16px;
+    line-height: 1;
+  }
+
+  .tour-calendar-events {
+    min-width: 0;
   }
 
   .tour-calendar-event,
   .tour-calendar-tba-item {
     padding: 7px;
+    border-radius: 8px;
+    min-width: 0;
+  }
+
+  .tour-calendar-event-title,
+  .tour-calendar-event-set {
+    overflow-wrap: anywhere;
+    word-break: normal;
   }
 
   .tour-calendar-event-title,
   .tour-calendar-event-set,
-  .tour-calendar-event-meta,
+  .tour-calendar-event-meta {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
   .calendar-ticket-btn,
   .calendar-end-btn {
     font-size: 11px;
@@ -1053,7 +1077,11 @@ const calendarTbaTours = computed(() => {
 
   .calendar-ticket-btn,
   .calendar-end-btn {
-    width: 100%;
+    width: auto;
+    max-width: 100%;
+    min-height: 28px;
+    padding: 0 9px;
+    white-space: nowrap;
   }
 
   .tour-calendar-tba-list {

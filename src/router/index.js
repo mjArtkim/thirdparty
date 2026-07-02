@@ -1,15 +1,30 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import MainPageView from '@/components/MainPage.vue';
-import MusicCategoryView from '@/components/musicCategory.vue';
-import TourPageView from '@/components/TourPage.vue';
-import AboutPageView from '@/components/AboutPage.vue';
-import NotFoundView from '@/components/unit/NotFound.vue';
-import Login from '@/components/Login.vue'
-import Admin from '@/components/Admin.vue'
-import { auth } from '@/firebase.js' 
-import { onAuthStateChanged } from 'firebase/auth'
 
 const adminEmails = ['mjtwins1@naver.com']
+
+const MainPageView = () => import('@/components/MainPage.vue')
+const MusicCategoryView = () => import('@/components/musicCategory.vue')
+const TourPageView = () => import('@/components/TourPage.vue')
+const AboutPageView = () => import('@/components/AboutPage.vue')
+const NotFoundView = () => import('@/components/unit/NotFound.vue')
+const Login = () => import('@/components/Login.vue')
+const Admin = () => import('@/components/Admin.vue')
+
+async function getCurrentUser() {
+  const [{ auth }, { onAuthStateChanged }] = await Promise.all([
+    import('@/firebase.js'),
+    import('firebase/auth')
+  ])
+
+  if (auth.currentUser) return auth.currentUser
+
+  return new Promise((resolve) => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      unsubscribe()
+      resolve(user)
+    })
+  })
+}
 
 const routes = [
   {
@@ -41,16 +56,7 @@ const routes = [
   { path: '/login', name: 'Login', component: Login },
   { path: '/admin', 
     name: 'Admin', 
-    component: Admin,
-    beforeEnter: (to, from, next) => {
-      const user = auth.currentUser
-      if (user && adminEmails.includes(user.email)) {
-        next()
-      } else {
-        alert('권한이 없는 계정입니다.')
-        next('/login') // 로그인 페이지로 이동
-      }
-    }
+    component: Admin
   },
 ];
 
@@ -64,16 +70,11 @@ const router = createRouter({
 
 router.beforeEach((to, from, next) => {
   if (to.name === 'Admin') {
-    onAuthStateChanged(auth, (user) => {
-      if (!user) {
-        alert('관리자 페이지는 로그인 후 접근 가능합니다.')
-        next({ name: 'Login' })
-      } else if (!adminEmails.includes(user.email)) {
-        alert('권한이 없는 계정입니다.')
-        next({ name: 'Login' })
-      } else {
-        next()
-      }
+    getCurrentUser().then((user) => {
+      if (user && adminEmails.includes(user.email)) return next()
+
+      alert(user ? '권한이 없는 계정입니다.' : '관리자 페이지는 로그인 후 접근 가능합니다.')
+      next({ name: 'Login' })
     })
   } else {
     next()

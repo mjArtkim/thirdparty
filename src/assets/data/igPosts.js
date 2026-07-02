@@ -39,6 +39,7 @@ import img38 from '@/assets/music/wecanfindaway.webp'
 import img39 from '@/assets/music/takemethere.webp'
 import img40 from '@/assets/music/enemy.webp'
 import img41 from '@/assets/music/lovemeagain.webp'
+import img42 from '@/assets/music/img43.webp'
 
 
 
@@ -888,7 +889,7 @@ export const igPosts = [
     linksound: "",
     type: 'Singles',
   },
-    {
+  {
     id: 42,
     image: img41,
     caption: "Love Me Again",
@@ -902,6 +903,23 @@ export const igPosts = [
     linkapple: "https://music.apple.com/kr/album/love-me-again-again-dubvision-third-party-remix/1863682741?i=1863682744",
     linkyoutube: "",
     linkspotify: "https://open.spotify.com/track/0Az2NLbpGUqE2kJ8LEFdfZ?si=9fbf5a10de30449",
+    linksound: "",
+    type: 'Singles',
+  },
+  {
+    id: 43,
+    image: img42,
+    caption: "Human",
+    album: "Human",
+    djname:"David Guetta, Third ≡ Party & JOHN MARTIN",
+    releases: "2026-07-03T00:00:00",
+    tag: "Progressive House, Dance",
+    recolabel: "Tomorrowland Music",
+    color: "#7F5F4A",
+    maincolor: "rgba(127, 95, 74, 0.3)",
+    linkapple: "https://music.apple.com/kr/album/human/6784223272?i=6784223276",
+    linkyoutube: "https://youtu.be/2TEoQuj886w?si=mEk_kO4NESVUh8Ep",
+    linkspotify: "https://open.spotify.com/track/426LH4RVp0WvxX69NQCTGl?si=a8dcde06383449b1",
     linksound: "",
     type: 'Singles',
   },

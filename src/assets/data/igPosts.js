@@ -40,7 +40,7 @@ import img39 from '@/assets/music/takemethere.webp'
 import img40 from '@/assets/music/enemy.webp'
 import img41 from '@/assets/music/lovemeagain.webp'
 import img42 from '@/assets/music/img43.webp'
-
+import img43 from '@/assets/music/img44.webp'
 
 
 
@@ -920,6 +920,23 @@ export const igPosts = [
     linkapple: "https://music.apple.com/kr/album/human/6784223272?i=6784223276",
     linkyoutube: "https://youtu.be/2TEoQuj886w?si=mEk_kO4NESVUh8Ep",
     linkspotify: "https://open.spotify.com/track/426LH4RVp0WvxX69NQCTGl?si=a8dcde06383449b1",
+    linksound: "",
+    type: 'Singles',
+  },
+    {
+    id: 44,
+    image: img43,
+    caption: "Live Again",
+    album: "Live Again",
+    djname:"HALŌ, Third ≡ Party, DubVision & Matisse & Sadko",
+    releases: "2026-09-18T00:00:00",
+    tag: "Progressive House, Dance",
+    recolabel: "Armada Music B.V.",
+    color: "#463D36",
+    maincolor: "rgba(70, 61, 54, 0.3)",
+    linkapple: "https://music.apple.com/kr/album/live-again/6808299459?i=6808299460",
+    linkyoutube: "",
+    linkspotify: "https://open.spotify.com/track/6pnYBrWkRnrlxPw55BDKC1?si=149bca1b19c74166",
     linksound: "",
     type: 'Singles',
   },
